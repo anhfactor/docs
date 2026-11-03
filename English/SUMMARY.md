@@ -918,6 +918,8 @@
 * [vLB](load-balancer/README.md)
   * [Deployment mode](load-balancer/deployment-mode.md)
   * [Feature Comparison](load-balancer/feature-comparison.md)
+  * [Security](load-balancer/security.md)
+  * [Attentions and Limitations](load-balancer/attentions-and-limitations.md)
   * [Application Load Balancer](load-balancer/application-load-balancer/README.md)
     * [How it works (ALB)](load-balancer/application-load-balancer/how-it-works-alb.md)
     * [Getting Started](load-balancer/application-load-balancer/getting-started.md)
