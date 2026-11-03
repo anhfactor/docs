@@ -38,3 +38,4 @@ Learn more about how the service works and detailed usage instructions through t
   * Application Load Balancer
   * Network Load Balancer
   * Monitor your load balancers
+  * Security
