@@ -28,5 +28,4 @@ sudo sysctl -w net.core.default_qdisc=fq
 
 To persist these changes across reboots, add the settings above to `/etc/sysctl.conf` and run `sudo sysctl -p`.
 
-
 > **Trade-offs**: Aggressive kernel buffer increases and congestion control adjustments on your endpoints can utilize more network capacity, but it also increases memory (RAM) consumption per socket. We recommend monitoring your backend server's memory utilization (`free -m`) and network socket state (`ss -s`) when applying high-buffer `sysctl` parameters in production environments.
