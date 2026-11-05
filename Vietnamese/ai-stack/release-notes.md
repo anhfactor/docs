@@ -18,9 +18,9 @@ AI Platform ra mắt **Guardrail** — tính năng bảo vệ dữ liệu và ki
 
 **GreenNode AgentBase — Built-in Tools (Code Interpreter & Browser)**
 
-AgentBase ra mắt **Built-in Tools** — bộ tool dựng sẵn cho AI Agent chạy code và điều khiển trình duyệt trong sandbox microVM được cô lập theo từng session:
+AgentBase ra mắt **Built-in Tools** — bộ tool dựng sẵn cho AI Agent chạy code và điều khiển trình duyệt trong sandbox được cô lập theo từng session:
 
-* **Code Interpreter:** chạy Python và lệnh shell, đọc/ghi file, chạy tiến trình nền — mỗi session trong một microVM riêng có kernel riêng.
+* **Code Interpreter:** chạy Python và lệnh shell, đọc/ghi file, chạy tiến trình nền — mỗi session trong một sandbox riêng, cô lập hoàn toàn.
   * Tìm hiểu thêm tại [Sử dụng Code Interpreter](agent-base/built-in-tools/su-dung-code-interpreter.md).
 
 * **Browser:** điều khiển Chrome thật qua CDP (Playwright/Puppeteer), xem trực tiếp màn hình qua live view và tải lại bản ghi phiên (recording).
@@ -28,7 +28,7 @@ AgentBase ra mắt **Built-in Tools** — bộ tool dựng sẵn cho AI Agent ch
 
 * Tích hợp qua **MCP**: kết nối agent bằng endpoint MCP, xác thực qua flow đăng nhập GreenNode Portal — token từ Root user, IAM user hoặc Service Account đều dùng được.
 
-* Sandbox workload chạy trên node group vKS riêng bật nested virtualization (Kata Containers + Cloud Hypervisor), tách biệt hoàn toàn khỏi hạ tầng chung.
+* Mỗi session chạy trong sandbox riêng, được cô lập hoàn toàn — trạng thái của session này không lệch sang session khác.
   * Tìm hiểu thêm tại [Built-in Tools](agent-base/built-in-tools/README.md).
 
 * Tính năng đang mở theo **whitelist** account — liên hệ [support@greennode.ai](mailto:support@greennode.ai) để được bật.

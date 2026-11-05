@@ -1,6 +1,6 @@
 # Sử dụng Code Interpreter
 
-> Hướng dẫn kết nối agent của bạn với **Code Interpreter** — chạy Python, lệnh shell và thao tác file trong sandbox microVM riêng cho từng session, tích hợp qua MCP.
+> Hướng dẫn kết nối agent của bạn với **Code Interpreter** — chạy Python, lệnh shell và thao tác file trong sandbox riêng, cô lập hoàn toàn theo từng session, tích hợp qua MCP.
 
 ---
 
@@ -54,11 +54,11 @@ Token từ **Root user, IAM user hoặc Service Account** đều dùng được.
 
 ## Mô hình hoạt động
 
-Agent nhận query của người dùng, LLM chọn tool call, rồi tool call đi qua kết nối MCP vào Code Interpreter — chạy trong sandbox microVM riêng và trả kết quả về cho agent:
+Agent nhận query của người dùng, LLM chọn tool call, rồi tool call đi qua kết nối MCP vào Code Interpreter — chạy trong sandbox riêng và trả kết quả về cho agent:
 
-<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-code-interpreter-architecture.svg" alt=""><figcaption><p>Kiến trúc Code Interpreter — agent gọi tool qua MCP, code chạy trong sandbox microVM cô lập</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-code-interpreter-architecture.svg" alt=""><figcaption><p>Kiến trúc Code Interpreter — agent gọi tool qua MCP, code chạy trong sandbox cô lập</p></figcaption></figure>
 
-Code Interpreter tạo **một lần và dùng lại** cho nhiều session — mỗi session vẫn là một microVM riêng.
+Code Interpreter tạo **một lần và dùng lại** cho nhiều session — mỗi session vẫn là một sandbox riêng.
 
 ---
 
@@ -68,7 +68,7 @@ Một lần dùng Code Interpreter đi qua các bước sau:
 
 ```
 Tạo Code Interpreter → chờ ACTIVE → tạo session → gọi tool → (lặp lại) → xoá
-                        (1 VM sẵn)    (1 microVM)   (invoke)
+                        (chuẩn bị sandbox) (1 sandbox)  (invoke)
 ```
 
 **Bước 1: Tạo Code Interpreter**
@@ -79,16 +79,16 @@ Tạo Code Interpreter → chờ ACTIVE → tạo session → gọi tool → (l�
 **Bước 2: Chờ trạng thái ACTIVE**
 
 1. Poll trạng thái tài nguyên mỗi vài giây.
-2. Lần tạo đầu mất **vài phút** vì phải dựng pool VM và boot VM đầu tiên. Sau đó các session tiếp theo nhanh hơn nhiều.
+2. Lần tạo đầu mất **vài phút** vì nền tảng chuẩn bị hạ tầng sandbox lần đầu. Sau đó các session tiếp theo nhanh hơn nhiều.
 3. Trước khi `ACTIVE`, mọi lời gọi session/invoke bị từ chối với `409`. Quá thời hạn chờ (5 phút) thì trạng thái chuyển `FAILED`.
 
 **Bước 3: Tạo session**
 
-1. Chạy tool tạo session — mỗi session là **một microVM riêng** với kernel riêng.
-2. Nếu còn VM nóng trong pool, session sẵn sàng sau khoảng vài giây; nếu hết, phải boot VM mới (chậm hơn đáng kể).
+1. Chạy tool tạo session — mỗi session là **một sandbox riêng, cô lập hoàn toàn**.
+2. Nếu còn sandbox sẵn sàng, session được cấp sau khoảng vài giây; nếu hết, nền tảng phải chuẩn bị sandbox mới (chậm hơn đáng kể).
 
 {% hint style="warning" %}
-Session **không tự hết hạn** — không có TTL hay idle timeout. Session bị quên vẫn giữ VM và chiếm slot quota cho tới khi bạn xoá. Hãy luôn xoá session khi dùng xong.
+Session **không tự hết hạn** — không có TTL hay idle timeout. Session bị quên vẫn giữ sandbox và chiếm slot quota cho tới khi bạn xoá. Hãy luôn xoá session khi dùng xong.
 {% endhint %}
 
 **Bước 4: Gọi tool để chạy code**
@@ -130,9 +130,9 @@ Lệnh thoát với mã khác 0 trả trạng thái task `failed`, nhưng bản 
 
 ## Cô lập giữa các session
 
-- File ghi ở session A **không thấy** ở session B — hai VM khác nhau.
+- File ghi ở session A **không thấy** ở session B — hai sandbox khác nhau.
 - Truy cập Code Interpreter của người dùng khác trả `404` (không phải `403`) để không lộ sự tồn tại của tài nguyên.
-- Khi xoá session, VM bị huỷ và toàn bộ trạng thái biến mất — không còn dữ liệu của bạn trong VM tiếp theo.
+- Khi xoá session, sandbox bị huỷ và toàn bộ trạng thái biến mất — không còn dữ liệu của bạn trong sandbox tiếp theo.
 
 ---
 

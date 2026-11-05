@@ -1,6 +1,6 @@
 # Sử dụng Browser
 
-> Hướng dẫn kết nối agent của bạn với **Browser** — điều khiển Chrome thật trong microVM riêng cho từng session: automation qua CDP, xem trực tiếp màn hình (live view) và xem lại bản ghi (recording), tích hợp qua MCP.
+> Hướng dẫn kết nối agent của bạn với **Browser** — điều khiển Chrome thật trong sandbox riêng cho từng session: automation qua CDP, xem trực tiếp màn hình (live view) và xem lại bản ghi (recording), tích hợp qua MCP.
 
 ---
 
@@ -52,23 +52,23 @@ Thay `<YOUR_BROWSER_ID>` bằng `id` của Browser bạn đã tạo — mọi l�
 
 ## Mô hình hoạt động
 
-Mỗi **session** là một trình duyệt Chrome thật chạy trong một microVM riêng. Có 3 luồng riêng biệt:
+Mỗi **session** là một trình duyệt Chrome thật chạy trong một sandbox riêng. Có 3 luồng riêng biệt:
 
 ```
 Agent ──── automation stream (CDP, cổng 9222) ────┐
-Người xem ── live view (noVNC, cổng 6080) ────────┤── Chrome trong microVM
+Người xem ── live view (noVNC, cổng 6080) ────────┤── Chrome trong sandbox
 Ghi hình ── recording (lưu khi xoá session) ──────┘
 ```
 
-- **Automation stream** — agent điều khiển Chrome: relay kết nối CDP của client vào cổng debug của Chrome trong VM. Playwright / Puppeteer dùng được như localhost.
+- **Automation stream** — agent điều khiển Chrome: relay kết nối CDP của client vào cổng debug của Chrome trong sandbox. Playwright / Puppeteer dùng được như localhost.
 - **Live view** — người xem màn hình Chrome trực tiếp qua noVNC, nhúng trong portal bằng iframe.
 - **Recording** — bản ghi phiên được lưu lại khi session kết thúc.
 
 Luồng đầy đủ: agent (kèm automation library như Playwright, browser-use) nhận query → LLM chọn tool call (`click`, `type`, `goto`...) → lệnh CDP đi qua automation stream vào Chromium trong session → nội dung trang và screenshot trả về agent:
 
-<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-browser-architecture.svg" alt=""><figcaption><p>Kiến trúc Browser — agent điều khiển Chromium trong sandbox microVM qua CDP</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-browser-architecture.svg" alt=""><figcaption><p>Kiến trúc Browser — agent điều khiển Chromium trong sandbox qua CDP</p></figcaption></figure>
 
-Browser dùng cùng khuôn với [Code Interpreter](su-dung-code-interpreter.md): tạo tài nguyên, chờ `ACTIVE`, tạo session (một VM mỗi session), xoá khi hết dùng.
+Browser dùng cùng khuôn với [Code Interpreter](su-dung-code-interpreter.md): tạo tài nguyên, chờ `ACTIVE`, tạo session (một sandbox mỗi session), xoá khi hết dùng.
 
 ---
 
@@ -78,7 +78,7 @@ Browser dùng cùng khuôn với [Code Interpreter](su-dung-code-interpreter.md)
 
 **Bước 2:** Bật automation stream cho session (tool/API `PUT .../sessions/{sessionId}/streams`). Luồng này bật/tắt được cho từng session.
 
-**Bước 3:** Trỏ client CDP (Playwright, Puppeteer) vào địa chỉ automation stream của session. Service relay kết nối của bạn tới Chrome trong VM và tự viết lại địa chỉ debugger để trỏ ngược về chính nó.
+**Bước 3:** Trỏ client CDP (Playwright, Puppeteer) vào địa chỉ automation stream của session. Service relay kết nối của bạn tới Chrome trong sandbox và tự viết lại địa chỉ debugger để trỏ ngược về chính nó.
 
 ---
 
@@ -87,14 +87,14 @@ Browser dùng cùng khuôn với [Code Interpreter](su-dung-code-interpreter.md)
 Màn hình Chrome được phục vụ qua noVNC và nhúng trong portal bằng iframe. Vì iframe và WebSocket không thể gắn header xác thực, live view dùng **URL đã ký** (kiểu presigned URL):
 
 1. Portal ký URL live view cho session (ticket hiệu lực **5 phút**).
-2. URL được đặt vào `iframe src` — ticket đi theo đường dẫn WebSocket và bị cắt bỏ trước khi vào VM.
+2. URL được đặt vào `iframe src` — ticket đi theo đường dẫn WebSocket và bị cắt bỏ trước khi vào sandbox.
 3. Kết nối đã thiết lập thì không xác thực lại; mỗi kết nối giữ tối đa **1 giờ**. Hết hạn thì portal ký URL mới và tải lại iframe.
 
 ---
 
 ## Ghi hình (recording)
 
-File ghi hình nằm bên trong VM nên sẽ mất khi VM bị xoá. Vì thế, **khi bạn xoá session**, service đọc file ghi hình ra ngay trước khi huỷ VM rồi lưu lên object storage. Sau đó lấy bản ghi bằng `GET .../sessions/{sessionId}/recording`.
+File ghi hình nằm bên trong sandbox nên sẽ mất khi session bị xoá. Vì thế, **khi bạn xoá session**, service đọc file ghi hình ra ngay trước khi huỷ sandbox rồi lưu lên object storage. Sau đó lấy bản ghi bằng `GET .../sessions/{sessionId}/recording`.
 
 {% hint style="warning" %}
 Recording là **best effort**: nếu không đọc/lưu được file, việc xoá session vẫn tiếp tục và không có bản ghi. Bản ghi lớn hơn 64 MiB (giá trị cấu hình mặc định) không được lưu.
@@ -107,7 +107,7 @@ Recording là **best effort**: nếu không đọc/lưu được file, việc xo
 | Đường dẫn dưới `/v1/browsers` | Mục đích |
 |---|---|
 | `POST`, `GET`, `GET /{id}`, `DELETE /{id}` | Tạo, liệt kê, xem, xoá Browser |
-| `POST/GET/DELETE /{id}/sessions[/{sessionId}]` | Quản lý session — mỗi session một Chrome trong một VM |
+| `POST/GET/DELETE /{id}/sessions[/{sessionId}]` | Quản lý session — mỗi session một Chrome trong một sandbox |
 | `PUT /{id}/sessions/{sessionId}/streams` | Bật/tắt automation stream |
 | `/{id}/sessions/{sessionId}/automation-stream[/*]` | Relay CDP, mọi method |
 | `POST .../live-view-stream-sign` và `GET .../live-view-stream[/*]` | Ký URL xem trực tiếp, và luồng xem |
@@ -117,7 +117,7 @@ Recording là **best effort**: nếu không đọc/lưu được file, việc xo
 
 ## Xoá
 
-1. Xoá session — service lưu recording lại (nếu bật), huỷ VM và toàn bộ trạng thái.
+1. Xoá session — service lưu recording lại (nếu bật), huỷ sandbox và toàn bộ trạng thái.
 2. Xoá Browser khi hết cần — trả lại quota.
 
 ---
