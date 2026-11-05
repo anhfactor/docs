@@ -23,6 +23,7 @@ Tính năng Whitelist IP trên chế độ Private Node Group của VKS cho phé
 49.213.71.0/24
 49.213.83.0/24
 49.213.86.0/23
+49.213.89.0/24
 61.28.224.0/20
 61.28.250.0/24
 103.245.248.0/22
@@ -52,7 +53,7 @@ Tính năng Whitelist IP trên chế độ Private Node Group của VKS cho phé
 * **Khuyến nghị**: Có thể sử dụng tính năng whitelist.
 * Cần thực hiện Whitelist thêm IP của NAT Gateway.
 
-**3. Private Cluster Bao Gồm Public Node Group hoặc Private Node Group**&#x20;
+**3. Private Cluster Bao Gồm Public Node Group hoặc Private Node Group**
 
 * **Khuyến nghị:** Có thể sử dụng tính năng whitelist.
 {% endhint %}

@@ -24,6 +24,7 @@ For users in the **HCM Region**, if you need to enable IP Whitelisting for secur
 49.213.71.0/24
 49.213.83.0/24
 49.213.86.0/23
+49.213.89.0/24
 61.28.224.0/20
 61.28.250.0/24
 103.245.248.0/22
