@@ -1,6 +1,6 @@
 # Quản lý Redis Cluster
 
-Sau khi tạo Redis Cluster, bạn có thể quản lý topology, thay đổi số replica, thay đổi instance type, thực hiện backup thủ công và xóa cluster trực tiếp từ trang chi tiết.
+Sau khi tạo Redis Cluster, bạn có thể quản lý topology, thay đổi số replica, thay đổi instance type, thực hiện backup thủ công, theo dõi metric và xóa cluster trực tiếp từ trang chi tiết.
 
 ---
 
@@ -211,6 +211,34 @@ Trong dialog **Preview changes and apply**: đối chiếu thay đổi ở bản
 
 Mỗi lần chỉnh sửa, bạn có thể thay đổi một hoặc nhiều parameter. Các parameter không được thay đổi trên portal sẽ giữ nguyên giá trị đang có.
 {% endhint %}
+
+---
+
+## Giám sát cluster (Monitoring)
+
+Khi bạn tạo Redis Cluster, hệ thống tự động thu thập metric của cluster qua vMonitor Platform và hiển thị ở tab **Monitor** trong trang chi tiết. Một số metric được bật sẵn, bạn không cần cấu hình thêm.
+
+Để xem metric:
+
+1. Truy cập trang chi tiết Redis Cluster.
+2. Chọn tab **Monitor**.
+3. Chọn **Cluster metric** để xem metric của cả cluster, hoặc **Node metric** để xem metric của từng node.
+4. Chọn khoảng thời gian cần xem ở góc phải, từ 15 phút đến 1 ngày.
+
+Các biểu đồ chính có sẵn ở tab Monitor:
+
+| Chế độ xem | Nhóm | Biểu đồ |
+| --- | --- | --- |
+| Cluster metric | Kết nối và lệnh | Connection Usage, Executed Commands, Top Commands, Slow Commands |
+| Cluster metric | CPU và bộ nhớ | Redis CPU Saturation (Main Thread), Redis Max Memory, Redis Used Memory, Redis Memory Fragmentation Ratio |
+| Cluster metric | Replication và cache | Master/Replica Offset, Hit Ratio |
+| Node metric | Trạng thái node | Online Nodes, Master Node, Replica Nodes |
+| Node metric | Tài nguyên | Instance CPU Usage, Instance Memory Usage |
+
+Để xem thêm metric ngoài tập bật sẵn, tự vẽ dashboard hoặc tạo cảnh báo (alarm), chọn **Monitored by vMonitor Platform** để chuyển sang vMonitor Platform và bật Detailed Monitoring. Tham khảo:
+
+* [Giám sát hoạt động vDB bằng vMonitor Platform](../../relational-database-service-rds/working-with-rds/giam-sat-hoat-dong-vdb-bang-vmonitor-platform.md)
+* [Danh sách metrics của vDB](../../../vmonitor-platform/cach-tinh-nang-cua-vmonitor-platform/metrics/danh-sach-metrics-ho-tro/danh-sach-metrics-cua-vdb.md)
 
 ---
 

@@ -152,7 +152,7 @@ Khi click vào một cluster trong danh sách, trang chi tiết hiển thị cá
 | **Connectivity & Security** | Connection endpoints và cài đặt bảo mật |
 | **Backup** | Lịch sử backup, tạo manual backup, xem backup information |
 | **History** | Activity logs |
-| **Monitor** | Metrics và biểu đồ giám sát |
+| **Monitor** | Metrics và biểu đồ giám sát, xem mục **Giám sát cluster (Monitoring)** bên dưới |
 
 ***
 
@@ -205,6 +205,32 @@ Hệ thống sẽ tự động thêm hoặc bớt Reader nodes. Writer node khô
 
 1. Tại trang chi tiết cluster, click **Reboot** trên thanh action.
 2. Xác nhận khởi động lại.
+
+### Giám sát cluster (Monitoring)
+
+Khi bạn tạo PostgreSQL Cluster, hệ thống tự động thu thập metric của cluster qua vMonitor Platform và hiển thị ở tab **Monitor** trong trang chi tiết. Một số metric được bật sẵn, bạn không cần cấu hình thêm.
+
+Để xem metric:
+
+1. Truy cập trang chi tiết PostgreSQL Cluster.
+2. Chọn tab **Monitor**.
+3. Chọn **Cluster metric** để xem metric của cả cluster, hoặc **Node metric** để xem metric của từng node.
+4. Chọn khoảng thời gian cần xem ở góc phải, từ 15 phút đến 1 ngày.
+
+Các biểu đồ chính có sẵn ở tab Monitor:
+
+| Chế độ xem | Nhóm | Biểu đồ |
+| --- | --- | --- |
+| Cluster metric | Kết nối | Max Connections, Connection Usage Per Node |
+| Cluster metric | Bộ nhớ và cache | Shared Buffers, Cache Hit Rate |
+| Cluster metric | Replication | Replication Lag |
+| Node metric | Trạng thái node | Online Nodes |
+| Node metric | Tài nguyên | CPU Usage, Mem Usage (Percent), Volume Usage (Percent) |
+
+Để xem thêm metric ngoài tập bật sẵn, tự vẽ dashboard hoặc tạo cảnh báo (alarm), chọn **Monitored by vMonitor Platform** để chuyển sang vMonitor Platform và bật Detailed Monitoring. Tham khảo:
+
+* [Giám sát hoạt động vDB bằng vMonitor Platform](../../working-with-rds/giam-sat-hoat-dong-vdb-bang-vmonitor-platform.md)
+* [Danh sách metrics của vDB](../../../../vmonitor-platform/cach-tinh-nang-cua-vmonitor-platform/metrics/danh-sach-metrics-ho-tro/danh-sach-metrics-cua-vdb.md)
 
 ***
 
