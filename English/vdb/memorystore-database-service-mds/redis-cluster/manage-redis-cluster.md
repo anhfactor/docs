@@ -1,6 +1,6 @@
 # Manage a Redis Cluster
 
-After creating a Redis Cluster, you can manage its topology, change the number of replicas, change the instance type, trigger manual backups, and delete the cluster directly from the cluster detail page.
+After creating a Redis Cluster, you can manage its topology, change the number of replicas, change the instance type, trigger manual backups, monitor metrics, and delete the cluster directly from the cluster detail page.
 
 ***
 
@@ -215,6 +215,34 @@ In the **Preview changes and apply** dialog: review the changes in the **Current
 
 Each time you edit, you can change one or more parameters. Parameters that you do not change on the portal keep their current values.
 {% endhint %}
+
+***
+
+## Monitor a Redis Cluster (Monitoring)
+
+When you create a Redis Cluster, the system automatically collects the cluster's metrics through vMonitor Platform and displays them in the **Monitor** tab of the cluster detail page. Some metrics are enabled by default, with no extra configuration needed.
+
+To view metrics:
+
+1. Go to the Redis Cluster detail page.
+2. Select the **Monitor** tab.
+3. Select **Cluster metric** to view metrics for the whole cluster, or **Node metric** to view metrics for each node.
+4. Select the time range in the top-right corner, from 15 minutes to 1 day.
+
+Main charts available in the Monitor tab:
+
+| View | Group | Charts |
+| --- | --- | --- |
+| Cluster metric | Connections and commands | Connection Usage, Executed Commands, Top Commands, Slow Commands |
+| Cluster metric | CPU and memory | Redis CPU Saturation (Main Thread), Redis Max Memory, Redis Used Memory, Redis Memory Fragmentation Ratio |
+| Cluster metric | Replication and cache | Master/Replica Offset, Hit Ratio |
+| Node metric | Node status | Online Nodes, Master Node, Replica Nodes |
+| Node metric | Resources | Instance CPU Usage, Instance Memory Usage |
+
+To view more metrics beyond the default set, build your own dashboards, or create alarms, select **Monitored by vMonitor Platform** to go to vMonitor Platform and enable Detailed Monitoring. See also:
+
+* [Monitoring vDB with vMonitor Platform](../../relational-database-service-rds/working-with-rds/giam-sat-hoat-dong-vdb-bang-vmonitor-platform.md)
+* [List vDB's metrics](../../../vmonitor-platform/cach-tinh-nang-cua-vmonitor-platform/metrics/danh-sach-metrics-ho-tro/danh-sach-metrics-cua-vdb.md)
 
 ***
 

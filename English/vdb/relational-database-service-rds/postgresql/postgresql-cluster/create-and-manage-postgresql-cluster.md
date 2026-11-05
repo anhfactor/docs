@@ -152,7 +152,7 @@ When clicking on a cluster in the list, the detail page shows the following info
 | **Connectivity & Security** | Connection endpoints and security settings |
 | **Backup** | Backup history, create manual backup, view backup information |
 | **History** | Activity logs |
-| **Monitor** | Metrics and monitoring charts |
+| **Monitor** | Metrics and monitoring charts, see the **Monitor a PostgreSQL Cluster (Monitoring)** section below |
 
 ***
 
@@ -205,6 +205,32 @@ The system will automatically add or remove Reader nodes. The Writer node is not
 
 1. On the cluster detail page, click **Reboot** on the action bar.
 2. Confirm the restart.
+
+### Monitor a PostgreSQL Cluster (Monitoring)
+
+When you create a PostgreSQL Cluster, the system automatically collects the cluster's metrics through vMonitor Platform and displays them in the **Monitor** tab of the cluster detail page. Some metrics are enabled by default, with no extra configuration needed.
+
+To view metrics:
+
+1. Go to the PostgreSQL Cluster detail page.
+2. Select the **Monitor** tab.
+3. Select **Cluster metric** to view metrics for the whole cluster, or **Node metric** to view metrics for each node.
+4. Select the time range in the top-right corner, from 15 minutes to 1 day.
+
+Main charts available in the Monitor tab:
+
+| View | Group | Charts |
+| --- | --- | --- |
+| Cluster metric | Connections | Max Connections, Connection Usage Per Node |
+| Cluster metric | Memory and cache | Shared Buffers, Cache Hit Rate |
+| Cluster metric | Replication | Replication Lag |
+| Node metric | Node status | Online Nodes |
+| Node metric | Resources | CPU Usage, Mem Usage (Percent), Volume Usage (Percent) |
+
+To view more metrics beyond the default set, build your own dashboards, or create alarms, select **Monitored by vMonitor Platform** to go to vMonitor Platform and enable Detailed Monitoring. See also:
+
+* [Monitoring vDB with vMonitor Platform](../../working-with-rds/giam-sat-hoat-dong-vdb-bang-vmonitor-platform.md)
+* [List vDB's metrics](../../../../vmonitor-platform/cach-tinh-nang-cua-vmonitor-platform/metrics/danh-sach-metrics-ho-tro/danh-sach-metrics-cua-vdb.md)
 
 ***
 
