@@ -1,6 +1,6 @@
 # Use Code Interpreter
 
-> Connect your agent to **Code Interpreter** — run Python, shell commands, and file operations in a sandbox microVM dedicated to each session, integrated over MCP.
+> Connect your agent to **Code Interpreter** — run Python, shell commands, and file operations in a sandbox fully isolated per session, integrated over MCP.
 
 ---
 
@@ -54,11 +54,11 @@ Tokens from a **Root user, IAM user, or Service Account** all work. If your agen
 
 ## How it works
 
-Your agent receives a user query, the LLM picks a tool call, and the tool call travels over the MCP connection into the Code Interpreter — running inside its own sandbox microVM and returning the result to the agent:
+Your agent receives a user query, the LLM picks a tool call, and the tool call travels over the MCP connection into the Code Interpreter — running inside its own sandbox and returning the result to the agent:
 
-<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-code-interpreter-architecture.svg" alt=""><figcaption><p>Code Interpreter architecture — the agent calls tools over MCP, code runs in an isolated sandbox microVM</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-code-interpreter-architecture.svg" alt=""><figcaption><p>Code Interpreter architecture — the agent calls tools over MCP, code runs in an isolated sandbox</p></figcaption></figure>
 
-A Code Interpreter is **created once and reused** across sessions — each session is still its own microVM.
+A Code Interpreter is **created once and reused** across sessions — each session is still its own sandbox.
 
 ---
 
@@ -68,7 +68,7 @@ One round of using Code Interpreter goes through these steps:
 
 ```
 Create Code Interpreter → wait for ACTIVE → create session → invoke tools → (repeat) → delete
-                          (1 VM ready)       (1 microVM)     (invoke)
+                          (sandbox setup)     (1 sandbox)      (invoke)
 ```
 
 **Step 1: Create a Code Interpreter**
@@ -79,16 +79,16 @@ Create Code Interpreter → wait for ACTIVE → create session → invoke tools 
 **Step 2: Wait for the ACTIVE status**
 
 1. Poll the resource status every few seconds.
-2. The first creation takes **a few minutes** because the VM pool must be provisioned and the first VM booted. Subsequent sessions are much faster.
+2. The first creation takes **a few minutes** because the platform provisions the sandbox infrastructure for the first time. Subsequent sessions are much faster.
 3. Before `ACTIVE`, all session/invoke calls are rejected with `409`. Past the wait deadline (5 minutes), the status becomes `FAILED` (terminal).
 
 **Step 3: Create a session**
 
-1. Run the session-creation tool — each session is **its own microVM** with a dedicated kernel.
-2. If a warm VM is available in the pool, the session is ready within seconds; otherwise a new VM must boot (noticeably slower).
+1. Run the session-creation tool — each session is **its own fully isolated sandbox**.
+2. If a sandbox is ready, the session is assigned within seconds; otherwise the platform must provision a new sandbox (noticeably slower).
 
 {% hint style="warning" %}
-Sessions **do not expire** — there is no TTL or idle timeout. A forgotten session keeps its VM and holds a quota slot until you delete it. Always delete sessions when done.
+Sessions **do not expire** — there is no TTL or idle timeout. A forgotten session keeps its sandbox and holds a quota slot until you delete it. Always delete sessions when done.
 {% endhint %}
 
 **Step 4: Invoke tools to run code**
@@ -130,9 +130,9 @@ A command exiting with a non-zero code returns task status `failed`, but the inv
 
 ## Isolation between sessions
 
-- Files written in session A are **not visible** in session B — they are different VMs.
+- Files written in session A are **not visible** in session B — they are different sandboxes.
 - Accessing another user's Code Interpreter returns `404` (not `403`), so the resource's existence is not revealed.
-- When a session is deleted, the VM is destroyed and all state disappears — nothing of yours remains in the next VM.
+- When a session is deleted, the sandbox is destroyed and all state disappears — nothing of yours remains in the next sandbox.
 
 ---
 

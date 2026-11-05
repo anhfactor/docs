@@ -6,7 +6,7 @@ Two tools are available:
 
 | Tool | Use it to |
 |---|---|
-| **Code Interpreter** | Run Python and shell commands, read/write files, run background processes — each session in its own microVM |
+| **Code Interpreter** | Run Python and shell commands, read/write files, run background processes — each session in its own fully isolated sandbox |
 | **Browser** | Drive a real Chrome (via CDP), watch the screen live over noVNC, and replay session recordings |
 
 Both tools integrate over **MCP** — your agent connects to an MCP endpoint provisioned by GreenNode, and the tools appear like any other MCP tools.
@@ -19,21 +19,20 @@ Built-in Tools is currently being rolled out by **whitelist**. If your account i
 
 ## Architecture
 
-Each of your sessions runs inside its own microVM with a dedicated kernel, claimed from a pre-warmed VM pool, so creating a session takes only a few seconds. Both tools share the same sandbox foundation — they differ in the product layer on top:
+Each of your sessions runs inside its own sandbox, provisioned in advance by the platform, so creating a session takes only a few seconds. Both tools share the same sandbox foundation — they differ in the product layer on top:
 
-<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-code-interpreter-architecture.svg" alt=""><figcaption><p>Code Interpreter — the agent calls tools over MCP, code runs in an isolated sandbox microVM</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-code-interpreter-architecture.svg" alt=""><figcaption><p>Code Interpreter — the agent calls tools over MCP, code runs in an isolated sandbox</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-browser-architecture.svg" alt=""><figcaption><p>Browser — the agent drives Chromium inside a sandbox microVM over CDP</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-browser-architecture.svg" alt=""><figcaption><p>Browser — the agent drives Chromium inside a sandbox over CDP</p></figcaption></figure>
 
 Main layers:
 
 - **Built-in Tools** — the product layer: manages resources you own (each Code Interpreter / Browser has an id, name, status), plus quotas, authentication, and lifecycle. The sandbox runtime underneath stays hidden — its id and URL are never exposed.
-- **AgentBase Runtime + OpenSandbox** — the platform layer: creates and keeps VMs warm (Pool), assigns one VM per new session, and reclaims it when the session ends.
-- **Dedicated vKS node group** — sandbox workloads are separated onto a dedicated node group on vKS with **nested virtualization** enabled and the `nested-virt` taint so regular pods cannot take those nodes. Each sandbox pod runs through RuntimeClass `kata-clh` (Kata Containers + Cloud Hypervisor).
+- **AgentBase Runtime** — the platform layer: manages the sandbox lifecycle — assigns a dedicated sandbox to each new session, tracks its status, and reclaims it when the session ends.
 
-### Why one microVM per session?
+### Why one sandbox per session?
 
-Agents need to run code and drive browsers exactly as you ask — and the platform must guarantee that every session operates **fully independently**, even when code hits errors or contains vulnerabilities. A regular Kubernetes pod shares the host kernel — one kernel vulnerability can spread to other pods on the same node. With the sandbox, each session gets its own kernel, separated by a hardware-enforced virtualization boundary: an incident in one session stays inside that session. When the session ends, the VM is destroyed and all state inside it disappears.
+Agents need to run code and drive browsers exactly as you ask — and the platform must guarantee that every session operates **fully independently**, even when code hits errors or contains vulnerabilities. That is why each session runs inside its own sandbox: the processes, filesystem, and memory of one session are completely separate from every other session — an incident in one session stays inside that session. When the session ends, the sandbox is destroyed and all state inside it disappears.
 
 ---
 

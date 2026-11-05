@@ -6,7 +6,7 @@ Hiện có 2 tool:
 
 | Tool | Dùng để |
 |---|---|
-| **Code Interpreter** | Chạy Python và lệnh shell, đọc/ghi file, chạy tiến trình nền — mỗi session trong một microVM riêng |
+| **Code Interpreter** | Chạy Python và lệnh shell, đọc/ghi file, chạy tiến trình nền — mỗi session trong một sandbox riêng, cô lập hoàn toàn |
 | **Browser** | Điều khiển Chrome thật (qua CDP), xem trực tiếp màn hình qua noVNC, lưu bản ghi phiên |
 
 Cả hai tool đều **tích hợp qua MCP** — agent của bạn kết nối vào endpoint MCP do GreenNode cấp, tool xuất hiện như các MCP tool bình thường.
@@ -19,21 +19,20 @@ Built-in Tools đang được mở theo từng đợt **whitelist**. Nếu accou
 
 ## Kiến trúc
 
-Mỗi session của bạn chạy trong một microVM riêng có kernel riêng, được cấp từ pool VM làm nóng sẵn (warm pool) nên tạo session chỉ mất vài giây. Hai tool dùng chung một nền sandbox — khác nhau ở lớp sản phẩm bên trên:
+Mỗi session của bạn chạy trong một sandbox riêng, được nền tảng cấp sẵn nên tạo session chỉ mất vài giây. Hai tool dùng chung một nền sandbox — khác nhau ở lớp sản phẩm bên trên:
 
-<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-code-interpreter-architecture.svg" alt=""><figcaption><p>Code Interpreter — agent gọi tool qua MCP, code chạy trong sandbox microVM cô lập</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-code-interpreter-architecture.svg" alt=""><figcaption><p>Code Interpreter — agent gọi tool qua MCP, code chạy trong sandbox cô lập</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-browser-architecture.svg" alt=""><figcaption><p>Browser — agent điều khiển Chromium trong sandbox microVM qua CDP</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Agentbase-image/agentbase-browser-architecture.svg" alt=""><figcaption><p>Browser — agent điều khiển Chromium trong sandbox qua CDP</p></figcaption></figure>
 
 Các tầng chính:
 
 - **Built-in Tools** — lớp sản phẩm: quản lý tài nguyên bạn sở hữu (Code Interpreter / Browser có id, tên, trạng thái), quota, xác thực và vòng đời. Runtime sandbox nằm ẩn bên dưới, không lộ id hay URL ra ngoài.
-- **AgentBase Runtime + OpenSandbox** — lớp nền tảng: tạo và giữ sẵn VM (Pool), cấp một VM cho mỗi session mới, thu hồi khi session kết thúc.
-- **vKS node group riêng** — workload sandbox được tách sang node group riêng trên vKS, bật **nested virtualization** và gắn taint `nested-virt` để pod thường không chiếm chỗ. Mỗi pod sandbox chạy qua RuntimeClass `kata-clh` (Kata Containers + Cloud Hypervisor).
+- **AgentBase Runtime** — lớp nền tảng: quản lý vòng đời sandbox — cấp một sandbox riêng cho mỗi session mới, theo dõi trạng thái và thu hồi khi session kết thúc.
 
-### Vì sao mỗi session một microVM?
+### Vì sao mỗi session một sandbox riêng?
 
-Agent cần chạy code và điều khiển trình duyệt đúng theo yêu cầu của bạn — và nền tảng cần đảm bảo mọi session hoạt động **hoàn toàn độc lập** với nhau, kể cả khi code gặp lỗi hoặc chứa lỗ hổng. Pod thường trên Kubernetes dùng chung kernel host — một lỗ hổng kernel có thể lan sang pod khác trên cùng node. Với sandbox, mỗi session có kernel riêng, ngăn cách bởi ranh giới ảo hoá do phần cứng thực thi: sự cố của session này được giữ nguyên trong đúng session đó. Hết session, VM bị huỷ và mọi trạng thái bên trong biến mất.
+Agent cần chạy code và điều khiển trình duyệt đúng theo yêu cầu của bạn — và nền tảng cần đảm bảo mọi session hoạt động **hoàn toàn độc lập** với nhau, kể cả khi code gặp lỗi hoặc chứa lỗ hổng. Vì thế mỗi session chạy trong một sandbox riêng: tiến trình, filesystem và bộ nhớ của session này hoàn toàn tách biệt với session khác — sự cố của session này được giữ nguyên trong đúng session đó. Hết session, sandbox bị huỷ và mọi trạng thái bên trong biến mất.
 
 ---
 
