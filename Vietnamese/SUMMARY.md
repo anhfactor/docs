@@ -1052,7 +1052,7 @@
     * [Metrics](vserver/compute-hcm03-1a/vlb-load-balancer-new-version/giam-sat-hoat-dong-lb/metrics.md)
     * [Logs](vserver/compute-hcm03-1a/vlb-load-balancer-new-version/giam-sat-hoat-dong-lb/logs.md)
   * [Bảo mật](vserver/compute-hcm03-1a/vlb-load-balancer-new-version/bao-mat.md)
-  * [Thông báo và lưu ý](vserver/compute-hcm03-1a/vlb-load-balancer-new-version/thong-bao-va-luu-y.md)
+  * [Lưu ý](vserver/compute-hcm03-1a/vlb-load-balancer-new-version/thong-bao-va-luu-y.md)
 * [GLB](global-load-balancer/README.md)
   * [Thông báo và cập nhật](global-load-balancer/thong-bao-va-cap-nhat.md)
   * [Mô hình hoạt động](global-load-balancer/mo-hinh-hoat-dong.md)
