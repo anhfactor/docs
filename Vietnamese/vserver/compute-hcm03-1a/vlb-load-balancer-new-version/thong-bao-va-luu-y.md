@@ -1,8 +1,8 @@
-## Thông báo và lưu ý
+## Lưu ý
 
-### A. Tối ưu hóa hiệu năng (Performance Optimization)
+### A. Tối ưu băng thông
 
-Load Balancers giữ vai trò trung tâm trong việc duy trì tính khả dụng cao và độ trễ thấp cho toàn bộ kiến trúc ứng dụng của bạn. Việc tối ưu hóa hiệu năng giúp Load Balancer xử lý hiệu quả lượng traffic lớn mà không biến nó thành điểm nghẽn.
+Load Balancers giữ vai trò trung tâm trong việc duy trì tính khả dụng cao (HA) và độ trễ thấp cho toàn bộ kiến trúc ứng dụng của bạn. Việc tối ưu băng thông giúp Load Balancer xử lý hiệu quả lượng traffic lớn mà không biến nó thành điểm nghẽn.
 
 Để đạt được băng thông tối đa trên các mạng có lưu lượng cao hoặc mạng đường dài độ trễ lớn (Long-Fat Networks - LFN), bạn cần đảm bảo:
 
@@ -28,4 +28,4 @@ Load Balancers giữ vai trò trung tâm trong việc duy trì tính khả dụn
 
     Để lưu lại các thiết lập này sau khi khởi động lại, hãy thêm các dòng cấu hình trên vào tập tin `/etc/sysctl.conf` và chạy lệnh `sudo sysctl -p`.
 
-> **Trade-offs**: Việc tăng mạnh dung lượng bộ đệm kernel và điều chỉnh thuật toán kiểm soát tắc nghẽn trên các máy chủ đầu cuối sẽ giúp khai thác tối đa dung lượng đường truyền, nhưng đồng thời cũng làm tăng lượng tiêu thụ bộ nhớ (RAM) trên mỗi socket. Chúng tôi khuyên bạn nên giám sát mức sử dụng RAM (free -m) và trạng thái socket mạng (ss -s) của máy chủ backend khi áp dụng các tham số sysctl bộ đệm cao trong môi trường Production.
+> **Trade-offs**: Việc tăng mạnh dung lượng bộ đệm kernel và điều chỉnh thuật toán kiểm soát tắc nghẽn trên các máy chủ đầu cuối sẽ giúp khai thác tối đa dung lượng đường truyền, nhưng đồng thời cũng làm tăng lượng tiêu thụ bộ nhớ (RAM) trên mỗi socket. Chúng tôi khuyên bạn nên giám sát mức sử dụng RAM (`free -m`) và trạng thái socket mạng (`ss -s`) của máy chủ backend khi áp dụng các tham số `sysctl` bộ đệm cao trong môi trường Production.
