@@ -2,7 +2,7 @@
 
 ## WAF là gì?
 
-**Web Application Firewall (WAF)** là một giải pháp bảo mật được thiết kế để bảo vệ **ứng dụng web và API** bằng cách giám sát, phân tích, lọc và chặn các lưu lượng HTTP/HTTPS độc hại trước khi chúng truy cập vào máy chủ ứng dụng (origin server).
+**Web Application Firewall** (WAF) là tiện ích bổ sung tùy chọn (add-on) của dịch vụ vServer, hỗ trợ người dùng tự bảo vệ các ứng dụng web và API triển khai trên vServer bằng cách giám sát, lọc và chặn các yêu cầu HTTP/HTTPS có dấu hiệu độc hại trước khi chúng đến máy chủ ứng dụng
 
 Khác với các firewall truyền thống hoạt động ở tầng mạng hoặc tầng giao vận (Layer 3 / Layer 4), **WAF hoạt động ở tầng ứng dụng (Layer 7)** và có khả năng hiểu các đặc thù của giao thức web, cấu trúc request và hành vi truy cập.
 
