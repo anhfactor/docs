@@ -1,4 +1,4 @@
-# Attention & Limitations
+# Tips & Recommendations
 
 ## A. Bandwidth Optimization
 
