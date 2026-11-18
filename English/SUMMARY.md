@@ -866,6 +866,7 @@
       * [Create a Redis Cluster](vdb/memorystore-database-service-mds/redis-cluster/create-redis-cluster.md)
       * [Connect a Redis Cluster](vdb/memorystore-database-service-mds/redis-cluster/connect-redis-cluster.md)
       * [Manage a Redis Cluster](vdb/memorystore-database-service-mds/redis-cluster/manage-redis-cluster.md)
+      * [Limitations](vdb/memorystore-database-service-mds/redis-cluster/limitations.md)
   * [Kafka Cluster Database (KDS)](vdb/kafka-cluster-kds/README.md)
     * [How It Works](vdb/kafka-cluster-kds/cach-thuc-hoat-dong.md)
     * [Getting Started with Kafka Cluster](vdb/kafka-cluster-kds/bat-dau-voi-kafka-cluster.md)

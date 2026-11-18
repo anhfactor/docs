@@ -46,7 +46,7 @@ Tab này hiển thị:
 
 ## Thay đổi số Replica (Edit Number of Nodes)
 
-Bạn có thể scale up hoặc scale down số Replica của cluster sau khi tạo mà không gây downtime.
+Bạn có thể scale up hoặc scale down số Replica của cluster sau khi tạo. Khi scale down, nếu Master nằm trong nhóm bị xóa, hệ thống tự động failover sang Replica và thao tác ghi bị gián đoạn ngắn trong lúc chuyển Master.
 
 ![](../../../.gitbook/assets/Redis-cluster/redis-edit-node.png)
 

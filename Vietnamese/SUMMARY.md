@@ -956,6 +956,7 @@
       * [Khởi tạo Redis Cluster](vdb/memorystore-database-service-mds/redis-cluster/khoi-tao-redis-cluster.md)
       * [Kết nối Redis Cluster](vdb/memorystore-database-service-mds/redis-cluster/ket-noi-redis-cluster.md)
       * [Quản lý Redis Cluster](vdb/memorystore-database-service-mds/redis-cluster/quan-ly-redis-cluster.md)
+      * [Giới hạn và hạn chế](vdb/memorystore-database-service-mds/redis-cluster/gioi-han-va-han-che.md)
   * [Kafka Cluster Database (KDS)](vdb/kafka-cluster-kds/README.md)
     * [Cách thức hoạt động](vdb/kafka-cluster-kds/cach-thuc-hoat-dong.md)
     * [Bắt đầu với Kafka Cluster](vdb/kafka-cluster-kds/bat-dau-voi-kafka-cluster.md)
