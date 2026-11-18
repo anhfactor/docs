@@ -46,7 +46,7 @@ This tab shows:
 
 ## Change Number of Replicas (Edit Number of Nodes)
 
-You can scale up or scale down the number of Replicas after cluster creation with no downtime.
+You can scale up or scale down the number of Replicas after cluster creation. When scaling down, if the Master is among the nodes being removed, the system automatically fails over to a Replica and writes are briefly interrupted while the Master switches.
 
 ![](<../../../.gitbook/assets/redis-edit-node (1).png>)
 

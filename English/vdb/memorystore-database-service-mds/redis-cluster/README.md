@@ -8,8 +8,8 @@
 
 Redis Cluster on vDB follows a **1 Master – N Replicas** model:
 
-* **Master node:** Handles all read and write operations.
-* **Replica nodes (2–9):** Asynchronously replicate data from the Master, serve read operations, and are ready for failover.
+* **Master node:** Handles all write operations. The write endpoint (port `6379`) always points to the Master.
+* **Replica nodes (2–9):** Asynchronously replicate data from the Master, serve read operations through the read endpoint (port `6380`, round-robin across Replicas), and are ready for failover.
 * **Automatic Failover:** When the Master fails, a Replica is automatically promoted to become the new Master. The cluster continues to operate after failover completes.
 
 ```
@@ -44,10 +44,10 @@ Replica 1  Replica 2 ...  ← Read / Failover
 
 ## Scaling Replicas
 
-You can change the number of Replicas in a Cluster after creation with **no downtime**. The system performs scaling step by step:
+You can change the number of Replicas in a Cluster after creation. The system performs scaling step by step:
 
 * **Scale up:** Adds one replica at a time, waiting for each replica to complete its initial sync before adding the next.
-* **Scale down:** Removes replicas in descending index order, waiting for each step to complete before proceeding.
+* **Scale down:** Removes replicas in descending index order, waiting for each step to complete before proceeding. If the Master is among the nodes being removed, the system automatically fails over to a Replica, and writes are briefly interrupted while the Master switches.
 
 {% hint style="warning" %}
 Each change can only increase or decrease by **1 node** at a time (current−1 or current+1), and the cluster must keep between **3 and 10 nodes**. Jumping multiple steps in a single action is not allowed. This ensures each sync completes before the next step, preventing replication errors during abrupt scaling.
@@ -78,4 +78,4 @@ Redis Cluster has built-in integration with **vBackup** to protect your data:
 | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Create a new Redis Cluster               | [Create a Redis Cluster](create-redis-cluster.md)                                                                                                 |
 | Manage topology, backups, delete cluster | [Manage a Redis Cluster](manage-redis-cluster.md)                                                                                                 |
-| View limitations and constraints         | [Limitations](https://github.com/vngcloud/docs/blob/main/English/vdb/memorystore-database-service-mds/redis-cluster/redis-cluster-limitations.md) |
+| View limitations and constraints         | [Limitations](limitations.md) |

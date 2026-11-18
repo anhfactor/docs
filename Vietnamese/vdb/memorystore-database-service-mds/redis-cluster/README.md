@@ -8,8 +8,8 @@
 
 Redis Cluster trên vDB hoạt động theo mô hình **1 Master – N Replicas**:
 
-* **Master node:** Xử lý toàn bộ read và write operations.
-* **Replica nodes (2–9):** Đồng bộ dữ liệu bất đồng bộ từ Master, phục vụ read operations và sẵn sàng failover.
+* **Master node:** Xử lý toàn bộ write operations. Endpoint ghi (port `6379`) luôn trỏ tới Master.
+* **Replica nodes (2–9):** Đồng bộ dữ liệu bất đồng bộ từ Master, phục vụ read operations qua endpoint đọc (port `6380`, round-robin qua các Replica) và sẵn sàng failover.
 * **Automatic Failover:** Khi Master gặp sự cố, một Replica được tự động promote thành Master mới. Cluster tiếp tục hoạt động sau khi failover hoàn tất.
 
 ```
@@ -44,10 +44,10 @@ Replica 1  Replica 2 ...  ← Read / Failover
 
 ## Scaling Replicas
 
-Bạn có thể thay đổi số lượng Replica của Cluster sau khi tạo mà **không gây downtime**. Hệ thống thực hiện scale theo từng bước:
+Bạn có thể thay đổi số lượng Replica của Cluster sau khi tạo. Hệ thống thực hiện scale theo từng bước:
 
 * **Scale up:** Thêm từng replica một, mỗi replica hoàn tất sync trước khi thêm node tiếp theo.
-* **Scale down:** Xóa replica theo thứ tự index giảm dần, mỗi bước chờ hoàn tất trước khi tiếp tục.
+* **Scale down:** Xóa replica theo thứ tự index giảm dần, mỗi bước chờ hoàn tất trước khi tiếp tục. Nếu Master nằm trong nhóm bị xóa, hệ thống tự động failover sang Replica, thao tác ghi bị gián đoạn ngắn trong lúc chuyển Master.
 
 {% hint style="warning" %}
 Mỗi lần thay đổi chỉ được tăng hoặc giảm **1 node** (current−1 hoặc current+1), và cluster phải giữ từ **3 đến 10 nodes**. Không thể nhảy nhiều bước trong một lần. Đây là cơ chế bảo vệ để đảm bảo sync hoàn tất trước mỗi bước tiếp theo, tránh lỗi replication khi scale đột ngột.
@@ -78,4 +78,4 @@ Redis Cluster tích hợp sẵn với **vBackup** để bảo vệ dữ liệu:
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tạo Redis Cluster mới                 | [Khởi tạo Redis Cluster](khoi-tao-redis-cluster.md)                                                                                                       |
 | Quản lý topology, backup, xóa cluster | [Quản lý Redis Cluster](quan-ly-redis-cluster.md)                                                                                                         |
-| Xem giới hạn và hạn chế               | [Giới hạn và hạn chế](https://github.com/vngcloud/docs/blob/main/Vietnamese/vdb/memorystore-database-service-mds/redis-cluster/gioi-han-redis-cluster.md) |
+| Xem giới hạn và hạn chế               | [Giới hạn và hạn chế](gioi-han-va-han-che.md) |

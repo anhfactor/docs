@@ -31,7 +31,9 @@ sudo make install
 
 1. Mở giao diện quản lý Database, chọn Redis Cluster cần kết nối.
 2. Chọn tab **Connectivity & Security**, xem mục **Endpoint & Port**.
-3. Ghi lại **IP** hoặc **Domain** của Instance và **Port** (mặc định `6379`).
+3. Ghi lại **IP** hoặc **Domain** của Instance và **Port**:
+   * `6379` — endpoint ghi, luôn trỏ tới Master.
+   * `6380` — endpoint đọc, round-robin qua các Replica. Dữ liệu đọc từ endpoint này có thể trễ hơn bản ghi mới nhất; cần read-your-writes thì dùng `6379`.
 4. Lấy thông tin xác thực: ACL user (mặc định `master-user`) và password.
 
 ![](../../../.gitbook/assets/Redis-cluster/ket-noi-redis-cluster-endpoint.png)
