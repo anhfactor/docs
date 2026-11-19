@@ -2,7 +2,7 @@
 
 Sử dụng tài liệu này để hiểu rõ hơn về các hình thức sử dụng tài nguyên theo loại người dùng. Ở cấp độ GreenNode Service, chúng tôi hỗ trợ 2 loại người dùng chính:
 
-* **Người dùng trả trước:** Là người dùng phải thanh toán chi phí sử dụng tài nguyên trước khi được phép sử dụn&#x67;**.** Thanh toán chi phí sử dụng tài nguyên theo cấu hình và thời gian muốn sử dụng (Cần xác định thời điểm ngừng sử dụng tài nguyên).
+* **Người dùng trả trước:** Là người dùng phải thanh toán chi phí sử dụng tài nguyên trước khi được phép sử dụng. Thanh toán chi phí sử dụng tài nguyên theo cấu hình và thời gian muốn sử dụng (Cần xác định thời điểm ngừng sử dụng tài nguyên).
 * **Người dùng trả sau:** Là người dùng được phép sử dụng tài nguyên trước và trả tiền sau, dựa trên chi phí sử dụng tài nguyên thực tế. Số tiền phải chi trả sẽ được chốt định kỳ mỗi cuối tháng cho đến khi người dùng không sử dụng tài nguyên nữa.
 
 Cùng điểm qua một số khác biệt về khái niệm cũng như quyền hạn và chức năng giữa 2 loại người dùng này đối với các dịch vụ GreenNode như:
@@ -35,7 +35,7 @@ Cùng điểm qua một số khác biệt về khái niệm cũng như quyền h
 * **Người dùng trả sau**
   * Ngay tại bước "Xác nhận", Product sẽ tiến hành cung cấp tài nguyên theo cấu hình người dùng yêu cầu, và hệ thống sẽ ghi nhận lại thời gian bắt đầu sử dụng tài nguyên.
 
-_→ Ghi chú: Vì là người dùng trả sau nên sẽ không cần phải thực hiện bước thanh toán tại &#x71;_&#x75;y trình thao tác trên tài nguyê&#x6E;_._
+_→ Ghi chú: Vì là người dùng trả sau nên không cần thực hiện bước thanh toán tại quy trình thao tác trên tài nguyên._
 
 #### 3. Quản lý tài nguyên <a href="#nguoidungtratruoc-and-trasau-3.quanlytainguyen" id="nguoidungtratruoc-and-trasau-3.quanlytainguyen"></a>
 
