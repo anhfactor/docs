@@ -1,5 +1,5 @@
 ---
-description: "Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview), served over the OpenAI-compatible Alibaba Cloud DashScope API. It sits between Max-Preview (top reasoning) and Flash (fastest / lowest cost), targeting medium-to-high complexity tasks at a balanced price-performance point. It ships with a 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) alongside function calling with structured output."
+description: "Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview). It sits between Max-Preview (top reasoning) and Flash (fastest / lowest cost), targeting medium-to-high complexity tasks at a balanced price-performance point. It ships with a 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) alongside function calling with structured output."
 ---
 
 # Qwen 3.6 Plus
@@ -8,7 +8,7 @@ description: "Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial 
 
 Model ID: `qwen/qwen3.6-plus` · Loại: Chat
 
-Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview), served over the OpenAI-compatible Alibaba Cloud DashScope API. It sits between Max-Preview (top reasoning) and Flash (fastest / lowest cost), targeting medium-to-high complexity tasks at a balanced price-performance point. It ships with a 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) alongside function calling with structured output.
+Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview). It sits between Max-Preview (top reasoning) and Flash (fastest / lowest cost), targeting medium-to-high complexity tasks at a balanced price-performance point. It ships with a 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) alongside function calling with structured output.
 
 ## Thông số
 

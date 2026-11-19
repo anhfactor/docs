@@ -1,5 +1,5 @@
 ---
-description: "Qwen3.8-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.8 commercial lineup, served over the OpenAI-compatible Alibaba Cloud DashScope API. It keeps the 1M-token context window of the family while allowing up to 128K output tokens, supports hybrid thinking / non-thinking modes, tool calling and structured output, and targets high-volume chat, classification and latency-sensitive agentic workloads."
+description: "Qwen3.8-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.8 commercial lineup. It keeps the 1M-token context window of the family while allowing up to 128K output tokens, supports hybrid thinking / non-thinking modes, tool calling and structured output, and targets high-volume chat, classification and latency-sensitive agentic workloads."
 ---
 
 # Qwen 3.8 Flash
@@ -8,7 +8,7 @@ description: "Qwen3.8-Flash is the cost-optimized, fastest tier of Alibaba's Qwe
 
 Model ID: `qwen/qwen3.8-flash` · Type: Chat
 
-Qwen3.8-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.8 commercial lineup, served over the OpenAI-compatible Alibaba Cloud DashScope API. It keeps the 1M-token context window of the family while allowing up to 128K output tokens, supports hybrid thinking / non-thinking modes, tool calling and structured output, and targets high-volume chat, classification and latency-sensitive agentic workloads.
+Qwen3.8-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.8 commercial lineup. It keeps the 1M-token context window of the family while allowing up to 128K output tokens, supports hybrid thinking / non-thinking modes, tool calling and structured output, and targets high-volume chat, classification and latency-sensitive agentic workloads.
 
 ## Specs
 
