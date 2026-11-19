@@ -765,6 +765,7 @@
     * [Resource Tag](vks/node-groups/resource-tag.md)
     * [Khởi tạo và làm việc với NVIDIA GPU Node Group](vks/node-groups/lam-viec-voi-nvidia-gpu-nodegroups.md)
     * [Sử dụng Multi-Instance GPU (MIG)](vks/node-groups/su-dung-multi-instance-gpu-mig.md)
+    * [Xóa các node được chọn trong Node Group](vks/node-groups/xoa-cac-node-duoc-chon.md)
     * [Worker Node Reserved Resources](vks/node-groups/worker-node-reserved-resources.md)
   * [Network](vks/network/README.md)
     * [Làm việc với Application Load Balancer (ALB)](vks/network/working-with-alb/README.md)

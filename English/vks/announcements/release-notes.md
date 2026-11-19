@@ -1,5 +1,14 @@
 # Release notes
 
+## Nov 19, 2026
+
+VKS (VNG Kubernetes Engine) has just released a new update with the following improvements:
+
+**New features:**
+
+* **Delete selected nodes in a Node Group:** when scaling down a Node Group, you can specify exactly which nodes are deleted right in the **View nodes** modal, instead of letting the system pick them. Supports delete-immediately (skip drain); if Autoscaling is enabled, the number of deletable nodes is limited by the **Minimum node** setting.
+  * See [Delete Selected Nodes in a Node Group](../node-groups/delete-selected-nodes.md) for details.
+
 ## Nov 13, 2026
 
 VKS (VNG Kubernetes Engine) has just released a new update with the following improvements:
