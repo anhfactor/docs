@@ -26,28 +26,28 @@ Không phải model nào cũng hỗ trợ mọi tham số. Kiểm tra `supported
 
 ## Mức hỗ trợ tham số theo model
 
-Đếm từ `supported_parameters` của 18 model chat công khai ngày 2026-11-18. Model được bật riêng cho từng tài khoản có thể khác — luôn kiểm tra `supported_parameters` của model qua `GET /v1/models`.
+Mức hỗ trợ khác nhau giữa các model. Luôn kiểm tra `supported_parameters` của model qua `GET /v1/models`.
 
-| Tham số | Số model chat hỗ trợ | Ghi chú |
-| --- | --- | --- |
-| `max_completion_tokens` | 18 / 18 | mọi model chat công khai |
-| `max_tokens` | 18 / 18 | mọi model chat công khai |
-| `parallel_tool_calls` | 18 / 18 | mọi model chat công khai |
-| `reasoning_effort` | 18 / 18 | mọi model chat công khai |
-| `seed` | 18 / 18 | mọi model chat công khai |
-| `tool_choice` | 18 / 18 | mọi model chat công khai |
-| `tools` | 18 / 18 | mọi model chat công khai |
-| `repetition_penalty` | 17 / 18 | xem `supported_parameters` của model |
-| `top_k` | 17 / 18 | xem `supported_parameters` của model |
-| `frequency_penalty` | 16 / 18 | xem `supported_parameters` của model |
-| `include_reasoning` | 16 / 18 | xem `supported_parameters` của model |
-| `min_p` | 16 / 18 | xem `supported_parameters` của model |
-| `presence_penalty` | 16 / 18 | xem `supported_parameters` của model |
-| `reasoning` | 16 / 18 | xem `supported_parameters` của model |
-| `temperature` | 16 / 18 | xem `supported_parameters` của model |
-| `top_p` | 16 / 18 | xem `supported_parameters` của model |
-| `response_format` | 15 / 18 | xem `supported_parameters` của model |
-| `stop` | 14 / 18 | xem `supported_parameters` của model |
-| `logprobs` | 11 / 18 | xem `supported_parameters` của model |
-| `top_logprobs` | 11 / 18 | xem `supported_parameters` của model |
-| `structured_outputs` | 10 / 18 | xem `supported_parameters` của model |
+| Tham số | Mức hỗ trợ |
+| --- | --- |
+| `max_completion_tokens` | Mọi model chat |
+| `max_tokens` | Mọi model chat |
+| `parallel_tool_calls` | Mọi model chat |
+| `reasoning_effort` | Mọi model chat |
+| `seed` | Mọi model chat |
+| `tool_choice` | Mọi model chat |
+| `tools` | Mọi model chat |
+| `repetition_penalty` | Tuỳ model, xem `supported_parameters` |
+| `top_k` | Tuỳ model, xem `supported_parameters` |
+| `frequency_penalty` | Tuỳ model, xem `supported_parameters` |
+| `include_reasoning` | Tuỳ model, xem `supported_parameters` |
+| `min_p` | Tuỳ model, xem `supported_parameters` |
+| `presence_penalty` | Tuỳ model, xem `supported_parameters` |
+| `reasoning` | Tuỳ model, xem `supported_parameters` |
+| `temperature` | Tuỳ model, xem `supported_parameters` |
+| `top_p` | Tuỳ model, xem `supported_parameters` |
+| `response_format` | Tuỳ model, xem `supported_parameters` |
+| `stop` | Tuỳ model, xem `supported_parameters` |
+| `logprobs` | Tuỳ model, xem `supported_parameters` |
+| `top_logprobs` | Tuỳ model, xem `supported_parameters` |
+| `structured_outputs` | Tuỳ model, xem `supported_parameters` |

@@ -26,28 +26,28 @@ Not every model supports every parameter. Check `supported_parameters` in [`GET 
 
 ## Parameter support by model
 
-Counted from `supported_parameters` of the 18 public chat models on 2026-11-18. Models enabled for a specific account may differ — always check the model's `supported_parameters` via `GET /v1/models`.
+Support varies by model. Always check the model's `supported_parameters` via `GET /v1/models`.
 
-| Parameter | Chat models supporting it | Note |
-| --- | --- | --- |
-| `max_completion_tokens` | 18 / 18 | all public chat models |
-| `max_tokens` | 18 / 18 | all public chat models |
-| `parallel_tool_calls` | 18 / 18 | all public chat models |
-| `reasoning_effort` | 18 / 18 | all public chat models |
-| `seed` | 18 / 18 | all public chat models |
-| `tool_choice` | 18 / 18 | all public chat models |
-| `tools` | 18 / 18 | all public chat models |
-| `repetition_penalty` | 17 / 18 | check `supported_parameters` of the model |
-| `top_k` | 17 / 18 | check `supported_parameters` of the model |
-| `frequency_penalty` | 16 / 18 | check `supported_parameters` of the model |
-| `include_reasoning` | 16 / 18 | check `supported_parameters` of the model |
-| `min_p` | 16 / 18 | check `supported_parameters` of the model |
-| `presence_penalty` | 16 / 18 | check `supported_parameters` of the model |
-| `reasoning` | 16 / 18 | check `supported_parameters` of the model |
-| `temperature` | 16 / 18 | check `supported_parameters` of the model |
-| `top_p` | 16 / 18 | check `supported_parameters` of the model |
-| `response_format` | 15 / 18 | check `supported_parameters` of the model |
-| `stop` | 14 / 18 | check `supported_parameters` of the model |
-| `logprobs` | 11 / 18 | check `supported_parameters` of the model |
-| `top_logprobs` | 11 / 18 | check `supported_parameters` of the model |
-| `structured_outputs` | 10 / 18 | check `supported_parameters` of the model |
+| Parameter | Support |
+| --- | --- |
+| `max_completion_tokens` | All chat models |
+| `max_tokens` | All chat models |
+| `parallel_tool_calls` | All chat models |
+| `reasoning_effort` | All chat models |
+| `seed` | All chat models |
+| `tool_choice` | All chat models |
+| `tools` | All chat models |
+| `repetition_penalty` | Varies by model, check `supported_parameters` |
+| `top_k` | Varies by model, check `supported_parameters` |
+| `frequency_penalty` | Varies by model, check `supported_parameters` |
+| `include_reasoning` | Varies by model, check `supported_parameters` |
+| `min_p` | Varies by model, check `supported_parameters` |
+| `presence_penalty` | Varies by model, check `supported_parameters` |
+| `reasoning` | Varies by model, check `supported_parameters` |
+| `temperature` | Varies by model, check `supported_parameters` |
+| `top_p` | Varies by model, check `supported_parameters` |
+| `response_format` | Varies by model, check `supported_parameters` |
+| `stop` | Varies by model, check `supported_parameters` |
+| `logprobs` | Varies by model, check `supported_parameters` |
+| `top_logprobs` | Varies by model, check `supported_parameters` |
+| `structured_outputs` | Varies by model, check `supported_parameters` |

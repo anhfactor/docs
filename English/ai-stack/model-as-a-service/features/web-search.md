@@ -5,7 +5,7 @@ description: "Add a web_search tool to your request and the gateway runs the sea
 # Web search
 
 {% hint style="info" %}
-Available on `google/gemma-4-31b-it` (checked on production 2026-11-14). Other models reject the tool (400 `invalid_request`) or answer without searching.
+Available on `google/gemma-4-31b-it`. Other models reject the tool (400 `invalid_request`) or answer without searching.
 {% endhint %}
 
 ## Adding the tool

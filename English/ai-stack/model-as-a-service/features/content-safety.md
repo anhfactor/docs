@@ -35,8 +35,4 @@ The request is answered with **400** and `x-ai-error-code: request_denied`. The 
 
 Guardrails are off unless they have been configured for your account. Settings are managed by GreenNode; [contact support](../help/support.md) to turn a guardrail on or adjust it.
 
-{% hint style="info" %}
-**Source**
 
-Response shapes are taken from the gateway source code; they were not triggered on production during the check of 2026-11-14.
-{% endhint %}

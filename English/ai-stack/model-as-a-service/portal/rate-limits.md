@@ -16,12 +16,6 @@ description: "Every account has a default request and token limit on each model.
 * A few models carry their own limit instead of the default (for example a daily request and token cap). The model page on the portal and the `x-ratelimit-*` headers of a response show the limit that applies to you.
 * An account that has been granted a higher limit uses that limit instead.
 
-{% hint style="info" %}
-**Checked on production**
-
-Default limit and counting scope verified against the production gateway configuration on 2026-11-14.
-{% endhint %}
-
 ## When you hit a limit
 
 The request returns `429` with `x-ai-error-code: request_denied` and a message naming the limit. The `x-ratelimit-*` response headers show which limit applied and how many seconds remain until it resets. See [Rate limits & limits](../api-reference/limits.md).

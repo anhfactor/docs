@@ -10,7 +10,7 @@ description: "Messages API tương thích Anthropic, dùng được với mọi 
 
 | Header | Bắt buộc | Giá trị | Mô tả |
 | --- | --- | --- | --- |
-| `x-api-key` | **Bắt buộc** | `<API_KEY>` | API key của bạn. `Authorization: Bearer`, `x-api-key` và `apikey` tương đương nhau. Thiếu → 401 `missing api key`; sai → 401 `unknown api key`. |
+| `x-api-key` | **Bắt buộc** | `<API_KEY>` | API key của bạn. Dùng `Authorization: Bearer` hoặc `x-api-key`. Thiếu → 401 `missing api key`; sai → 401 `unknown api key`. |
 | `Content-Type` | **Bắt buộc** | `application/json` | Body là JSON, UTF-8. |
 
 ## Tham số body

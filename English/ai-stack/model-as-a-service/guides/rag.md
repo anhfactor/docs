@@ -67,12 +67,6 @@ print(answer.choices[0].message.content)
 ```
 {% endcode %}
 
-{% hint style="warning" %}
-**Not run end to end**
-
-This example is assembled from the documented request and response shapes of each endpoint; it has not been executed against production as one script.
-{% endhint %}
-
 ## Tips
 
 * Split documents into passages that fit the embedding model's context (8,192 tokens for `bge-m3`).

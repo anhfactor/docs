@@ -5,7 +5,7 @@ description: "Thêm tool web_search vào request, gateway sẽ thực hiện tì
 # Tìm kiếm web
 
 {% hint style="info" %}
-Có trên `google/gemma-4-31b-it` (đã đối chiếu production ngày 2026-11-14). Các model khác từ chối tool (400 `invalid_request`) hoặc trả lời mà không tìm kiếm.
+Có trên `google/gemma-4-31b-it`. Các model khác từ chối tool (400 `invalid_request`) hoặc trả lời mà không tìm kiếm.
 {% endhint %}
 
 ## Thêm tool

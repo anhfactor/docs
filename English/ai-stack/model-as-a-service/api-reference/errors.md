@@ -84,11 +84,6 @@ A few responses come from the proxy layer before the request reaches a model. Th
 | 502 | `{"message":"An invalid response was received from the upstream server", …}` | On `/v1/…` endpoints: the gateway cannot read `model` from the body (the body is not valid JSON, is empty, or has no `model`), so the request cannot be routed. Send a valid JSON body with `model`. This is not retryable. |
 | 504 | `{"message":"The upstream server is timing out", …}` | The model did not answer within the request time limit. Use streaming or lower `max_tokens`. See [limits](limits.md). |
 
-{% hint style="info" %}
-**Checked on production**
-
-The 401, 404 `model_not_found`, 404 no-route, 405 and 502 responses above were observed on the production gateway on 2026-11-14 and re-checked on 2026-11-18.
-{% endhint %}
 
 ## Recommended retry policy
 
