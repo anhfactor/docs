@@ -1,7 +1,3 @@
----
-description: "DeepSeek-V4 Flash is the speed- and cost-optimized tier of the DeepSeek-V4 family. On the same MLA + DeepSeekMoE backbone it activates fewer experts per token to deliver high-throughput, low-latency responses for chat, summarization and lightweight reasoning, while preserving a 128K token context window. Served over an OpenAI-compatible API."
----
-
 # DeepSeek V4 Flash
 
 Model ID: `deepseek/deepseek-v4-flash` · Type: Chat

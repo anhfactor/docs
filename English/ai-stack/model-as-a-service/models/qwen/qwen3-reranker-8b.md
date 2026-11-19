@@ -1,7 +1,3 @@
----
-description: "Qwen3-Reranker-8B is an 8B text reranking model from the Qwen3 family. Given a query and candidate documents it returns a relevance score for each pair, used to reorder retrieval results in search and RAG pipelines."
----
-
 # Qwen 3 Reranker 8B
 
 Model ID: `qwen/qwen3-reranker-8b` · Type: Rerank

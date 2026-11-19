@@ -1,7 +1,3 @@
----
-description: "DeepSeek-V4.1-Flash is the lightweight flagship of DeepSeek's new Causal Encoder-Decoder architecture: a 552B-parameter Mixture-of-Experts model with 8B active parameters for input and 16B for output, out-performing DeepSeek-V4-Pro on key benchmarks. It offers native visual understanding (text + image input), deep thinking, a 1M-token context window and up to 384K output tokens. Available over the OpenAI Chat Completions, Anthropic Messages and Responses APIs."
----
-
 # DeepSeek V4.1 Flash
 
 Model ID: `deepseek/deepseek-v4.1-flash-thirdparty` · Loại: Chat
