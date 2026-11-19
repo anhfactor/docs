@@ -227,7 +227,7 @@ Thời gian này phụ thuộc vào size của volume, size volume càng lớn t
 
 ### \[vServer] IOPS có thể nâng lên tối đa bao nhiêu?
 
-Chúng tôi cho phép bạn nâng tối đa IOPS trong mức từ 200 đến 10000.
+Chúng tôi cho phép bạn nâng tối đa IOPS trong mức từ 3000 đến 60000.
 
 ### \[vServer] Tôi có thể add bao nhiêu volume trên một server ?
 
