@@ -23,15 +23,12 @@ https://maas-llm-aiplatform-hcm.api.vngcloud.vn
 
 ## Authentication
 
-Send your API key in one of these headers; use the one your SDK sends by default. If a request carries several, the gateway reads `Authorization` first, then `apikey`, then `x-api-key`.
+Send your API key in one of these two headers:
 
 | Header | Typical client |
 | --- | --- |
-| `Authorization: Bearer <key>` | OpenAI SDKs, curl, most tools |
-| `x-api-key: <key>` | Anthropic SDKs |
-| `apikey: <key>` | Legacy integrations |
-
-`GET /v1/models` does not accept the `apikey` header (returns 401); use `Authorization: Bearer` or `x-api-key` for that endpoint.
+| `Authorization: Bearer <key>` | OpenAI SDK, curl |
+| `x-api-key: <key>` | Anthropic SDK, Claude Code |
 
 Missing or unknown key → **401** `request_denied`. Model not enabled for the key → **403** `request_denied`.
 

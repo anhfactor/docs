@@ -26,13 +26,10 @@ Mặc định mỗi tài khoản có tối đa 50 API key. Tạo thêm sẽ báo
 
 ## Gửi key trong request
 
-Luôn gửi key trong header, không đặt trong URL hay body. Ba header dưới đây tương đương; dùng header mà SDK của bạn gửi mặc định.
-
 | Header | Client thường dùng |
 | --- | --- |
 | `Authorization: Bearer <API_KEY>` | OpenAI SDK, curl |
 | `x-api-key: <API_KEY>` | Anthropic SDK, Claude Code |
-| `apikey: <API_KEY>` | Tích hợp cũ |
 
 {% code title="shell" %}
 ```bash

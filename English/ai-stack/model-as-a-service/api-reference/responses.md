@@ -10,7 +10,7 @@ description: "OpenAI Responses API, available on every chat model. Used by Codex
 
 | Header | Required | Value | Description |
 | --- | --- | --- | --- |
-| `Authorization` | **Required** | `Bearer <API_KEY>` | Your API key. `Authorization: Bearer`, `x-api-key` and `apikey` are equivalent. Missing → 401 `missing api key`; wrong → 401 `unknown api key`. |
+| `Authorization` | **Required** | `Bearer <API_KEY>` | Your API key. Use `Authorization: Bearer` or `x-api-key`. Missing → 401 `missing api key`; wrong → 401 `unknown api key`. |
 | `Content-Type` | **Required** | `application/json` | The body is JSON, UTF-8. |
 
 ## Body parameters

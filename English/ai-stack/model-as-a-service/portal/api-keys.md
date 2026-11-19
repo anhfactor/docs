@@ -26,13 +26,10 @@ By default each account can have up to 50 API keys. Creating more returns “API
 
 ## Send the key
 
-Always send the key in a header, never in the URL or the body. The three headers below are equivalent; use the one your SDK sends by default.
-
 | Header | Typical client |
 | --- | --- |
 | `Authorization: Bearer <API_KEY>` | OpenAI SDK, curl |
 | `x-api-key: <API_KEY>` | Anthropic SDK, Claude Code |
-| `apikey: <API_KEY>` | Legacy integrations |
 
 {% code title="shell" %}
 ```bash

@@ -10,7 +10,7 @@ description: "OpenAI Responses API, dùng được với mọi model chat. Đư�
 
 | Header | Bắt buộc | Giá trị | Mô tả |
 | --- | --- | --- | --- |
-| `Authorization` | **Bắt buộc** | `Bearer <API_KEY>` | API key của bạn. `Authorization: Bearer`, `x-api-key` và `apikey` tương đương nhau. Thiếu → 401 `missing api key`; sai → 401 `unknown api key`. |
+| `Authorization` | **Bắt buộc** | `Bearer <API_KEY>` | API key của bạn. Dùng `Authorization: Bearer` hoặc `x-api-key`. Thiếu → 401 `missing api key`; sai → 401 `unknown api key`. |
 | `Content-Type` | **Bắt buộc** | `application/json` | Body là JSON, UTF-8. |
 
 ## Tham số body

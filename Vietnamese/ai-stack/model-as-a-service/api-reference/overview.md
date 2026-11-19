@@ -23,15 +23,12 @@ https://maas-llm-aiplatform-hcm.api.vngcloud.vn
 
 ## Xác thực
 
-Gửi API key qua một trong các header sau; dùng header mà SDK của bạn gửi mặc định. Nếu request có nhiều header, gateway đọc `Authorization` trước, rồi `apikey`, rồi `x-api-key`.
+Gửi API key qua một trong hai header sau:
 
 | Header | Client thường dùng |
 | --- | --- |
-| `Authorization: Bearer <key>` | OpenAI SDKs, curl, most tools |
-| `x-api-key: <key>` | Anthropic SDKs |
-| `apikey: <key>` | Tích hợp cũ |
-
-`GET /v1/models` không nhận header `apikey` (trả 401); với endpoint này hãy dùng `Authorization: Bearer` hoặc `x-api-key`.
+| `Authorization: Bearer <key>` | OpenAI SDK, curl |
+| `x-api-key: <key>` | Anthropic SDK, Claude Code |
 
 Thiếu key hoặc key không hợp lệ → **401** `request_denied`. Model chưa được bật cho key → **403** `request_denied`.
 
