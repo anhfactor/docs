@@ -1,7 +1,3 @@
----
-description: "BGE-M3 is a multilingual text embedding model from BAAI. It supports more than 100 languages and inputs of up to 8,192 tokens, for semantic search and retrieval-augmented generation (RAG)."
----
-
 # BGE-M3
 
 Model ID: `baai/bge-m3` · Loại: Embedding

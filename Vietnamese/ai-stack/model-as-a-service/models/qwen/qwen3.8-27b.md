@@ -1,7 +1,3 @@
----
-description: "Qwen3.8-27B is a 27B-parameter open-weight model from the Qwen3.8 family, self-hosted on GreenNode infrastructure. It supports a 1M-token context window, text and image input, hybrid thinking / non-thinking modes and tool calling, exposed over OpenAI Chat Completions, Anthropic Messages and OpenAI Responses APIs."
----
-
 # Qwen 3.8 27B
 
 Model ID: `qwen/qwen3.8-27b` · Loại: Chat

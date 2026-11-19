@@ -1,7 +1,3 @@
----
-description: "GLM-5.2 is Z.ai's open-weight flagship model for agentic engineering, released June 13, 2026. Built on a 744B-parameter Mixture-of-Experts architecture with ~40B active parameters per token, it delivers a 1M-token context window (up to 131K output tokens) and introduces IndexShare sparse-attention reuse for ~2.9x lower per-token FLOPs at 1M context plus improved speculative decoding. It is among the leading open-weight models for long-horizon coding, with function calling, structured output, context caching, streaming, MCP integration and selectable thinking-effort levels (High/Max). Weights are published under the MIT license."
----
-
 # GLM-5.2
 
 Model ID: `z-ai/glm-5.2-thirdparty` · Type: Chat

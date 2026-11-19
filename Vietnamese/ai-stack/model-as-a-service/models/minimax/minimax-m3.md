@@ -1,7 +1,3 @@
----
-description: "MiniMax-M3 is MiniMax's natively multimodal frontier model (released 2026-06-01), built on MSA (MiniMax Sparse Attention) which sharply cuts the compute cost of 1M-token context. It accepts text, image and video input with a 1M-token context window and up to 512K output tokens, and exposes both the OpenAI Chat Completions API and the Anthropic Messages API. Reasoning is adaptive by default and can be turned off via thinking.type, or split out of the answer via reasoning_split. Tuned for frontier agentic coding and computer-use workloads."
----
-
 # MiniMax M3
 
 Model ID: `minimax/minimax-m3` · Loại: Chat

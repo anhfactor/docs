@@ -1,7 +1,3 @@
----
-description: "GreenNode IDP is an Intelligent Document Processing solution researched and developed by GreenNode. Unlike traditional OCR technologies that only convert images into plain text, GreenNode IDP integrates three core technologies—OCR, GenAI, and LLM—allowing the system not only to recognize but also to understand semantics, accurately extract data, validate information, and automatically classify documents."
----
-
 # GreenNode IDP
 
 Model ID: `greennode/idp` · Loại: OCR
