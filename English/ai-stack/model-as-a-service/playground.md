@@ -69,7 +69,7 @@ When using Playground, you can adjust the following parameters to control model 
 * Document type: 15 types (Default: Citizen ID).
 * File type: Image (jpg, png, bmp, tif; up to 10 MB) or PDF (up to 50 MB).
 
-For more detailed parameters, refer to the documentation of [vLLM](https://docs.vllm.ai) and [OpenAI](https://platform.openai.com/docs/api-reference/introduction).
+See [Parameters](api-reference/parameters.md) for details on each parameter.
 
 ### Model Comparison
 

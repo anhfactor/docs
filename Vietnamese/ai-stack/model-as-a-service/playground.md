@@ -67,7 +67,7 @@ Khi sử dụng Playground, bạn có thể điều chỉnh các thông số sau
 * Loại tài liệu: 15 loại (Mặc định: Căn cước công dân).
 * Loại tệp: Ảnh (jpg, png, bmp, tif; tối đa 10 MB) hoặc PDF (tối đa 50 MB).
 
-Để xem thêm các thông số chi tiết, bạn có thể tham khảo tài liệu của [vLLM](https://docs.vllm.ai) và [OpenAI](https://platform.openai.com/docs/api-reference/introduction).
+Xem chi tiết từng tham số tại [Tham số](api-reference/parameters.md).
 
 ### So sánh mô hình
 
