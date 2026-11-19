@@ -20,7 +20,6 @@ Thanh toán trực tuyến là 1 trong những phương thức thanh toán chín
     * Thành công: Phát sinh lịch sử hóa đơn tại [Billing History](https://dashboard.console.greennode.ai/billing-report)
     * Thất bại: Hoàn tiền (Phát sinh giao dịch hoàn tiền tại[ Credit History](https://dashboard.console.greennode.ai/credit-history)), Hủy tác vụ
 * **Kết quả khi hoàn thành tác vụ:**
-  * Gửi mail thông báo thông tin cấu hình tài nguyên
   * Phát sinh các lịch sử giao dịch tại [Credit History](https://dashboard.console.greennode.ai/credit-history), [Payment History](https://dashboard.console.greennode.ai/payment-history), [Billing History](https://dashboard.console.greennode.ai/billing-report)
 
 #### Hiện tại, tính năng thanh toán trực tuyến tại GreenNode đang hỗ trợ các phương thức thanh toán sau: <a href="#thanhtoantructuyen-hientai-tinhnangthanhtoantructuyentaivngclouddanghotrocacphuongthucthanhtoansau" id="thanhtoantructuyen-hientai-tinhnangthanhtoantructuyentaivngclouddanghotrocacphuongthucthanhtoansau"></a>
