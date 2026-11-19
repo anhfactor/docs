@@ -29,9 +29,9 @@ The full model list (Model ID, context length, input, endpoints, reasoning) is k
 
 Models are offered in one of two ways:
 
-* **GreenNode self-host** (GreenNode Model) — the model is deployed and operated directly by GreenNode on GreenNode infrastructure.
-* **Third-party** (Third-party Model) — the model is operated by a third-party provider; the request is forwarded to that provider under an official contract.
+* **GreenNode self-host** — the model runs on GreenNode infrastructure.
+* **Third-party** — the request is forwarded to the model vendor under an official contract.
 
-The 99.90% uptime commitment applies to GreenNode Models only, not to Third-party Models. See [SLA](sla.md).
+Under the [SLA](sla.md), the commitment applies to the availability of the Service for GreenNode Models; GreenNode does not commit to any SLA for Third-party Models.
 
 MaaS supports these model types: **Chat**, **Embedding**, **Rerank** and **OCR**.

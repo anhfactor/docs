@@ -47,7 +47,9 @@ Trang Models có bộ lọc ở thanh bên trái:
 
 ## Self-host và third-party
 
-Model chạy trên hạ tầng GreenNode (**GreenNode self-host**) hoặc được chuyển tới nhà cung cấp model theo hợp đồng chính thức (**Third-party**). Một số dòng model có cả hai; biến thể qua đối tác có ID kết thúc bằng `-thirdparty` và công tắc bật/tắt riêng. Cam kết SLA chỉ áp dụng cho model GreenNode self-host, xem [Cam kết SLA](../cam-ket-sla.md).
+Model chạy trên hạ tầng GreenNode (**GreenNode self-host**) hoặc được chuyển tới nhà cung cấp model theo hợp đồng chính thức (**Third-party**). Một số dòng model có cả hai; biến thể qua đối tác có ID kết thúc bằng `-thirdparty` và công tắc bật/tắt riêng.
+
+Theo [Cam kết SLA](../cam-ket-sla.md), cam kết áp dụng đối với tính sẵn sàng của Dịch Vụ đối với các Mô Hình GreenNode; GreenNode không cam kết SLA đối với Mô Hình Bên Thứ Ba.
 
 ## Kiểm tra kết quả
 

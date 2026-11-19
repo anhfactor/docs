@@ -15,7 +15,7 @@ description: "Gateway làm gì khi backend của model lỗi, và phần nào th
 
 * Retry 429 và 5xx với exponential backoff kèm jitter, tuân theo `Retry-After`. Xem [Lỗi](../api-reference/errors.md).
 * Request streaming bị lỗi không được gateway retry, và stream đã bắt đầu rồi đứt thì không nối lại được. Hãy retry toàn bộ request.
-* Với luồng quan trọng, chuẩn bị model thứ hai (ví dụ biến thể `-thirdparty`, hoặc dòng model khác; lưu ý model third-party không thuộc phạm vi [Cam kết SLA](../cam-ket-sla.md)) và chuyển sang khi gặp `pool_exhausted` hoặc `upstream_error` lặp lại.
+* Với luồng quan trọng, chuẩn bị model thứ hai (ví dụ biến thể `-thirdparty`, hoặc dòng model khác; lưu ý GreenNode không cam kết SLA đối với Mô Hình Bên Thứ Ba, xem [Cam kết SLA](../cam-ket-sla.md)) và chuyển sang khi gặp `pool_exhausted` hoặc `upstream_error` lặp lại.
 * Tự bảo đảm tính idempotent phía bạn: request retry là một lần sinh mới và bị tính phí lần nữa nếu lần đầu đã sinh nội dung.
 
 ## Timeout

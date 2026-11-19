@@ -47,7 +47,9 @@ The Models page has filters in the left sidebar:
 
 ## Self-hosted and third-party
 
-A model is either hosted on GreenNode infrastructure (**GreenNode self-host**) or forwarded to the model vendor under an official contract (**Third-party**). Some model families are offered both ways; the partner variant has an ID ending in `-thirdparty` and its own on/off switch. The SLA covers GreenNode self-host models only, see [SLA](../sla.md).
+A model is either hosted on GreenNode infrastructure (**GreenNode self-host**) or forwarded to the model vendor under an official contract (**Third-party**). Some model families are offered both ways; the partner variant has an ID ending in `-thirdparty` and its own on/off switch.
+
+Under the [SLA](../sla.md), the commitment applies to the availability of the Service for GreenNode Models; GreenNode does not commit to any SLA for Third-party Models.
 
 ## Check the result
 

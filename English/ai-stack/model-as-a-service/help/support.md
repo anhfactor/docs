@@ -30,7 +30,8 @@ description: "How to reach GreenNode, what to include in a report, and the terms
 | Reasoning tokens | Tokens the model spends thinking before the answer. Billed as output. |
 | Cached tokens | Input tokens served from the prompt cache, billed at the cache price. |
 | RPM / TPM | Requests per minute / tokens per minute. |
-| Self-host / Third-party | GreenNode Model (operated directly by GreenNode on GreenNode infrastructure) or Third-party Model (operated by a third-party provider). The SLA covers GreenNode Models only, see [SLA](../sla.md). |
+| Self-host / Third-party | Where a model runs: on GreenNode infrastructure, or at the model vendor under contract. |
 | SSE | Server-sent events, the format used for streaming. |
+| SLA | Service Level Agreement. GreenNode does not commit to any SLA for Third-party Models. See [SLA](../sla.md). |
 | RAG | Retrieval-augmented generation: answering from retrieved documents. |
 | Prepaid / Postpaid | Pay from credits bought in advance, or be invoiced monthly. |

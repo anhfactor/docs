@@ -15,7 +15,7 @@ description: "What the gateway does when a model backend fails, and what is left
 
 * Retry 429 and 5xx with exponential backoff and jitter, honouring `Retry-After`. See [Errors](../api-reference/errors.md).
 * A streaming request that fails is not retried by the gateway, and a stream that breaks after it started cannot be resumed. Retry the whole request.
-* For critical paths keep a second model (for example the `-thirdparty` variant, or another family; note that third-party models are outside the [SLA](../sla.md)) and switch to it on repeated `pool_exhausted` or `upstream_error`.
+* For critical paths keep a second model (for example the `-thirdparty` variant, or another family; note that GreenNode does not commit to any SLA for Third-party Models, see [SLA](../sla.md)) and switch to it on repeated `pool_exhausted` or `upstream_error`.
 * Make requests idempotent on your side: a retried request is a new generation and is billed again if the first one produced output.
 
 ## Timeouts

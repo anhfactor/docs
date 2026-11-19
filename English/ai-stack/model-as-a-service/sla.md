@@ -1,115 +1,149 @@
 ---
 description: >-
-  The Service Level Agreement (SLA) for GreenNode AI MaaS, version 2026.1:
-  committed uptime, scope, service credits, maintenance, response times and the
-  complaint process.
+  The Service Level Agreement (SLA) for GreenNode AI MaaS, version 2026.1,
+  effective from November 9th 2026.
 ---
 
 # SLA
 
 {% hint style="info" %}
-This page summarises the **AI MaaS (Model as a Service) Service Level Agreement, version 2026.1, effective from November 9th 2026**. The legally binding text is at [GreenNode Terms of Service — SLA](https://greennode.ai/terms-of-service/vietnam/service-level-agreement). If anything here differs, that text prevails.
+The content below is quoted verbatim from the AI MaaS Service Level Agreement at [greennode.ai/terms-of-service/vietnam/service-level-agreement](https://greennode.ai/terms-of-service/vietnam/service-level-agreement).
 {% endhint %}
 
-## Committed monthly uptime
+**AI MaaS (Model as a Service)**
 
-| Service | Committed Monthly Uptime Percentage | Calculation Unit | Acceptable Downtime Equivalent |
-| --- | --- | --- | --- |
-| AI MaaS | **99.90%** | Model | Equivalent to 43 minutes 28 seconds |
+_Version 2026.1, effective from November 9th 2026_
 
-**Scope of commitment:** the commitment applies to the availability of the Service for **GreenNode Models**. GreenNode does not commit to any SLA for:
+This Service Level Agreement ("SLA") is a commitment of Vi Na Data Information Technology - Service Joint Stock Company ("GreenNode") to the Customer, the party using the services of GreenNode, and is considered as a commitment on service quality to ensure benefits for all Customers.
 
-* Third-party Models;
-* Performance metrics of the Service, including but not limited to tokens per minute (TPM), requests per minute (RPM), response speed and similar metrics.
+This SLA applies to GreenNode's AI MaaS (Model as a Service) service (the "Service") – a service that provides artificial intelligence (AI) models through an application programming interface (API), which is further described [here](https://docs.greennode.ai/ai-stack/model-as-a-service).
 
-## Concepts and definitions
+## 1. CONCEPTS AND DEFINITIONS
 
-| Term | Definition |
-| --- | --- |
-| **GreenNode Model** | AI models directly deployed and operated by GreenNode on GreenNode's infrastructure. |
-| **Third-party Model** | AI models operated by a third-party provider and made available to the Customer by GreenNode through the Service. The list of models and their classification are published and updated on the Service Console. |
-| **Unavailable State** (Downtime) | The period during which the Service is unavailable due to GreenNode's fault, excluding maintenance periods, the permitted unavailability cases and other cases excluded in the SLA. |
-| **Monthly Uptime Period** | Total minutes in the month minus the minutes the Service is in the Unavailable State due to GreenNode's fault, excluding maintenance periods, suspension caused by a Force Majeure Event and other excluded cases. |
-| **Monthly Downtime Percentage** | Total time in the Unavailable State divided by the total time in the month, multiplied by 100. |
-| **Monthly Uptime Percentage** | 100% minus the Monthly Downtime Percentage. |
-| **Force Majeure Event** | An event that happens in an objective, unpredictable and irreparable manner despite all necessary measures, including but not limited to natural disasters, enemy sabotage, extreme weather, sabotage actions, protests, strikes and bans from Government Agencies. |
-| **Credit** | The value recorded in the Customer's Service account and used to pay for the Service in accordance with GreenNode's pricing policy. |
+**1.1.** "Customer"/ "Service User": means any individual or entity using GreenNode's Service.
 
-### When the Service is in the Unavailable State
+**1.2.** "GreenNode Model": means the AI models directly deployed and operated by GreenNode on GreenNode's infrastructure. "Third-party Model": means the AI models operated by a third-party provider and made available to the Customer by GreenNode through the Service. The list of available models and theirification are published and updated by GreenNode on the [Service Console](https://aiplatform.console.greennode.ai/models).
 
-The Unavailable State is determined when one or more of the following occurs:
+**1.3.**
+
+"Unavailable State" or "Downtime": refers to the period during which the Service is unavailable due to GreenNode's fault and excludes: (i) maintenance periods; (ii) periods during which the Service falls under any of the permitted unavailability cases as stipulated in Clause 4 of this SLA; and (iii) any other cases as excluded in this SLA.
+
+The "Unavailable State" of the Service shall be determined when one or more of the following cases occurs:
 
 * a. The Service system stops responding to the Customer's API requests;
 * b. The server operating the Service stops operating.
 
-Time in the Unavailable State is counted from the earlier of (i) the time GreenNode's monitoring system records the incident and (ii) the time the Customer notifies GreenNode of the incident, provided that GreenNode confirms the incident falls within the scope of the Service, until the Service resumes operation.
+The time in the Unavailable State is counted from the earlier of (i) the time GreenNode's monitoring system records the incident and (ii) the time the Customer notifies GreenNode of the incident in accordance with Clause 6 of this SLA, provided that GreenNode confirms the incident falls within the scope of the Service, until the time the Service resumes operation.
 
-## Formula
+**1.4.** "Monthly Uptime Period": means the total number of minutes in the month minus the total number of minutes in that month during which the Service is in the Unavailable State due to GreenNode's fault, excluding maintenance periods, Service suspension caused by a Force Majeure Event and other cases excluded in this SLA.
 
-| Service | Formula |
+**1.5.** "Monthly Downtime Percentage": is calculated by dividing the total time the Service is in the Unavailable State by the total time in the month, then multiplied by 100.
+
+**1.6.** "Monthly Uptime Percentage": is calculated as 100% minus the "Monthly Downtime Percentage".
+
+**1.7.** "Force Majeure Event": means an event that happens in an objective, unpredictable and irreparable manner despite the application of all necessary measures and in the permissible capacity, including but not limited to natural disasters, enemy sabotage, extreme weather phenomena, sabotage actions, protests, strikes, and bans from Government Agencies.
+
+**1.8.** "Credit": means the value recorded in the Customer's Service account and used to pay for the use of the Service in accordance with GreenNode's pricing policy.
+
+## 2. MONTHLY UPTIME PERCENTAGE FORMULA
+
+| **Service** | **Formula** |
 | --- | --- |
-| AI MaaS | Uptime = 100% − Monthly Downtime Percentage |
+| AI MaaS | Uptime = 100% - "Monthly Downtime Percentage" |
 
-## Service credits
+## 3. GREENNODE'S COMMITMENT ON MONTHLY UPTIME PERCENTAGE
 
-If the Service fails the committed Monthly Uptime Percentage, GreenNode provides a Service credit as **Credit added to the Customer's Service account**:
+**3.1.**
 
-| Monthly Uptime Percentage | Service Rate to compensate |
+Service Level Commitment
+
+| **Services** | **Committed Monthly Uptime Percentage** | **Calculation Unit** | **Acceptable Downtime Equivalent** |
+| --- | --- | --- | --- |
+| AI MaaS | 99.90% | Model | Equivalent to 43 minutes 28 seconds |
+
+Scope of commitment: the above commitment applies to the availability of the Service for GreenNode Models. GreenNode does not commit to any SLA for:
+
+* a. Third-party Models;
+* b. Performance metrics of the Service, including but not limited to tokens per minute (TPM), requests per minute (RPM), response speed and similar metrics.
+
+**3.2.**
+
+GreenNode's responsibility for failure of Service Level Commitment
+
+In case that the Service fails the committed Monthly Uptime Percentage as stated above, GreenNode is responsible for providing the corresponding Service credit to the Customer in the form of Credit added to the Customer's Service account. The Service rate to compensate shall be determined as follows:
+
+| **Monthly Uptime Percentage** | **Service Rate to compensate** |
 | --- | --- |
 | From 95% to less than 99.90% | 10% |
 | From 90% to less than 95% | 30% |
 | Below 90% | 100% |
 
-The compensation value is calculated as follows:
+The compensation value is calculated based on the above percentage as follows:
 
-* **Token plan:** when any GreenNode Model in the plan fails the commitment, the Monthly Uptime Percentage is determined for the entire plan and the compensation is calculated on the value of the plan in that month's payment cycle.
-* **Pay-as-you-go:** the Monthly Uptime Percentage is determined separately for each affected GreenNode Model and the compensation is calculated on the total Credit the Customer used for that model in the month of the incident.
+* a. For Customers using a token plan: when any GreenNode Model included in the plan fails the commitment, the Monthly Uptime Percentage is determined for the entire plan and the compensation value is calculated on the value of the plan in the payment cycle of that month;
+* b. For pay-as-you-go Customers: the Monthly Uptime Percentage is determined separately for each affected GreenNode Model and the compensation value is calculated on the total Credit the Customer has used for that model in the month in which the incident occurs.
 
-## Permitted unavailability
+## 4. PERMITTED UNAVAILABILITY
 
-* The Service is interrupted due to maintenance under **System maintenance** below.
-* The Service is inaccessible due to a Force Majeure Event.
-* The Service is unavailable due to interruption, performance degradation, change or discontinuation on the part of the Third-party Model provider, beyond GreenNode's control.
-* The Service is unavailable due to causes not arising from GreenNode's fault; Downtime is counted only when the Unavailable State arises from GreenNode's fault.
-* Other cases excluded under the SLA, GreenNode's Terms of Service or the service contract (if any).
+**4.1.** Service is interrupted due to the maintenance in accordance with Clause 5 of this SLA.
 
-## System maintenance
+**4.2.** The Service is inaccessible due to Force Majeure Event.
 
-Maintenance can be scheduled on any day of the week (including weekends) and at any time of day; GreenNode endeavours to carry it out when it least affects Customers. When maintenance requires a temporary suspension of the Service, GreenNode notifies Customers by telephone, email or on the homepage [greennode.ai](https://greennode.ai/):
+**4.3.** The Service is unavailable due to interruption, performance degradation, change or discontinuation on the part of the Third-party Model provider, which is beyond GreenNode's control.
 
-| Case | Notice |
-| --- | --- |
-| Periodic maintenance | Three (03) working days in advance |
-| Emergency maintenance | At least thirty (30) minutes in advance |
-| Incidents beyond GreenNode's control, including Force Majeure Events | Within four (4) working hours of the incident |
+**4.4.** The Service is unavailable due to causes not arising from GreenNode's fault; Downtime is counted only when the Unavailable State arises from GreenNode's fault.
 
-Total maintenance time affecting the Customer's Service in one (1) month **does not exceed 120 minutes**.
+**4.5.** Other cases excluded under this SLA, GreenNode's Terms of Service or the service contract (if any).
 
-## Response and resolution times
+## 5. SYSTEM MAINTENANCE
 
-Contact: 24/7 support call centre **1900 1549**, website [greennode.ai](https://greennode.ai/) or email [support@greennode.ai](mailto:support@greennode.ai).
+**5.1.** System maintenance is mandatory to ensure the continuity of the Service provided to Customer. The maintenance can be scheduled on any day of the week (including weekend) and at any time of the day. However, GreenNode shall endeavor to carry out the maintenance at the time that least affects Customer's use of the Service.
 
-| Item | Time |
-| --- | --- |
-| Response to a troubleshooting request | Within 15 minutes of receiving the request |
-| Response and troubleshooting | From 15 minutes up to 48 working hours after responding to the request |
-| Serious problems | May be longer, but not more than 72 working hours after responding to the request |
+**5.2.**
 
-## Complaint process
+When performing mandatory system maintenance requiring temporary suspension of the Service, GreenNode shall notify Customer in advance via telephone or email on GreenNode's system or on the homepage [https://greennode.ai/](https://greennode.ai/), within the advance notice period as follows:
 
-Send in writing or by email to [support@greennode.ai](mailto:support@greennode.ai), including:
+* a. Three (03) working days in advance before expected day of periodic maintenance.
+* b. Thirty (30) minutes in advance before expected time of maintenance in emergency maintenance cases.
+* c. Within four (4) working hours since the time the incident occurs for emergency maintenance due to incidents beyond the control of GreenNode, including the occurrence of any Force Majeure Event.
 
-* Email or document subject: **"Request to compensate according to SLA commitment"**;
-* The affected account;
-* The specific dates, times and moments the Service was in the Unavailable State;
-* Error logs or screenshots at the time of the error (blur or hide confidential information);
-* Data-loss claims are considered only with an official assessment from an independent, legally authorised assessment organisation; the Customer bears its cost;
-* Damages and their value, with supporting documents and invoices;
-* The compensation requested.
+**5.3.** GreenNode commits that the total maintenance time affecting the Customer's Service in one (1) month shall not exceed one hundred and twenty (120) minutes.
 
-| Item | Deadline |
-| --- | --- |
-| Filing a complaint | Within three (3) months of the incident; later complaints are not accepted |
-| Response and resolution | Within 15 working days of receipt |
+## 6. COMMITMENT ON THE TIME FOR FEEDBACK, RESPONSE AND RESOLUTION OF PROBLEMS
 
-If the Customer is dissatisfied with the resolution, they can send feedback again; it is handled as a new complaint.
+**6.1.**
+
+Forms of contact for receiving and solving problems:
+
+* a. Via 24/7 support call center: 1900 1549
+* b. Via website or email: [https://greennode.ai/](https://greennode.ai/); [support@greennode.ai](mailto:support@greennode.ai)
+
+**6.2.**
+
+Response time:
+
+* a. Response time for troubleshooting request: within 15 minutes since the time the request is received.
+* b. Response time and troubleshooting time for the Customer's problems: within 15 minutes up to 48 working hours since the time of responding to troubleshooting request.
+* c. For serious problems, response time can be longer, but not exceed 72 working hours since the time of responding to troubleshooting request.
+
+## 7. PROCESS OF RECEIVING AND RESPONDING TO COMPLAINTS
+
+Forms of contact for receiving complaints: in document or send email via [support@greennode.ai](mailto:support@greennode.ai)
+
+**7.1.**
+
+Content of complaints: in order to save the Customer's time, when sending complaints to GreenNode, the Customer should sufficiently provide the following information:
+
+* a. Email or Document subject must be clearly stated: "Request to compensate according to SLA commitment";
+* b. The information of the account affected;
+* c. Specific date and time and the moments when the system, and Service used by the Customer fall into the Unavailable State;
+* d. Logs recording errors or screenshots at the time the error occurs (the Customer's confidential information should be blurred or hidden);
+* e. All claims regarding data loss shall only be received and considered by GreenNode when accompanied by an official assessment document issued by an independent assessment organization with legal functions (which clearlyentifies the cause of data loss, the list and volume of lost data). The entire cost related to this assessment shall be borne by the Customer.
+* f. Damages to the Customer and the value of damages accompanied by relevant documents and invoices;
+* g. The level of compensation that the Customer requires.
+
+**7.2.** Time to receive complaints: within three (3) months since the incident occurs; more than the above-mentioned time, GreenNode shall not accept and resolve any relevant complaints.
+
+**7.3.** Time to respond and resolve complaints: within 15 (fifteen) working days since the day the complaint is received.
+
+**7.4.** In case the Customer is dissatisfied with the resolution documents of GreenNode, the Customer can resend feedback to GreenNode; in this case, the Customer's feedback shall be received and processed as a new Complaint.
