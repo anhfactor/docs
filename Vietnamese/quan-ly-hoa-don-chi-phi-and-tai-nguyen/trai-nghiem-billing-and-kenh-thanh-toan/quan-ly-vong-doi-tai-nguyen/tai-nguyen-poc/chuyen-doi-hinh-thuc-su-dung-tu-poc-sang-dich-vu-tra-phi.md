@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Chuyển đổi hình thức sử dụng từ POC sang dịch vụ trả phí
 
 Tại GreenNode Service, chúng tôi hỗ trợ người dùng thay đổi mục đích sử dụng tài nguyên một cách linh hoạt, từ giai đoạn POC chuyển sang dịch vụ trả phí trên cùng một tài nguyên. Việc chuyển đổi mục đích sử dụng trên mang lại lợi ích đáng kể như _**tiết kiệm thời gian khởi tạo tài nguyên mới (cấu hình, thanh toán,...), tối ưu hóa chi phí sử dụng, tái sử dụng dữ liệu cũ cho mục địch mới,...**_

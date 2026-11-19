@@ -1,6 +1,6 @@
 # Tài nguyên POC
 
-Tài nguyên POC sinh ra nhằm mục đích hỗ trợ người dùng có thể trải nghiệm dịch vụ tại GreenNode một cách tốt nhất.&#x20;
+Tài nguyên POC sinh ra nhằm mục đích hỗ trợ người dùng có thể trải nghiệm dịch vụ tại GreenNode một cách tốt nhất.
 
 Điều kiện sử dụng tài nguyên POC:
 
@@ -13,7 +13,7 @@ Tài nguyên POC sinh ra nhằm mục đích hỗ trợ người dùng có thể
 
 ***
 
-* **Bước 1: Cấu hình tài nguyên**&#x20;
+* **Bước 1: Cấu hình tài nguyên**
   * 1.1 Truy cập vào trang sản phẩm **vServer, vStorage, vMonitor**
   * 1.2 Chọn tài nguyên và cấu hình cần sử dụng tại trang sản phẩm
   * 1.3 Nhấn chọn sử dụng tài nguyên POC
@@ -21,7 +21,7 @@ Tài nguyên POC sinh ra nhằm mục đích hỗ trợ người dùng có thể
 * **Bước 2: Thanh toán tài nguyên bằng ví POC**
   * Xem hướng dẫn chi tiết [**tại đây**](../../thanh-toan/thanh-toan-tai-nguyen-poc.md)
 * **Bước 3: Hệ thống thực hiện**
-  * Cung cấp tài nguyên&#x20;
+  * Cung cấp tài nguyên
   * Email thông báo thông tin tài nguyên vừa khởi tạo
 
 **Một số lưu ý khi khởi tạo tài nguyên POC**
@@ -49,16 +49,14 @@ Quy trình và phương thức tính giá tương tự như khi gia hạn tài n
 
 ***
 
-**Trong trường hợp người dùng dừng POC trước thời hạn kết thúc tài nguyên POC, hệ thống sẽ:**
+Người dùng có thể dừng POC đối với tài nguyên POC bất kỳ lúc nào trong thời hạn hiệu lực của ví POC. **Dừng POC đồng nghĩa với việc chuyển đổi tài nguyên từ POC sang dịch vụ trả phí**: tài nguyên được giữ nguyên cấu hình và tiếp tục sử dụng như một tài nguyên thường.
 
-* Tiến hành hoàn phí sử dụng tài nguyên POC còn lại (nếu có) vào ví POC
+Khi người dùng dừng POC, hệ thống sẽ:
 
-**Để tiếp tục sử dụng tài nguyên vừa dừng POC như một tài nguyên bình thường (với mục đích giữ nguyên cấu hình), người dùng có thể:**
+* Hoàn phí sử dụng tài nguyên POC còn lại (nếu có) vào ví POC.
+* Chuyển người dùng đến trang thanh toán. Người dùng phải thanh toán phí sử dụng tài nguyên thông qua các hình thức khác ngoài ví POC, như GreenNode Credit hoặc cổng thanh toán.
 
-* Gia hạn tài nguyên (trong trường hợp tài nguyên chưa bị chuyển vào mục thùng rác)
-* Khôi phục tài nguyên (trường hợp đã bị chuyển vào mục thùng rác trong vòng 7 ngày)
-
-Đối với cả 2 tác vụ trên, tài nguyên sẽ được tính là tài nguyên thường và người dùng phải tiến hành thanh toán phí sử dụng tài nguyên thông qua các hình thức khác ngoài ví POC
+Sau khi thanh toán thành công, tài nguyên được tính là tài nguyên thường.
 
 ## Hết thời gian sử dụng ví POC <a href="#tainguyenpoc-hetthoigiansudungvipoc" id="tainguyenpoc-hetthoigiansudungvipoc"></a>
 
@@ -66,7 +64,7 @@ Quy trình và phương thức tính giá tương tự như khi gia hạn tài n
 
 Tại thời điểm hết hạn sử dụng ví POC, hệ thống sẽ:
 
-* Dừng POC đối với tất cả tài nguyên POC đang sử dụng
-  * Đối với các tài nguyên áp dụng **tạm giữ credit**, khi dừng POC sẽ dừng cung cấp dịch vụ và xóa luôn tài nguyên POC đó. Do đó, quý khách hàng cần chủ động dừng POC trước thời hạn kết thúc để đảm bảo tiếp tục sử dụng tài nguyên. [Danh sách dịch vụ áp dụng tạm giữ credit tại đây](../../thanh-toan/tam-giu-credit.md).
-  * Đối với các tài nguyên áp dụng hình thức trả trước từ ví POC, hệ thống sẽ tạm giữ tài nguyên trong vòng 7 ngày trước khi xóa vĩnh viễn, quý khách có thể vào khôi phục lại nếu có nhu cầu sử dụng tiếp
-* Tắt ví POC: Người dùng sẽ không được phép sử dùng tài nguyên dưới hình thức POC cho đến khi ví POC được bật trở lại
+* Kết thúc POC đối với tất cả tài nguyên POC đang sử dụng. Tài nguyên **không** được tự động chuyển sang dịch vụ trả phí:
+  * Đối với các tài nguyên áp dụng **tạm giữ credit**, hệ thống sẽ dừng cung cấp dịch vụ và xóa luôn tài nguyên POC đó. Do đó, nếu muốn tiếp tục sử dụng, quý khách hàng cần chủ động dừng POC (chuyển sang dịch vụ trả phí) trước khi ví POC hết hạn. Xem danh sách dịch vụ áp dụng tạm giữ credit.
+  * Đối với các tài nguyên áp dụng hình thức trả trước từ ví POC, tài nguyên sẽ bị tạm ngưng trong vòng 7 ngày trước khi xóa vĩnh viễn. Trong thời gian này, quý khách có thể gia hạn tài nguyên nếu có nhu cầu sử dụng tiếp.
+* Tắt ví POC: Người dùng sẽ không được phép sử dụng tài nguyên dưới hình thức POC cho đến khi ví POC được bật trở lại.
