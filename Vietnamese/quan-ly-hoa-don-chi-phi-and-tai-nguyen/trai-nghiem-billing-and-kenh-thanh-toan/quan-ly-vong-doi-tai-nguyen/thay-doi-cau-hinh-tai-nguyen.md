@@ -25,7 +25,6 @@ Sử dụng tài liệu này như là một hướng dẫn thay đổi cấu hì
   * 3.2 Kiểm tra **thông tin thanh toán, hóa đơn tại**
     * **User Portal:** [**https://dashboard.console.greennode.ai/**](https://dashboard.console.greennode.ai/)
 * **Bước 4: Hệ thống thực hiện**
-  * Email thông báo thông tin tài nguyên vừa thay đổi cấu hình
   * Phát sinh hóa đơn theo cấu hình mới
 
 #### **Hướng dẫn tính giá tài nguyên khi thay đổi cấu hình** <a href="#thaydoicauhinhtainguyen-huongdantinhgiatainguyenkhithaydoicauhinh" id="thaydoicauhinhtainguyen-huongdantinhgiatainguyenkhithaydoicauhinh"></a>
