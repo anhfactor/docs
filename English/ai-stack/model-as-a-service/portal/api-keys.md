@@ -8,13 +8,13 @@ description: "An API key identifies your account on every MaaS request. You need
 
 1. Sign in to [AI Platform](https://aiplatform.console.greennode.ai) and open **API Keys**.
 2. Click **Create an API key**.
-3. Enter an **API Key Name**. Optionally tick **Set as default** to make it the default key.
+3. Enter an **API Key Name**: it must not start or end with a hyphen (`-`) and must not match an existing key name. Optionally tick **Set as default** to make it the default key.
 4. Click **Create API key**. The key appears in the list.
 
 {% hint style="info" %}
 **Limit**
 
-Each account can have up to 50 API keys. Creating more returns “API key limit exceeded”. All keys of an account share the same enabled models and the same rate-limit counters.
+By default each account can have up to 50 API keys. Creating more returns “API key limit exceeded”. If you need more, [contact support](../help/support.md). All keys of an account share the same enabled models and the same rate-limit counters.
 {% endhint %}
 
 ## View or delete a key
@@ -33,8 +33,6 @@ Always send the key in a header, never in the URL or the body. The three headers
 | `Authorization: Bearer <API_KEY>` | OpenAI SDK, curl |
 | `x-api-key: <API_KEY>` | Anthropic SDK, Claude Code |
 | `apikey: <API_KEY>` | Legacy integrations |
-
-`GET /v1/models` does not accept the `apikey` header (returns 401); use `Authorization: Bearer` or `x-api-key` for that endpoint.
 
 {% code title="shell" %}
 ```bash

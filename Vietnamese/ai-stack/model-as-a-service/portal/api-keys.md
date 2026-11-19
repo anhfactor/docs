@@ -8,13 +8,13 @@ description: "API key định danh tài khoản của bạn trong mọi request 
 
 1. Đăng nhập [AI Platform](https://aiplatform.console.greennode.ai) và mở mục **API Keys**.
 2. Bấm **Create an API key**.
-3. Nhập **API Key Name**. Có thể chọn **Set as default** để đặt làm key mặc định.
+3. Nhập **API Key Name**: không bắt đầu hoặc kết thúc bằng dấu gạch ngang (`-`) và không trùng tên key đã có. Có thể chọn **Set as default** để đặt làm key mặc định.
 4. Bấm **Create API key**. Key xuất hiện trong danh sách.
 
 {% hint style="info" %}
 **Giới hạn**
 
-Mỗi tài khoản có tối đa 50 API key. Tạo thêm sẽ báo “API key limit exceeded”. Mọi key của một tài khoản dùng chung danh sách model đã bật và chung bộ đếm rate limit.
+Mặc định mỗi tài khoản có tối đa 50 API key. Tạo thêm sẽ báo “API key limit exceeded”. Cần nhiều hơn, hãy [liên hệ hỗ trợ](../help/support.md). Mọi key của một tài khoản dùng chung danh sách model đã bật và chung bộ đếm rate limit.
 {% endhint %}
 
 ## Xem hoặc xoá key
@@ -33,8 +33,6 @@ Luôn gửi key trong header, không đặt trong URL hay body. Ba header dướ
 | `Authorization: Bearer <API_KEY>` | OpenAI SDK, curl |
 | `x-api-key: <API_KEY>` | Anthropic SDK, Claude Code |
 | `apikey: <API_KEY>` | Tích hợp cũ |
-
-`GET /v1/models` không nhận header `apikey` (trả 401); với endpoint này hãy dùng `Authorization: Bearer` hoặc `x-api-key`.
 
 {% code title="shell" %}
 ```bash
