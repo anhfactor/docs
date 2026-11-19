@@ -1,5 +1,8 @@
 ---
-description: "Qwen3.8-27B is a 27B-parameter open-weight model from the Qwen3.8 family, self-hosted on VNG infrastructure (SGLang). It supports a 1M-token context window, text and image input, hybrid thinking / non-thinking modes and tool calling, exposed over OpenAI Chat Completions, Anthropic Messages and OpenAI Responses APIs."
+description: >-
+  Qwen3.8-27B is a 27B-parameter open-weight model from the Qwen3.8 family,
+  self-hosted on VNG infrastructure (SGLang). It supports a 1M-token context
+  window, text and image input, hybrid thinking / non
 ---
 
 # Qwen 3.8 27B
@@ -12,13 +15,13 @@ Qwen3.8-27B is a 27B-parameter open-weight model from the Qwen3.8 family, self-h
 
 ## Thông số
 
-| Thông số | Giá trị |
-| --- | --- |
-| Ngữ cảnh | 1M tokens |
-| Output tối đa | 1M tokens |
-| Đầu vào | text, image |
-| Đầu ra | text |
-| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số      | Giá trị                                                 |
+| ------------- | ------------------------------------------------------- |
+| Ngữ cảnh      | 1M tokens                                               |
+| Output tối đa | 1M tokens                                               |
+| Đầu vào       | text, image                                             |
+| Đầu ra        | text                                                    |
+| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 

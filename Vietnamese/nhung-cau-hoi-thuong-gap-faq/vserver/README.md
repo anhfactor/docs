@@ -42,11 +42,11 @@ Tùy trường hợp khác nhau mà máy chủ có thể khởi động lại đ
 
 ### \[vServer]Làm sao để extend disk trong Linux ?
 
-Quý khách có thể thực hiện như sau : Thực hiện extend disk trên portal GreenNode:[ Mở rộng Volume với hệ điều hành Linux](../../vserver/compute-hcm03-1a/volume/mo-rong-volume-voi-he-dieu-hanh-linux.md).
+Quý khách có thể thực hiện như sau : Thực hiện extend disk trên portal GreenNode:[ Mở rộng Volume với hệ điều hành Linux](../../vserver/compute/volume/mo-rong-volume-voi-he-dieu-hanh-linux.md).
 
 ### \[vServer]Làm sao để extend disk trong Window ?
 
-&#x20;[Mở rộng Volume với hệ điều hành Window](../../vserver/compute-hcm03-1a/volume/mo-rong-volume-voi-he-dieu-hanh-window.md) Quý khách có thể thực hiện như sau :[ Thực hiện extend disk trên portal GreenNode](./#vserver-lam-sao-de-extend-disk-trong-window)
+[Mở rộng Volume với hệ điều hành Window](../../vserver/compute/volume/mo-rong-volume-voi-he-dieu-hanh-window.md) Quý khách có thể thực hiện như sau :[ Thực hiện extend disk trên portal GreenNode](./#vserver-lam-sao-de-extend-disk-trong-window)
 
 ### \[vServer]Tôi cần reinstall lại OS?
 
@@ -70,7 +70,7 @@ Nếu Server hết hạn, trên giao diện trang chủ sẽ có trạng thái E
 
 ### \[vServer] Tôi muốn Reset Pass của server ?
 
-Bạn không thể tự reset password cho Server của mình. Để tiến hành reset password cho Server, vui lòng gởi request tại trang [Hỗ trợ ](https://helpdesk.greennode.ai/)của chúng tôi.&#x20;
+Bạn không thể tự reset password cho Server của mình. Để tiến hành reset password cho Server, vui lòng gởi request tại trang [Hỗ trợ ](https://helpdesk.greennode.ai/)của chúng tôi.
 
 ### \[vServer] Tôi không allow được 1 số port trên Webmin Vserver ?
 
@@ -162,7 +162,7 @@ Hiện tại Bạn có thể add tối đa 2 volume trên một server . Phân v
 
 ### \[vServer] Tôi muốn ssh đến server bằng user root thì làm như thế nào?
 
-Bạn vui lòng thao tác theo cú pháp sau :&#x20;
+Bạn vui lòng thao tác theo cú pháp sau :
 
 \#Edit /etc/ssh/sshd\_config\
 PermitRootLogin no -->> PermitRootLogin yes\
@@ -195,7 +195,7 @@ Khi tạo Server ở site VPC mình phải tạo Network trước cho Server (V�
 
 ### \[vServer] Tôi muốn nâng dung lượng HDD mà sao chỉ được tối đa 200G ?
 
-Bạn có thể vào phần Storage trên Portal để add thêm Volume tối đa lên tới 10TB cho Server của mình theo hướng dẫn tại trang [Tăng kích thước Volume](../../vserver/compute-hcm03-1a/volume/).
+Bạn có thể vào phần Storage trên Portal để add thêm Volume tối đa lên tới 10TB cho Server của mình theo hướng dẫn tại trang [Tăng kích thước Volume](../../vserver/compute/volume/).
 
 ### \[vServer] Create image là full các disk luôn hay chỉ có disk C (hay phân vùng Root)?
 
@@ -203,7 +203,7 @@ Create image là tạo full tất cả các disk/phân vùng.
 
 ### \[vServer] Tôi lỡ tay xóa hết các rule trong Security Policy và hiện tại không thể nào ssh vào được server ?
 
-Bạn vui lòng vào Group Default add lại các rule Ingress và Egress default theo như [hướng dẫn sau](../../vserver/compute-hcm03-1a/security/ssh-key-bo-khoa.md) giúp để có thể ssh vào lại server.
+Bạn vui lòng vào Group Default add lại các rule Ingress và Egress default theo như [hướng dẫn sau](../../vserver/compute/security/ssh-key-bo-khoa.md) giúp để có thể ssh vào lại server.
 
 ### \[vServer] "vServer: Tôi không tạo thêm được security group? "
 
@@ -266,13 +266,6 @@ Attach, Detech 2 lần nên hệ thống nhận Sdc. Detach Attach lần nữa t
 
 **Cách 1** :Mở disk management, phải chuột đĩa offlime và chọn online cho disk đó, sau đó phải chuột chọn Initialized Disk, chọn GPT và nhấn OK, sau đó có thể tạo phân vùng.\
 **Cách 2**: Truy cập vào Server Manager\File and Storage Services\Volumes\Disks và bật online lên và khởi tạo ổ đĩa.
-
-### \[vServer] Thông tin chip và xung nhịp gói High Perfomance vServer
-
-Hiện chúng tôi hỗ trợ 2 loại chip High Performance vServer bao gồm:
-
-* Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
-* Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz
 
 ### \[vServer] Tại sao server window của tôi RDP thì lại báo account password has expired?
 

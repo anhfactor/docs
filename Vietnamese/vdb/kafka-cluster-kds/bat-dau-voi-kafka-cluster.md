@@ -11,7 +11,7 @@ Tham khảo hướng dẫn đăng nhập vào GreenNode [tại đây](../../iden
 
 ## Bước 2: Tạo Cụm Kafka
 
-1.  Nhấp vào nút "Tạo Cụm Kafka".&#x20;
+1.  Nhấp vào nút "Tạo Cụm Kafka".
 
     <figure><img src="../../.gitbook/assets/image (744).png" alt="" width="228"><figcaption></figcaption></figure>
 2. Điền thông tin sau:
@@ -24,7 +24,7 @@ Tham khảo hướng dẫn đăng nhập vào GreenNode [tại đây](../../iden
    * **Access Method Control (mTLS, SASL):** Chọn phương thức xác thực và ủy quyền cho client kết nối đến cụm Kafka. mTLS sử dụng chứng chỉ client và server, SASL sử dụng tên người dùng và mật khẩu.
    * **Encryption Mode:** Chọn chế độ mã hóa dữ liệu. Mặc định, mã hóa in transit (dữ liệu được mã hóa khi truyền giữa client và broker) và within cluster (dữ liệu được mã hóa khi lưu trữ trên các broker) được bật.
    * **Config Group:** Chọn nhóm cấu hình áp dụng cho cụm Kafka. Nhóm cấu hình chứa các thiết lập chi tiết về hoạt động của Kafka.
-3.  Nhấp vào nút "Tạo" để bắt đầu quá trình tạo cụm Kafka.&#x20;
+3.  Nhấp vào nút "Tạo" để bắt đầu quá trình tạo cụm Kafka.
 
     <figure><img src="../../.gitbook/assets/image (745).png" alt=""><figcaption></figcaption></figure>
 
@@ -67,8 +67,8 @@ Có nhiều cách kết nối tới cụm Kafka, hướng dẫn sau sẽ giới 
 
 Lưu ý: Hướng dẫn cài đặt dưới đây được thực hiện trên server client unbuntu 22.04.
 
-1. Khởi tạo Server. Xem hướng dẫn chi tiết khởi tạo server [tại đây](../../vserver/compute-hcm03-1a/server/tao-may-chu-bang-bang-dieu-khien.md).
-2. Kết nối đến server vừa khởi tạo. Xem hướng dẫn chi tiết [tại đây.](../../vserver/compute-hcm03-1a/server/ket-noi-vao-may-chu-ao/)
+1. Khởi tạo Server. Xem hướng dẫn chi tiết khởi tạo server [tại đây](../../vserver/compute/server/tao-may-chu-bang-bang-dieu-khien.md).
+2. Kết nối đến server vừa khởi tạo. Xem hướng dẫn chi tiết [tại đây.](../../vserver/compute/server/ket-noi-vao-may-chu-ao/)
 3. Cài đặt Java và các package cần thiết trên server với lệnh sau:
 
 ```bash
@@ -89,7 +89,7 @@ wget https://archive.apache.org/dist/kafka/3.7.0/kafka_2.13-3.7.0.tgz
 tar -xzf kafka_2.13-3.7.0.tgz
 ```
 
-5.  Tiếp theo, tải về các chứng chỉ TLS để truy cập đến cụm Kafka.&#x20;
+5.  Tiếp theo, tải về các chứng chỉ TLS để truy cập đến cụm Kafka.
 
     <figure><img src="../../.gitbook/assets/image (746).png" alt=""><figcaption></figcaption></figure>
 6. Tại server vừa khởi tạo, tải lên và giải nén các chứng chỉ TLS và unzip theo lệnh bên dưới:
@@ -154,4 +154,3 @@ Example
 1. Khi bạn không còn nhu cầu sử dụng cụm Kafka, hãy truy cập vào trang quản lý cụm Kafka.
 2. Tìm và nhấp vào nút "Xóa Cụm Kafka".
 3. Xác nhận việc xóa cụm Kafka để tránh mất dữ liệu và chi phí không cần thiết.
-

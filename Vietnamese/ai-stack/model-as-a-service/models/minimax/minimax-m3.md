@@ -1,5 +1,8 @@
 ---
-description: "MiniMax-M3 is MiniMax's natively multimodal frontier model (released 2026-06-01), built on MSA (MiniMax Sparse Attention) which sharply cuts the compute cost of 1M-token context. Per Tencent Cloud TokenHub it accepts text, image and video input with a 1M-token context window and up to 512K output tokens, and exposes both the OpenAI Chat Completions API and the Anthropic Messages API. Reasoning is adaptive by default and can be turned off via thinking.type, or split out of the answer via reasoning_split. Tuned for frontier agentic coding and computer-use workloads."
+description: >-
+  MiniMax-M3 is MiniMax's natively multimodal frontier model (released
+  2026-06-01), built on MSA (MiniMax Sparse Attention) which sharply cuts the
+  compute cost of 1M-token context. Per Tencent Cloud Tok
 ---
 
 # MiniMax M3
@@ -8,17 +11,17 @@ description: "MiniMax-M3 is MiniMax's natively multimodal frontier model (releas
 
 Model ID: `minimax/minimax-m3` · Loại: Chat
 
-MiniMax-M3 is MiniMax's natively multimodal frontier model (released 2026-06-01), built on MSA (MiniMax Sparse Attention) which sharply cuts the compute cost of 1M-token context. Per Tencent Cloud TokenHub it accepts text, image and video input with a 1M-token context window and up to 512K output tokens, and exposes both the OpenAI Chat Completions API and the Anthropic Messages API. Reasoning is adaptive by default and can be turned off via thinking.type, or split out of the answer via reasoning_split. Tuned for frontier agentic coding and computer-use workloads.
+MiniMax-M3 is MiniMax's natively multimodal frontier model (released 2026-06-01), built on MSA (MiniMax Sparse Attention) which sharply cuts the compute cost of 1M-token context. Per Tencent Cloud TokenHub it accepts text, image and video input with a 1M-token context window and up to 512K output tokens, and exposes both the OpenAI Chat Completions API and the Anthropic Messages API. Reasoning is adaptive by default and can be turned off via thinking.type, or split out of the answer via reasoning\_split. Tuned for frontier agentic coding and computer-use workloads.
 
 ## Thông số
 
-| Thông số | Giá trị |
-| --- | --- |
-| Ngữ cảnh | 1M tokens |
-| Output tối đa | 512K tokens |
-| Đầu vào | text, image, video |
-| Đầu ra | text |
-| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số      | Giá trị                                                 |
+| ------------- | ------------------------------------------------------- |
+| Ngữ cảnh      | 1M tokens                                               |
+| Output tối đa | 512K tokens                                             |
+| Đầu vào       | text, image, video                                      |
+| Đầu ra        | text                                                    |
+| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 

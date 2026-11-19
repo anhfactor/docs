@@ -1,5 +1,8 @@
 ---
-description: "Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview), served over the OpenAI-compatible Alibaba Cloud DashScope API. It sits between Max-Preview (top reasoning) and Flash (fastest / lowest cost), targeting medium-to-high complexity tasks at a balanced price-performance point. It ships with a 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) alongside function calling with structured output."
+description: >-
+  Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial lineup
+  (flash / plus / max-preview), served over the OpenAI-compatible Alibaba Cloud
+  DashScope API. It sits between Max-Preview (top r
 ---
 
 # Qwen 3.6 Plus
@@ -12,13 +15,13 @@ Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial lineup (flash 
 
 ## Thông số
 
-| Thông số | Giá trị |
-| --- | --- |
-| Ngữ cảnh | 1M tokens |
-| Output tối đa | 64K tokens |
-| Đầu vào | text, image, video |
-| Đầu ra | text |
-| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số      | Giá trị                                                 |
+| ------------- | ------------------------------------------------------- |
+| Ngữ cảnh      | 1M tokens                                               |
+| Output tối đa | 64K tokens                                              |
+| Đầu vào       | text, image, video                                      |
+| Đầu ra        | text                                                    |
+| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 

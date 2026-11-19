@@ -1,5 +1,8 @@
 ---
-description: "GLM-5.3 is Z.ai's open-weight flagship model of the GLM-5 series, built for agentic coding, reasoning and tool use. Self-hosted on GreenNode infrastructure with a 300K-token context window. Supports chat completions, Anthropic-style messages and the responses API, with function calling, structured output, streaming and reasoning-effort control."
+description: >-
+  GLM-5.3 is Z.ai's open-weight flagship model of the GLM-5 series, built for
+  agentic coding, reasoning and tool use. Self-hosted on GreenNode
+  infrastructure with a 300K-token context window. Supports c
 ---
 
 # GLM-5.3
@@ -12,13 +15,13 @@ GLM-5.3 is Z.ai's open-weight flagship model of the GLM-5 series, built for agen
 
 ## Thông số
 
-| Thông số | Giá trị |
-| --- | --- |
-| Ngữ cảnh | 300K tokens |
-| Output tối đa | 128K tokens |
-| Đầu vào | text |
-| Đầu ra | text |
-| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số      | Giá trị                                                 |
+| ------------- | ------------------------------------------------------- |
+| Ngữ cảnh      | 300K tokens                                             |
+| Output tối đa | 128K tokens                                             |
+| Đầu vào       | text                                                    |
+| Đầu ra        | text                                                    |
+| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 

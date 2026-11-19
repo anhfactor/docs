@@ -1,11 +1,11 @@
 # Làm việc với vBackup project
 
-vBackup project là một loại project được tạo từ chức năng backup nhằm lưu trữ dữ liệu từ hệ thống vBackup khi bạn thực hiện tạo các bản sao lưu (backup) cho Server của bạn từ hệ thống vServer về hệ thống vStorage theo hướng dẫn tại [đây](../../../../vserver/compute-hcm03-1a/backup/).
+vBackup project là một loại project được tạo từ chức năng backup nhằm lưu trữ dữ liệu từ hệ thống vBackup khi bạn thực hiện tạo các bản sao lưu (backup) cho Server của bạn từ hệ thống vServer về hệ thống vStorage theo hướng dẫn tại [đây](../../../../vserver/compute/backup/).
 
-Đối với vBackup project, sẽ có 2 trường hợp xảy ra:&#x20;
+Đối với vBackup project, sẽ có 2 trường hợp xảy ra:
 
-* Nếu bạn chưa có backup project nào trên hệ thống vStorage thì khi bạn thực hiện backup Server, một backup project mới sẽ được tạo với 50 GB dung lượng miễn phí trên lớp lưu trữ Gold class và thời hạn sử dụng backup project này là 1 tháng kể từ thời điểm thiết lập thành công backup server theo hướng dẫn bên trên.&#x20;
-* Nếu bạn đã có backup project được tạo sau đó xóa trước đây thì khi bạn thực hiện backup Server lần kế tiếp, một backup project mới sẽ được tạo với 0 GB dung lượng miễn phí trên lớp lưu trữ Gold class (tên backup project không đổi).&#x20;
+* Nếu bạn chưa có backup project nào trên hệ thống vStorage thì khi bạn thực hiện backup Server, một backup project mới sẽ được tạo với 50 GB dung lượng miễn phí trên lớp lưu trữ Gold class và thời hạn sử dụng backup project này là 1 tháng kể từ thời điểm thiết lập thành công backup server theo hướng dẫn bên trên.
+* Nếu bạn đã có backup project được tạo sau đó xóa trước đây thì khi bạn thực hiện backup Server lần kế tiếp, một backup project mới sẽ được tạo với 0 GB dung lượng miễn phí trên lớp lưu trữ Gold class (tên backup project không đổi).
 
 Đối với 2 loại vBackup project này, bạn có thể:
 
@@ -58,9 +58,9 @@ Lúc này **backup project** bị xóa sẽ nằm trong **Thùng rác**, bạn c
 * **Xóa** **hoàn toàn** backup project khỏi vStorage bằng cách chọn **Xóa**.
 * **Khôi phục** lại backup project sử dụng theo hướng dẫn ngay bên dưới.
 
-Đối với khách hàng trả trước, nếu bạn đã phát sinh chi phí cho việc gia hạn hay tăng hạn mức backup project này thì khi bạn thực hiện xóa backup project còn thời hạn sử dụng, chúng tôi sẽ thực hiện bồi hoàn lại cho bạn số tiền thực tế mà bạn chưa sử dụng tương ứng trong chu kỳ lưu trữ còn lại. Chi tiết cách vStorage tính phí bồi hoàn và khôi phục project, hãy xem [Cách tính phí](https://docs.vngcloud.vn/pages/viewpage.action?pageId=49648482).&#x20;
+Đối với khách hàng trả trước, nếu bạn đã phát sinh chi phí cho việc gia hạn hay tăng hạn mức backup project này thì khi bạn thực hiện xóa backup project còn thời hạn sử dụng, chúng tôi sẽ thực hiện bồi hoàn lại cho bạn số tiền thực tế mà bạn chưa sử dụng tương ứng trong chu kỳ lưu trữ còn lại. Chi tiết cách vStorage tính phí bồi hoàn và khôi phục project, hãy xem [Cách tính phí](https://docs.vngcloud.vn/pages/viewpage.action?pageId=49648482).
 
-Do hành động xóa project tiềm ẩn nhiều rủi ro nên chúng tôi khuyến cáo bạn hãy xem xét cẩn thận cũng như tạo một phiên bản dự phòng của project trước khi thực hiện xóa.&#x20;
+Do hành động xóa project tiềm ẩn nhiều rủi ro nên chúng tôi khuyến cáo bạn hãy xem xét cẩn thận cũng như tạo một phiên bản dự phòng của project trước khi thực hiện xóa.
 
 </details>
 

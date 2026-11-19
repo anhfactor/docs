@@ -1,5 +1,8 @@
 ---
-description: "Kimi K2.7 Code is Moonshot AI's coding-focused open-source model, open-sourced in June 2026. It targets programming and agentic workflows with more reliable instruction following over long contexts and higher task success rates, and supports text, image and video input. The model runs with thinking always enabled. Moonshot reports improved coding and agentic performance over K2.6 together with lower average token consumption on long-context tasks. Served here over Tencent Cloud TokenHub, which exposes the OpenAI Chat Completions, Anthropic Messages and Responses APIs for this model."
+description: >-
+  Kimi K2.7 Code is Moonshot AI's coding-focused open-source model, open-sourced
+  in June 2026. It targets programming and agentic workflows with more reliable
+  instruction following over long contexts an
 ---
 
 # Kimi K2.7 Code
@@ -12,13 +15,13 @@ Kimi K2.7 Code is Moonshot AI's coding-focused open-source model, open-sourced i
 
 ## Thông số
 
-| Thông số | Giá trị |
-| --- | --- |
-| Ngữ cảnh | 256K tokens |
-| Output tối đa | 256K tokens |
-| Đầu vào | text, image, video |
-| Đầu ra | text |
-| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số      | Giá trị                                                 |
+| ------------- | ------------------------------------------------------- |
+| Ngữ cảnh      | 256K tokens                                             |
+| Output tối đa | 256K tokens                                             |
+| Đầu vào       | text, image, video                                      |
+| Đầu ra        | text                                                    |
+| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 
