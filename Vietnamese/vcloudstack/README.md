@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # vCloudStack
 
 ## Tổng quan
@@ -12,7 +16,7 @@ Với vCloudStack, bạn có thể chạy một số dịch vụ GreenNode cục
 
 ***
 
-## Lợi ích&#x20;
+## Lợi ích
 
 **Chạy dịch vụ GreenNode tại chỗ**
 
