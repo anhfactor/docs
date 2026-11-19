@@ -20,7 +20,7 @@ Ngoài việc tạo qua Portal, bạn cũng có thể tạo Multi-AZ Cluster qua
 Multi-AZ Control Plane **chỉ hỗ trợ VPC đã bật DNS**. Nếu VPC chưa bật DNS, VPC đó sẽ **không hiển thị** trong dropdown khi tạo Multi-AZ Cluster.
 {% endhint %}
 
-Để bật DNS cho VPC, vui lòng thực hiện tại portal vServer theo hướng dẫn tại [đây](../../vserver/compute-hcm03-1a/network/virtual-private-cloud-vpc/).
+Để bật DNS cho VPC, vui lòng thực hiện tại portal vServer theo hướng dẫn tại [đây](../../vserver/compute/network/virtual-private-cloud-vpc/).
 
 ### 2. Chuẩn bị Subnets
 
@@ -44,8 +44,8 @@ Ví dụ cấu hình subnets **không** hợp lệ:
 
 ### 3. Các điều kiện khác
 
-* Có ít nhất 1 **VPC** và 1 **Subnet** đang ở trạng thái **ACTIVE**. Nếu bạn chưa có VPC, Subnet nào, vui lòng khởi tạo VPC, Subnet theo hướng dẫn tại [đây.](../../vserver/compute-hcm03-1a/network/virtual-private-cloud-vpc/)
-* Có ít nhất 1 **SSH key** đang ở trạng thái **ACTIVE**. Nếu bạn chưa có SSH key, vui lòng khởi tạo theo hướng dẫn tại [đây.](../../vserver/compute-hcm03-1a/security/ssh-key-bo-khoa.md)
+* Có ít nhất 1 **VPC** và 1 **Subnet** đang ở trạng thái **ACTIVE**. Nếu bạn chưa có VPC, Subnet nào, vui lòng khởi tạo VPC, Subnet theo hướng dẫn tại [đây.](../../vserver/compute/network/virtual-private-cloud-vpc/)
+* Có ít nhất 1 **SSH key** đang ở trạng thái **ACTIVE**. Nếu bạn chưa có SSH key, vui lòng khởi tạo theo hướng dẫn tại [đây.](../../vserver/compute/security/ssh-key-bo-khoa.md)
 
 ***
 

@@ -14,10 +14,10 @@ You can filter models using the options on the left sidebar:
 
 * Provider: Google, Anthropic, OpenAI, GreenNode, ...
 * Model Type:
-  * Chat: Designed for interactive conversations. These models can retain context and conversation history.
-  * Image Generation: Generates new images based on text descriptions.
+  * Chat: Designed for interactive conversations. Called through Chat Completions, Messages (Anthropic) or Responses, depending on the model.
   * Embedding: Converts data (text, images, audio, etc.) into high-dimensional vectors, allowing machines to understand and compare semantics for search, classification, or recommendation.
-  * Completion: Processes each prompt independently without retaining conversation history.
+  * Rerank: Reorders a list of documents by relevance to a query.
+  * OCR: Extracts text and data from images and documents.
 * Use Case::
   * Vietnamese: Optimized for Vietnamese language tasks.
   * General Tasks: Suitable for a wide range of general-purpose tasks.
@@ -57,5 +57,4 @@ After testing in the Playground, you can access models via AI Platform MaaS:
 
 ### Data Security and Privacy
 
-* Data in transit is encrypted with **TLS 1.3**.
-* Data exists only in the memory of the inference system for the duration of request processing. GreenNode does not store your prompt inputs and outputs long-term for any other purpose.
+* Data in transit is encrypted with **TLS 1.2 or later**.

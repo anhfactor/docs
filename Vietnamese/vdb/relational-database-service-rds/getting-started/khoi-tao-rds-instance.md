@@ -29,7 +29,7 @@ Tại giao diện quản lý Database, bạn click chọn **Create Database**. Q
       * Password phải bắt đầu bằng kí tự chữ cái: A-Z hoặc a-z.
       * Password không được bắt đầu hay kết thúc bằng các kí tự đặc biệt.
 * **Bước 4 Mạng và bảo mật:**&#x54;ại mục **Network & Security**, bạn lựa chọn
-  * **Cloud Network (VPC & Subnet)** sẽ sử dụng cho RDS Instance này. Mọi RDS Instance đều phải kết nối với một Cloud Network. Nếu chưa có Cloud Network nào, bạn có thể tạo một Cloud Network mới với hướng dẫn[ tại đây](../../../vserver/compute-hcm03-1a/network/virtual-private-cloud-vpc/).
+  * **Cloud Network (VPC & Subnet)** sẽ sử dụng cho RDS Instance này. Mọi RDS Instance đều phải kết nối với một Cloud Network. Nếu chưa có Cloud Network nào, bạn có thể tạo một Cloud Network mới với hướng dẫn[ tại đây](../../../vserver/compute/network/virtual-private-cloud-vpc/).
   * **Truy cập công khai:** Nếu bạn muốn RDS Instance có IP Public và có thể truy cập từ ngoài Internet, bạn cần bật tính năng **Truy cập công khai** (**Public Accessbility)**, nếu bạn muốn RDS Instance chỉ có IP Private và chỉ những Cloud Servers mới có thể truy cập được thì bạn cần tắt tính năng Public Accessibility.
 
 **Lưu ý**: việc lựa chọn có hay không Public Accessibility chỉ được lựa chọn một lần duy nhất tại thời điểm khởi tạo này. Bạn không thể thay đổi thiết lập này về sau. Để tăng cường bảo mật, GreenNode cho phép bạn giới hạn các địa chỉ IP tin cậy được phép truy cập vào mỗi RDS Instance thông qua **Security Group Rules**.

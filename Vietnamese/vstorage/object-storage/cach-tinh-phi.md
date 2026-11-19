@@ -13,7 +13,7 @@ Ban đầu, khi bạn đăng ký tài khoản GreenNode thành công, mặc đ�
 
 Nếu có nhu cầu và đáp ứng một số điều kiện về chỉ số chi tiêu, chúng tôi có thể hỗ trợ **chuyển đổi hình thức người dùng từ trả trước sang trả sau**, hoặc bạn có thể cân nhắc sử dụng hình thức thanh toán theo dung lượng sử dụng. Khi đó bạn không cần trả tiền lúc mua gói lưu trữ — giá trị hóa đơn mỗi tháng sẽ được tính dựa trên dung lượng, số lượng request... thực tế bạn sử dụng.
 
-Bạn có thể lựa chọn hình thức phù hợp để tối ưu chi phí lưu trữ của bạn hay đơn vị của bạn. Chi tiết tham khảo thêm tại [Quản lý hóa đơn, chi phí & tài nguyên trên GreenNode](../../quan-ly-hoa-don-chi-phi-and-tai-nguyen-tren-vng-cloud/).
+Bạn có thể lựa chọn hình thức phù hợp để tối ưu chi phí lưu trữ của bạn hay đơn vị của bạn. Chi tiết tham khảo thêm tại [Quản lý hóa đơn, chi phí & tài nguyên trên GreenNode](../../quan-ly-hoa-don-chi-phi-and-tai-nguyen/).
 
 ***
 

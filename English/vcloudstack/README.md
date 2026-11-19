@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # vCloudstack
 
 ### Overview <a href="#tong-quan" id="tong-quan"></a>

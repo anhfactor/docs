@@ -30,14 +30,14 @@ OCR là một loại model trong MaaS, nhưng do đặc thù xử lý tài liệ
 * **URL**: `https://maas-llm-aiplatform-hcm.api.vngcloud.vn/maas/user-<PORTAL_USER_ID>/greennode/idp/v1/ocr/ingest`
 * **Headers**:
   * `Authorization: Bearer <API_KEY>`
-  * `portal-user-id: <PORTAL_USER_ID>`
+  * `portal-user-id: <PORTAL_USER_ID>` (tùy chọn — gateway tự gắn theo API key; nếu gửi phải trùng user ID trong URL)
 * **Body**: `multipart/form-data`
   * `flow` (required)
     * `single`: OCR 1 tài liệu
     * hoặc `<FLOW_ID>`: OCR theo bộ tài liệu (nếu bạn được cấp flow)
-  * `doc_type` (required nếu `flow=single`): `<DOC_TYPE>`
-  * `file_type` (required): `PDF` hoặc `IMAGE`
-  * `file` (required): file cần OCR
+  * `doc_type` (required nếu `flow=single`): `<DOC_TYPE>`, ví dụ `Doc2Text` (OCR văn bản chung). Loại tài liệu khác: liên hệ GreenNode
+  * `file_type` (required nếu `flow=single`): `PDF` hoặc `IMAGE`
+  * `file` (required): file cần OCR. `PDF`: 1 file đuôi `.pdf`, 2 KB–50 MB. `IMAGE`: jpg, jpeg, png, bmp, tif, tiff, mỗi file 2 KB–10 MB, gửi được nhiều file
 
 #### Ví dụ
 
@@ -51,10 +51,10 @@ curl --location 'https://maas-llm-aiplatform-hcm.api.vngcloud.vn/maas/user-<PORT
   --form 'file=@"<FILE_PATH>"'
 ```
 
-Response sẽ chứa:
+Thành công trả **201**, response chứa:
 
-* `request_id`: dùng để lấy kết quả
-* (tuỳ trường hợp) `file_ids`: dùng để tải ảnh kết quả
+* `data.request_id`: dùng để lấy kết quả
+* `data.file_ids`: dùng để tải ảnh kết quả
 
 ### Get OCR Result (dùng `request_id` để lấy text/data)
 
@@ -76,7 +76,7 @@ curl --location 'https://maas-llm-aiplatform-hcm.api.vngcloud.vn/maas/user-<PORT
 
 Điều này bình thường vì OCR đang xử lý.
 
-* Đợi 2–5 giây và gọi lại API này (polling).
+* Đợi 2–5 giây và gọi lại API này (polling) cho tới khi `data.status` = `COMPLETED`.
 * Nếu quá thời gian timeout mà vẫn không có dữ liệu, gửi `request_id` cho team support để kiểm tra.
 
 ### Các API lấy thêm dữ liệu khác của OCR (tuỳ nhu cầu)
@@ -103,7 +103,7 @@ curl --location 'https://maas-llm-aiplatform-hcm.api.vngcloud.vn/maas/user-<PORT
   --header 'portal-user-id: <PORTAL_USER_ID>'
 ```
 
-Note: document\_id nằm trong response của Get OCR Result
+Note: document\_id nằm trong `data.documents[].document_id` của response Get OCR Result
 
 #### Lấy kết quả con dấu
 
@@ -129,10 +129,16 @@ curl --location 'https://maas-llm-aiplatform-hcm.api.vngcloud.vn/maas/user-<PORT
 
 ### Troubleshooting nhanh cho OCR
 
+* `401 Unauthorized`:
+  * Thiếu `Authorization` (`missing api key`) hoặc API key sai (`unknown api key`).
 * `403 Forbidden`:
-  * Thiếu/sai `Authorization` hoặc không có quyền.
-* `400 Bad Request` / `4XX`:
-  * Thiếu field bắt buộc (`flow`, `file_type`, `file`, ...)
-  * `doc_type` không đúng theo cấu hình.
+  * User ID trong đường dẫn khác chủ sở hữu API key (`tenant mismatch`).
+* `400 Bad Request`:
+  * Thiếu `doc_type` hoặc `file_type` khi `flow=single`, thiếu `file`, hoặc loại / kích thước file không hợp lệ.
+* `404 Not Found`:
+  * `request_id` không tồn tại.
+* `500`:
+  * `Multipart field value cannot be null`: thiếu trường `flow`.
+  * `Doc Type not found`: `doc_type` không tồn tại.
 * Polling mãi chưa ra kết quả:
   * Gửi `request_id` + thời điểm gọi + file mẫu (nếu được) cho team support.

@@ -4,10 +4,10 @@ Trong phần này, chúng ta sẽ tìm hiểu về cách sử dụng và quản 
 
 #### Trước khi bắt đầu <a href="#gettingstarted-truockhibatdau" id="gettingstarted-truockhibatdau"></a>
 
-* Để bắt đầu sử dụng Application Load Balancer, bạn cần có ít nhất **một Virtal Private Cloud (VPC)**, tham khảo hướng dẫn [Virtual Private Cloud (VPC)](../../network/virtual-private-cloud-vpc/).
+* Để bắt đầu sử dụng Application Load Balancer, bạn cần có ít nhất **một Virtal Private Cloud (VPC)**, tham khảo hướng dẫn [Virtual Private Cloud (VPC)](../../../compute/network/virtual-private-cloud-vpc/).
 * Tìm hiểu cách **truy cập GreenNode Portal** với Root User Account hoặc IAM User Account, tham khảo hướng dẫn [How to Login into GreenNode](../../../../identity-and-access-management-iam/cac-loai-dinh-danh-iam/tai-khoan-user-accounts/cach-dang-nhap-vao-vng-cloud.md).
 * Trong trường hợp người dùng muốn bắt đầu với IAM User Account, tham khảo hướng dẫn [IAM for vServer](../../../../identity-and-access-management-iam/cach-phan-quyen-iam-cho-dich-vu-vng-cloud/iam-cho-vserver.md).
-* Đối với Application Load Balancer, yêu cầu có ít nhất một chứng chỉ TLS/SSL khi **cấu hình HTTPS Listener**, tham khảo hướng dẫn [Upload a certificate](certificate/upload-a-certificate.md).&#x20;
+* Đối với Application Load Balancer, yêu cầu có ít nhất một chứng chỉ TLS/SSL khi **cấu hình HTTPS Listener**, tham khảo hướng dẫn [Upload a certificate](certificate/upload-a-certificate.md).
 
 #### 1. Truy cập vLB Console <a href="#gettingstarted-1.truycapvlbconsole" id="gettingstarted-1.truycapvlbconsole"></a>
 
@@ -34,7 +34,7 @@ vLB Console là giao diện người dùng dựa trên web, cho phép bạn qu�
      * Chọn **Internal** nếu: Chỉ cho phép truy cập với mạng nội bộ
    * _**Load Balancer Package**_: Chọn gói khởi tạo phù hợp với nhu cầu và mục đích sử dụng, lưu ý rằng gói này là yếu tố chính dùng để tính chi phí khởi tạo và vận hành Load Balancer của bạn
    * **Auto-scale:** Chọn bật/tắt tính năng auto-scale số lượng LB. Xem chi tiết tính năng auto-scale [tại đây.](../auto-scaling.md)
-   * _**Cài đặt Network**_**: Chọn Virtual Private Cloud (VPC) và Subnet** có sẵn từ danh sách VPC của bạn, trường hợp chưa khởi tạo VPC, tham khảo hướng dẫn [Virtual Private Cloud (VPC)](../../network/virtual-private-cloud-vpc/).
+   * _**Cài đặt Network**_**: Chọn Virtual Private Cloud (VPC) và Subnet** có sẵn từ danh sách VPC của bạn, trường hợp chưa khởi tạo VPC, tham khảo hướng dẫn [Virtual Private Cloud (VPC)](../../../compute/network/virtual-private-cloud-vpc/).
 3. **Chọn cấu hình Listener**
    * **Tên Listener:** Trường hợp người dùng không chủ động điền tên Listener, hệ thống sẽ tự động sinh ra tên Listener.
    * **Giao thức & Cổng (Protocol & Port)**
@@ -52,7 +52,7 @@ vLB Console là giao diện người dùng dựa trên web, cho phép bạn qu�
    * **Tab "Tóm tắt / Summary"**: Kiểm tra lần lượt các thông tin cấu hình Load Balancer, Listener, Pool và Pool Member
    * **Tab " Danh sách / Item list":** Kiểm tra thông tin Load Balancer Package và Chi phí
 7. **Hoàn tất khởi tạo: Sau khi hoàn tất việc cấu hình và kiểm tra thông tin, click nút "Tạo load Balancer / Create Load Balancer" để hoàn tất việc khởi tạo.**
-   * Đối với người dùng trả trước, bạn sẽ được điều hướng đến trang thanh toán, tại đây bạn cần cung cấp một phương thức thanh toán khả dụng để hoàn tất việc khởi tạo Application Load Balancer. Tham khảo thêm hướng dẫn [Thanh toán trực tuyến](../../../../quan-ly-hoa-don-chi-phi-and-tai-nguyen-tren-vng-cloud/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/thanh-toan-truc-tuyen.md)
+   * Đối với người dùng trả trước, bạn sẽ được điều hướng đến trang thanh toán, tại đây bạn cần cung cấp một phương thức thanh toán khả dụng để hoàn tất việc khởi tạo Application Load Balancer. Tham khảo thêm hướng dẫn [Thanh toán trực tuyến](../../../../quan-ly-hoa-don-chi-phi-and-tai-nguyen/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/thanh-toan-truc-tuyen.md)
 
 #### 3. Quan sát và kiểm tra ALB <a href="#gettingstarted-3.quansatvakiemtraalb" id="gettingstarted-3.quansatvakiemtraalb"></a>
 
@@ -60,6 +60,3 @@ vLB Console là giao diện người dùng dựa trên web, cho phép bạn qu�
 * Sau khi khởi tạo thành công, người dùng có thể truy cập vào trang chi tiết Load Balancer để quan sát và kiểm tra tính đúng đắn của Load Balancer.
 
 Trên đây là các hướng dẫn cơ bản trong việc khởi tạo Application Load Balancer một cách nhanh chóng nhất. Ngoài ra, còn có các cấu hình nâng cao cho từng nhu cầu sử dụng Load Balancer khác nhau. Cùng tìm hiểu chi tiết cách hoạt động cũng như các tính năng nâng cao của một Application Load Balancer thông qua chuỗi bài viết dưới đây:
-
-
-

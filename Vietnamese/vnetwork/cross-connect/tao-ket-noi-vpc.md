@@ -33,6 +33,5 @@
 **Ghi chú:**
 
 * **Requester Region** và **Accepter Region** được hiểu là hai region độc lập để tạo thành một kết nối Cross Connect. (Requester Region được mặc định chọn theo region đang được chọn khi truy cập vào vServer)
-* VPC của mỗi Region phải được tạo từ trước tại vServer; ( xem [Tạo VPC](../../vserver/compute-hcm03-1a/network/virtual-private-cloud-vpc/#virtualprivatecloud-vpc-taovpc)).
+* VPC của mỗi Region phải được tạo từ trước tại vServer; ( xem [Tạo VPC](../../vserver/compute/network/virtual-private-cloud-vpc/#virtualprivatecloud-vpc-taovpc)).
 {% endhint %}
-

@@ -61,7 +61,7 @@ VNG Managed Policy là các Chính Sách IAM (IAM Policy) được tạo mặc �
 
 ### **3. Khám phá chi tiết cách sử dụng IAM cho vServer** <a href="#iamforvserver-3.khamphachitietcachsudungiamchovserver" id="iamforvserver-3.khamphachitietcachsudungiamchovserver"></a>
 
-* Tìm hiểu thêm về IAM cho vServer: [Quản lý định danh và truy cập (IAM) cho vServer](../../vserver/compute-hcm03-1a/quan-ly-dinh-danh-va-truy-cap-iam-cho-vserver/)
+* Tìm hiểu thêm về IAM cho vServer: [Quản lý định danh và truy cập (IAM) cho vServer](../../vserver/compute/quan-ly-dinh-danh-va-truy-cap-iam-cho-vserver/)
 * Tìm hiểu thêm về IAM:
   * [IAM Identity](../quan-ly-truy-cap-iam/)
   * [Các trường hợp sử dụng thông thường của IAM](../ung-dung-pho-bien/)

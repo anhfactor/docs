@@ -1,6 +1,6 @@
 # Khởi tạo một Private Cluster
 
-Trước đây, các public cluster trên VKS đang sử dụng địa chỉ Public IP để giao tiếp giữa nodes và control plane. Để nâng cao bảo mật cho cluster của bạn, chúng tôi đã cho ra mắt mô hình private cluster. Tính năng Private Cluster giúp cho cụm K8S của bạn được bảo mật nhất có thể, mọi kết nối hoàn toàn là private từ kết nối giữa nodes tới control plane, kết nối từ client tới control plane, hay kết nối từ nodes tới các sản phẩm dịch vụ khác trong GreenNode như: vStorage, vCR, vMonitor, GreenNode APIs,...Private Cluster là lựa chọn lý tưởng cho **các dịch vụ yêu cầu kiểm soát truy cập chặt chẽ, đảm bảo tuân thủ các quy định về bảo mật và quyền riêng tư dữ liệu**.&#x20;
+Trước đây, các public cluster trên VKS đang sử dụng địa chỉ Public IP để giao tiếp giữa nodes và control plane. Để nâng cao bảo mật cho cluster của bạn, chúng tôi đã cho ra mắt mô hình private cluster. Tính năng Private Cluster giúp cho cụm K8S của bạn được bảo mật nhất có thể, mọi kết nối hoàn toàn là private từ kết nối giữa nodes tới control plane, kết nối từ client tới control plane, hay kết nối từ nodes tới các sản phẩm dịch vụ khác trong GreenNode như: vStorage, vCR, vMonitor, GreenNode APIs,...Private Cluster là lựa chọn lý tưởng cho **các dịch vụ yêu cầu kiểm soát truy cập chặt chẽ, đảm bảo tuân thủ các quy định về bảo mật và quyền riêng tư dữ liệu**.
 
 ### Model
 
@@ -24,50 +24,49 @@ Bạn có thể xem thông tin 4 private service endpoint thông qua portal vSer
 {% hint style="info" %}
 **Warning:**
 
-* `<mark style="color:red;background-color:red;">`**Không xóa Private Service Endpoint**`</mark>`: Để đảm bảo hoạt động ổn định của cluster, bạn không nên xóa 4 service endpoint đã được tạo sẵn. Nếu vô tình xóa hoặc chỉnh sửa 4 endpoint này, trong vòng tối đa 5 phút, hệ thống sẽ tự động tạo lại nhưng có thể gây gián đoạn đến các dịch vụ đang chạy. Lúc này, do service endpoint tạo lại có thể đã thay đổi Endpoint IP so với ban đầu nên để cluster hoạt động được, bạn cần thực hiện thêm Endpoint IP một cách thủ công cho những server đang chạy trước đó thông qua câu lệnh:
-
-  ```
-  vks-bootstraper add-host -i <IP> -d <DOMAIN>
-  ```
-
-  Ví dụ,
-
-  * Nếu bạn xóa private service endpoint của 4 dịch vụ trên tại `<mark style="color:red;background-color:red;">`**Region HCM**`</mark>` thì bạn cần add host qua lệnh:
+*   `<mark style="color:red;background-color:red;">`**Không xóa Private Service Endpoint**`</mark>`: Để đảm bảo hoạt động ổn định của cluster, bạn không nên xóa 4 service endpoint đã được tạo sẵn. Nếu vô tình xóa hoặc chỉnh sửa 4 endpoint này, trong vòng tối đa 5 phút, hệ thống sẽ tự động tạo lại nhưng có thể gây gián đoạn đến các dịch vụ đang chạy. Lúc này, do service endpoint tạo lại có thể đã thay đổi Endpoint IP so với ban đầu nên để cluster hoạt động được, bạn cần thực hiện thêm Endpoint IP một cách thủ công cho những server đang chạy trước đó thông qua câu lệnh:
 
     ```
-    vks-boostraper add-host -i 192.168.1.9 -d vcr.vngcloud.vn
-    vks-boostraper add-host -i 192.168.1.8 -d hcm-3.api.vngcloud.vn
-    vks-boostraper add-host -i 192.168.1.5 -d iamapis.vngcloud.vn
-    vks-boostraper add-host -i 192.168.1.7 -d hcm03.vstorage.vngcloud.vn
+    vks-bootstraper add-host -i <IP> -d <DOMAIN>
     ```
-  * Nếu bạn xóa private service endpoint của vCR tại `<mark style="color:red;background-color:red;">`**Region HAN**`</mark>` thì bạn cần add host qua lệnh:
 
-    ```
-    vks-boostraper add-host -i 192.168.1.9 -d vcr-han.vngcloud.vn
-    vks-boostraper add-host -i 192.168.1.8 -d han-1.api.vngcloud.vn
-    vks-boostraper add-host -i 192.168.1.5 -d iamapis.vngcloud.vn
-    vks-boostraper add-host -i 192.168.1.7 -d han02.vstorage.vngcloud.vn
-    ```
+    Ví dụ,
+
+    *   Nếu bạn xóa private service endpoint của 4 dịch vụ trên tại `<mark style="color:red;background-color:red;">`**Region HCM**`</mark>` thì bạn cần add host qua lệnh:
+
+        ```
+        vks-boostraper add-host -i 192.168.1.9 -d vcr.vngcloud.vn
+        vks-boostraper add-host -i 192.168.1.8 -d hcm-3.api.vngcloud.vn
+        vks-boostraper add-host -i 192.168.1.5 -d iamapis.vngcloud.vn
+        vks-boostraper add-host -i 192.168.1.7 -d hcm03.vstorage.vngcloud.vn
+        ```
+    *   Nếu bạn xóa private service endpoint của vCR tại `<mark style="color:red;background-color:red;">`**Region HAN**`</mark>` thì bạn cần add host qua lệnh:
+
+        ```
+        vks-boostraper add-host -i 192.168.1.9 -d vcr-han.vngcloud.vn
+        vks-boostraper add-host -i 192.168.1.8 -d han-1.api.vngcloud.vn
+        vks-boostraper add-host -i 192.168.1.5 -d iamapis.vngcloud.vn
+        vks-boostraper add-host -i 192.168.1.7 -d han02.vstorage.vngcloud.vn
+        ```
 * `<mark style="color:red;background-color:red;">`**Tái sử dụng Private Service Endpoint:**`</mark>` Các service endpoint có thể được nhiều private cluster cùng sử dụng. Khi các private cluster chung VPC thì chúng tôi sẽ tái sử dụng chúng cho các cluster này.
 * `<mark style="color:red;background-color:red;">`**Xóa Private Service Endpoint tự động:**`</mark>` Khi bạn xóa cluster, nếu không còn cluster nào tái sử dụng các service endpoint này, hệ thống sẽ tự động xóa chúng.
 * `<mark style="color:red;background-color:red;">`**Chi phí sử dụng Private Service Endpoint:**`</mark>` Việc sử dụng private cluster sẽ phát sinh thêm chi phí cho 4 private service endpoint, nhưng nó mang lại nhiều lợi ích về bảo mật cho dự án của bạn. Bạn hãy cân nhắc kỹ lưỡng các yếu tố để đưa ra quyết định sử dụng public hay private cho cluster của mình.
 * `<mark style="color:red;background-color:red;">`**Trên VKS, tại mỗi Region HCM hay HAN, domain của vCR để pull/ push image khác nhau**`</mark>`. Hãy chú ý khi sử dụng để tránh nhầm lần. Cụ thể:
-
   * **Với Region HCM**: dùng domain `vcr.vngcloud.vn`
   * **Với Region HAN**: dùng domain `vcr-han.vngcloud.vn`
-    {% endhint %}
+{% endhint %}
 
----
+***
 
 ### Điều kiện cần
 
 Để có thể khởi tạo một **Cluster** và **Deploy** một **Workload**, bạn cần:
 
-* Có ít nhất 1 **VPC** và 1 **Subnet** đang ở trạng thái **ACTIVE**. Nếu bạn chưa có VPC, Subnet nào, vui lòng khởi tạo VPC, Subnet theo hướng dẫn tại [đây.](../../vserver/compute-hcm03-1a/network/virtual-private-cloud-vpc/)
-* Có ít nhất 1 **SSH** key đang ở trạng thái **ACTIVE**. Nếu bạn chưa có SSH key nào, vui lòng khởi tạo SSH key theo hướng dẫn tại [đây.](../../vserver/compute-hcm03-1a/security/ssh-key-bo-khoa.md)
+* Có ít nhất 1 **VPC** và 1 **Subnet** đang ở trạng thái **ACTIVE**. Nếu bạn chưa có VPC, Subnet nào, vui lòng khởi tạo VPC, Subnet theo hướng dẫn tại [đây.](../../vserver/compute/network/virtual-private-cloud-vpc/)
+* Có ít nhất 1 **SSH** key đang ở trạng thái **ACTIVE**. Nếu bạn chưa có SSH key nào, vui lòng khởi tạo SSH key theo hướng dẫn tại [đây.](../../vserver/compute/security/ssh-key-bo-khoa.md)
 * Đã cài đặt và cấu hình **kubectl** trên thiết bị của bạn. vui lòng tham khảo tại [đây](https://kubernetes.io/vi/docs/tasks/tools/install-kubectl/) nếu bạn chưa rõ cách cài đặt và sử dụng kuberctl. Ngoài ra, bạn không nên sử dụng phiên bản kubectl quá cũ, chúng tôi khuyến cáo bạn nên sử dụng phiên bản kubectl sai lệch không quá một phiên bản với version của cluster.
 
----
+***
 
 ### Khởi tạo Cluster
 
@@ -94,9 +93,9 @@ Bạn có thể xem thông tin 4 private service endpoint thông qua portal vSer
 
 * **Một Cluster** có thể có **nhiều Node Group**, mỗi Node Group có thể hoạt động ở mode Public/ Private tùy theo nhu cầu của bạn.
 * Do **Cluster** của bạn được khởi tạo ở chế độ **Private**, để có thể truy cập vào **kube-api** của Control Plane thì bạn cần **đứng trong VPC** mà bạn chọn sử dụng cho Cluster của bạn.
-  {% endhint %}
+{% endhint %}
 
----
+***
 
 ### Kết nối và kiểm tra thông tin Cluster vừa tạo
 
@@ -180,7 +179,7 @@ NAME                                    STATUS   ROLES    AGE     VERSION
 vks-demo-cluster-nodegroup-demo-7c9aa   Ready    <none>   8m11s   v1.28.8
 ```
 
----
+***
 
 ### Sử dụng Docker để Pull/Push image
 
@@ -193,7 +192,7 @@ Do Private Cluster chỉ có thể kết nối private tới hệ thống vConta
 #### **Bước 2: Khởi tạo Public Repository và Repository User trên vContainer Registry Portal:**
 
 * Đăng nhập portal vCR tại đường dẫn:
-  * Với `<mark style="color:red;background-color:red;">`**Region HCM**`</mark>`:  [https://vcr.console.greennode.ai/list](https://vcr.console.greennode.ai/list)
+  * Với `<mark style="color:red;background-color:red;">`**Region HCM**`</mark>`: [https://vcr.console.greennode.ai/list](https://vcr.console.greennode.ai/list)
   * Với `<mark style="color:red;background-color:red;">`**Region HN**`</mark>`: [https://han-1.console.greennode.ai/vcr/repository/list](https://han-1.console.greennode.ai/vcr/repository/list)
 * Thực hiện khởi tạo Repositoryvà Repository theo hướng dẫn tại [đây](../../vcontainer-registry/repository/). Ví dụ trong hình dưới, tôi đã khởi tạo demo\_repo với demo\_user có thể pull/ push image:
 
@@ -205,7 +204,7 @@ Do Private Cluster chỉ có thể kết nối private tới hệ thống vConta
 **Warning:**
 
 * Nếu bạn mong muốn khởi tạo Private Reposity, để pull image từ Private Reposity, bạn cần tạo secret key theo hướng dẫn tại [đây](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
-  {% endhint %}
+{% endhint %}
 
 **Bước 3:** Thực hiện pull image nginx về theo lệnh:
 
@@ -215,7 +214,7 @@ docker pull nginx:latest
 
 **Bươc 4:** Thực hiện login vào vCR qua lệnh:
 
-* Với `<mark style="color:red;background-color:red;">`**Region HCM**`</mark>`:&#x20;
+* Với `<mark style="color:red;background-color:red;">`**Region HCM**`</mark>`:
 
 ```
 docker login vcr.vngcloud.vn -u <repository_user>
@@ -235,7 +234,7 @@ docker login vcr-han.vngcloud.vn -u 53461-user_demo
 
 **Bước 5:** Gán tag cho image nginx
 
-* Với `<mark style="color:red;background-color:red;">`**Region HCM**`</mark>`**:**&#x20;
+* Với `<mark style="color:red;background-color:red;">`**Region HCM**`</mark>`**:**
 
 ```
 docker tag SOURCE_IMAGE[:TAG] vcr.vngcloud.vn/REPO_NAME/IMAGE[:TAG]
@@ -261,7 +260,7 @@ docker tag nginx:latest vcr-han.vngcloud.vn/53461-repo_demo/nginx-demo:latest
 docker push vcr.vngcloud.vn/REPO_NAME/IMAGE[:TAG]
 ```
 
-* Với `<mark style="color:red;background-color:red;">`**Region HAN**`</mark>`**:**&#x20;
+* Với `<mark style="color:red;background-color:red;">`**Region HAN**`</mark>`**:**
 
 ```
 docker push vcr-han.vngcloud.vn/REPO_NAME/IMAGE[:TAG]
@@ -273,11 +272,11 @@ docker push vcr-han.vngcloud.vn/REPO_NAME/IMAGE[:TAG]
 docker push vcr-han.vngcloud.vn/53461-repo_demo/nginx-demo:latest
 ```
 
----
+***
 
 ### Deploy một Workload
 
-#### Deploy một Workload và expose service qua vLB Layer 4&#x20;
+#### Deploy một Workload và expose service qua vLB Layer 4
 
 Sau đây là hướng dẫn để bạn deploy service nginx và expose service này qua vLB Layer 4 (Network Load Balancer)
 
@@ -331,7 +330,7 @@ spec:
 kubectl apply -f nginx-service-lb4.yaml
 ```
 
----
+***
 
 **Bước 2: Kiểm tra thông tin Deployment, Service trước khi expose ra Internet.**
 
@@ -355,7 +354,7 @@ NAME                             READY   STATUS    RESTARTS   AGE     IP        
 pod/nginx-app-56bbc8fdd8-4pz68   1/1     Running   0          3m32s   172.16.4.207   vks-demo-cluster-nodegroup-demo-7c9aa   <none>           <none>
 ```
 
----
+***
 
 Lúc này, hệ thống vLB sẽ khởi tạo môt Network Load Balancer, bạn có thể xem thông tin LB này thông qua portal vLB tại [đây](https://hcm-3.console.greennode.ai/vserver/load-balancer/vlb).
 
@@ -427,7 +426,7 @@ spec:
 kubectl apply -f nginx-service-lb7.yaml
 ```
 
----
+***
 
 **Bước 2: Kiểm tra thông tin Deployment, Service trước khi expose ra Internet.**
 
@@ -451,7 +450,7 @@ NAME                             READY   STATUS    RESTARTS   AGE     IP        
 pod/nginx-app-7f45b65946-6wlgw   1/1     Running   0          2m49s   172.16.54.3   ng-e0fc7245-0c6e-4336-abcc-31a70eeed71d-972a9   <none>           <none>
 ```
 
----
+***
 
 **Bước 3: Thực hiện tạo file nginx-ingress.yaml qua lệnh:**
 
@@ -459,7 +458,7 @@ pod/nginx-app-7f45b65946-6wlgw   1/1     Running   0          2m49s   172.16.54.
 vi nginx-ingress.yaml
 ```
 
-Sau đó, bạn hãy nhập nội dung cho file này như sau:&#x20;
+Sau đó, bạn hãy nhập nội dung cho file này như sau:
 
 ```
 apiVersion: networking.k8s.io/v1
@@ -496,7 +495,7 @@ Lúc này, hệ thống vLB sẽ khởi tạo môt Application Load Balancer, b�
 
 <figure><img src="../../.gitbook/assets/image (1083).png" alt=""><figcaption></figcaption></figure>
 
-**Bước 4: Để truy cập vào app nginx vừa expose, bạn có thể sử dụng Endpoint của Load Balancer  với định dạng:**
+**Bước 4: Để truy cập vào app nginx vừa expose, bạn có thể sử dụng Endpoint của Load Balancer với định dạng:**
 
 ```
 http://Endpoint/
@@ -512,4 +511,4 @@ Ví dụ, bên dưới tôi đã truy cập thành công vào app nginx với đ
 **Một vài chú ý khác:**
 
 * Để đảm bảo private cluster hoạt động hiệu quả, chúng tôi đã tự động thêm Subnet mà bạn chọn sử dụng cho Cluster vào danh sách Whitelist của cụm. Bạn có thể sử dụng tính năng Whitelist để giới hạn các Subnet trong VPC có quyền truy cập vào kube-api. Chi tiết cách sử dụng tính năng Whitelist vui lòng tham khảo tại [đây](https://docs.vngcloud.vn/vng-cloud-document/v/vn/vks/clusters/whitelist).
-  {% endhint %}
+{% endhint %}

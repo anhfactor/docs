@@ -83,6 +83,6 @@ To **delete** a **Metric quota**, you can:
 4. In the current Metric quota package, select **Delete**.
 5. On the Metric quota deletion confirmation screen, select **Delete**.
 
-After you delete the Metric quota package, it will disappear from your list of Metric quota packages. If your resources still have remaining usage time, we will refund the unused balance to your credit wallet. For detailed information on how vMonitor Platform calculates resource refund fees, please refer to [Pricing](../../../vserver/compute-hcm03-1a/pricing.md).
+After you delete the Metric quota package, it will disappear from your list of Metric quota packages. If your resources still have remaining usage time, we will refund the unused balance to your credit wallet. For detailed information on how vMonitor Platform calculates resource refund fees, please refer to [Pricing](../../../vserver/compute/pricing.md).
 
 <mark style="color:red;">Since deleting a Metric quota carries risks (resources cannot be restored after deletion), we advise you to carefully consider before proceeding with the deletion.</mark>

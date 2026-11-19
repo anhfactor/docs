@@ -2,7 +2,7 @@
 
 PostgreSQL Cluster cho phép triển khai database với kiến trúc **1 Writer + N Readers**, đảm bảo **High Availability** và khả năng **scale read** cho ứng dụng của bạn. Khi Writer gặp sự cố, hệ thống tự động failover sang một Reader mà không cần can thiệp thủ công.
 
-Để tìm hiểu thêm về khái niệm, kiến trúc và so sánh giữa Single Node và Cluster, vui lòng tham khảo tại [PostgreSQL Cluster](README.md).
+Để tìm hiểu thêm về khái niệm, kiến trúc và so sánh giữa Single Node và Cluster, vui lòng tham khảo tại [PostgreSQL Cluster](./).
 
 ***
 
@@ -50,12 +50,12 @@ Khi chọn Deployment Type là **Cluster**, hệ thống hiển thị thêm sect
 * **Storage Size**: Chọn dung lượng ổ cứng (bao gồm data và log).
 * **Number of Nodes**: Chọn số lượng node cho cluster (từ 2 đến 10). Hệ thống sẽ hiển thị **Role Distribution** tương ứng:
 
-| Số lượng Node | Phân bổ vai trò |
-| --- | --- |
-| 2 | 1 Writer + 1 Reader |
-| 3 | 1 Writer + 2 Readers |
-| 5 | 1 Writer + 4 Readers |
-| 10 | 1 Writer + 9 Readers |
+| Số lượng Node | Phân bổ vai trò      |
+| ------------- | -------------------- |
+| 2             | 1 Writer + 1 Reader  |
+| 3             | 1 Writer + 2 Readers |
+| 5             | 1 Writer + 4 Readers |
+| 10            | 1 Writer + 9 Readers |
 
 #### Bước 3: Cài đặt phiên bản DB (DB Settings)
 
@@ -73,7 +73,7 @@ Khi chọn Deployment Type là **Cluster**, hệ thống hiển thị thêm sect
 
 #### Bước 4: Mạng và bảo mật (Network & Security)
 
-* **Cloud Network (VPC & Subnet)**: Chọn VPC và Subnet cho cluster. Nếu chưa có, bạn có thể tạo mới theo hướng dẫn [tại đây](../../../../vserver/compute-hcm03-1a/network/virtual-private-cloud-vpc/README.md).
+* **Cloud Network (VPC & Subnet)**: Chọn VPC và Subnet cho cluster. Nếu chưa có, bạn có thể tạo mới theo hướng dẫn [tại đây](../../../../vserver/compute/network/virtual-private-cloud-vpc/).
 * **Public Accessibility**: Bật nếu muốn cluster có IP Public và truy cập từ Internet; tắt nếu chỉ muốn truy cập qua IP Private.
 * **Multi-AZ**: nếu ở Bước 1 bạn chọn **Multi-AZ**, mục này yêu cầu VPC đã bật DNS và hiển thị bảng **Subnets** để chọn zone thay cho một Subnet đơn — xem [Khởi tạo PostgreSQL Cluster Multi-AZ](khoi-tao-postgresql-cluster-multi-az.md).
 
@@ -119,11 +119,11 @@ Tại mục **Summary** bên phải, rà soát lại các thông tin cấu hình
 
 Tại trang Database List, bạn có thể lọc nhanh database theo loại deployment:
 
-| Tab | Mô tả |
-| --- | --- |
-| **All Databases** | Hiển thị tất cả database |
-| **Single Node** | Chỉ hiển thị các database Single Node |
-| **Clusters** | Chỉ hiển thị các database Cluster |
+| Tab               | Mô tả                                 |
+| ----------------- | ------------------------------------- |
+| **All Databases** | Hiển thị tất cả database              |
+| **Single Node**   | Chỉ hiển thị các database Single Node |
+| **Clusters**      | Chỉ hiển thị các database Cluster     |
 
 ### Xem chi tiết Cluster
 
@@ -131,28 +131,28 @@ Khi click vào một cluster trong danh sách, trang chi tiết hiển thị cá
 
 **General Information:**
 
-| Thông tin | Mô tả | Ví dụ |
-| --- | --- | --- |
-| ID | ID định danh của cluster | pg-1dfa6aaf-20c9-44a1-... |
-| Zone | Availability Zone | HCM03-1A |
-| Role | Vai trò của instance | Primary Writer / Replica Reader |
-| Replica Source | Nguồn replica (nếu có) | N/A |
-| Instance Type | Cấu hình instance | db-postgre.s-general-2x4-n10 (2 Core, 4 GB) |
-| Engine | Engine và deployment type | PostgreSQL 15 (Cluster, 3 Node) |
-| Storage | Dung lượng và loại storage | 20 GB (GEN2-NVME-IOPS5000) |
-| Free GB | Dung lượng backup miễn phí đi kèm package | 20 GB |
-| Configuration Group | Configuration group đang áp dụng | default-group |
-| Network | VPC network | vpc-10-10-0-0 |
+| Thông tin           | Mô tả                                     | Ví dụ                                       |
+| ------------------- | ----------------------------------------- | ------------------------------------------- |
+| ID                  | ID định danh của cluster                  | pg-1dfa6aaf-20c9-44a1-...                   |
+| Zone                | Availability Zone                         | HCM03-1A                                    |
+| Role                | Vai trò của instance                      | Primary Writer / Replica Reader             |
+| Replica Source      | Nguồn replica (nếu có)                    | N/A                                         |
+| Instance Type       | Cấu hình instance                         | db-postgre.s-general-2x4-n10 (2 Core, 4 GB) |
+| Engine              | Engine và deployment type                 | PostgreSQL 15 (Cluster, 3 Node)             |
+| Storage             | Dung lượng và loại storage                | 20 GB (GEN2-NVME-IOPS5000)                  |
+| Free GB             | Dung lượng backup miễn phí đi kèm package | 20 GB                                       |
+| Configuration Group | Configuration group đang áp dụng          | default-group                               |
+| Network             | VPC network                               | vpc-10-10-0-0                               |
 
 **Các tab chi tiết:**
 
-| Tab | Nội dung |
-| --- | --- |
-| **Configuration** | Thông tin flavor (vCPU, RAM) và storage (type, size, disk usage) |
-| **Connectivity & Security** | Connection endpoints và cài đặt bảo mật |
-| **Backup** | Lịch sử backup, tạo manual backup, xem backup information |
-| **History** | Activity logs |
-| **Monitor** | Metrics và biểu đồ giám sát, xem mục **Giám sát cluster (Monitoring)** bên dưới |
+| Tab                         | Nội dung                                                                        |
+| --------------------------- | ------------------------------------------------------------------------------- |
+| **Configuration**           | Thông tin flavor (vCPU, RAM) và storage (type, size, disk usage)                |
+| **Connectivity & Security** | Connection endpoints và cài đặt bảo mật                                         |
+| **Backup**                  | Lịch sử backup, tạo manual backup, xem backup information                       |
+| **History**                 | Activity logs                                                                   |
+| **Monitor**                 | Metrics và biểu đồ giám sát, xem mục **Giám sát cluster (Monitoring)** bên dưới |
 
 ***
 
@@ -219,13 +219,13 @@ Khi bạn tạo PostgreSQL Cluster, hệ thống tự động thu thập metric 
 
 Các biểu đồ chính có sẵn ở tab Monitor:
 
-| Chế độ xem | Nhóm | Biểu đồ |
-| --- | --- | --- |
-| Cluster metric | Kết nối | Max Connections, Connection Usage Per Node |
-| Cluster metric | Bộ nhớ và cache | Shared Buffers, Cache Hit Rate |
-| Cluster metric | Replication | Replication Lag |
-| Node metric | Trạng thái node | Online Nodes |
-| Node metric | Tài nguyên | CPU Usage, Mem Usage (Percent), Volume Usage (Percent) |
+| Chế độ xem     | Nhóm            | Biểu đồ                                                |
+| -------------- | --------------- | ------------------------------------------------------ |
+| Cluster metric | Kết nối         | Max Connections, Connection Usage Per Node             |
+| Cluster metric | Bộ nhớ và cache | Shared Buffers, Cache Hit Rate                         |
+| Cluster metric | Replication     | Replication Lag                                        |
+| Node metric    | Trạng thái node | Online Nodes                                           |
+| Node metric    | Tài nguyên      | CPU Usage, Mem Usage (Percent), Volume Usage (Percent) |
 
 Để xem thêm metric ngoài tập bật sẵn, tự vẽ dashboard hoặc tạo cảnh báo (alarm), chọn **Monitored by vMonitor Platform** để chuyển sang vMonitor Platform và bật Detailed Monitoring. Tham khảo:
 
@@ -249,7 +249,7 @@ Tại đầu tab Backup có link **"View full backup details →"** dẫn thẳn
 
 Có 2 cách tạo Manual Backup:
 
-* **Cách 1 (khuyến nghị):** Click nút **Back up now** trực tiếp trên thanh action của trang chi tiết cluster (xem hướng dẫn tại [Tạo Backup ngay lập tức](#tạo-backup-ngay-lập-tức-back-up-now)).
+* **Cách 1 (khuyến nghị):** Click nút **Back up now** trực tiếp trên thanh action của trang chi tiết cluster (xem hướng dẫn tại [Tạo Backup ngay lập tức](khoi-tao-va-quan-ly-postgresql-cluster.md#tạo-backup-ngay-lập-tức-back-up-now)).
 * **Cách 2:** Tại tab **Backup**, click **Create Manual Backup**, sau đó xác nhận.
 
 Hệ thống sẽ tạo một **Full Snapshot** của database. Bản backup mới xuất hiện trong danh sách với trạng thái **In Progress** và chuyển sang **Completed** khi hoàn tất.

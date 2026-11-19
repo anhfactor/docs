@@ -31,7 +31,9 @@ sudo make install
 
 1. Open the Database management console and select the Redis Cluster to connect to.
 2. Select the **Connectivity & Security** tab and review the **Endpoint & Port** section.
-3. Note the Instance **IP** or **Domain** and the **Port** (default `6379`).
+3. Note the Instance **IP** or **Domain** and the **Port**:
+   * `6379` — write endpoint, always points to the Master.
+   * `6380` — read endpoint, round-robin across Replicas. Data read from this endpoint may lag behind the latest write; for read-your-writes, use `6379`.
 4. Get the authentication credentials: the ACL user (default `master-user`) and password.
 
 ![](../../../.gitbook/assets/Redis-cluster/ket-noi-redis-cluster-endpoint.png)

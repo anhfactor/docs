@@ -15,10 +15,10 @@ Bạn có thể lọc các mô hình bằng các tùy chọn ở thanh bên trá
 
 * Nhà cung cấp (Provider): Google, Anthropic, OpenAI, GreenNode, ...
 * Loại mô hình (Model Type):
-  * Chat: Được thiết kế cho các cuộc hội thoại tương tác. Chúng có khả năng lưu giữ ngữ cảnh và lịch sử cuộc trò chuyện.
-  * Image Generation: Tạo ra hình ảnh mới dựa trên mô tả văn bản.
+  * Chat: Được thiết kế cho các cuộc hội thoại tương tác. Gọi qua Chat Completions, Messages (Anthropic) hoặc Responses tuỳ model.
   * Embedding: chuyển đổi dữ liệu (văn bản, hình ảnh, âm thanh,…) thành vector nhiều chiều, giúp máy tính hiểu và so sánh ngữ nghĩa để phục vụ tìm kiếm, phân loại hoặc gợi ý nội dung.
-  * Completion: Xử lý từng yêu cầu (prompt) một cách độc lập mà không lưu lại lịch sử hội thoại.
+  * Rerank: Sắp xếp lại danh sách tài liệu theo mức độ liên quan với câu truy vấn.
+  * OCR: Trích xuất văn bản và dữ liệu từ ảnh, tài liệu.
 * Trường hợp sử dụng (Use-case):
   * Vietnamese: Tối ưu cho các tác vụ tiếng Việt.
   * General Tasks: Phù hợp cho nhiều tác vụ chung.
@@ -30,13 +30,13 @@ Bạn có thể lọc các mô hình bằng các tùy chọn ở thanh bên trá
 
 ### Bật / Tắt mô hình
 
-1. Nhấp vào nút "Bật/Tăt model" (Toggle models). User cần activate billing để enable model, đối với user Prepaid cần nạp quota để enable model còn user Postpaid có thể enable model và sử dụng được ngay. Tham khảo [cách tính phí](https://docs.vngcloud.vn/vng-cloud-document/vn/ai-stack/model-as-a-service/cach-tinh-phi)<br>
+1. Nhấp vào nút "Bật/Tắt model" (Toggle models). User cần activate billing để enable model, đối với user Prepaid cần nạp quota để enable model còn user Postpaid có thể enable model và sử dụng được ngay. Tham khảo [cách tính phí](cach-tinh-phi.md)<br>
 
 <figure><img src="../../.gitbook/assets/image (779).png" alt=""><figcaption></figcaption></figure>
 
-1. Lựa chọn mô hình: Một cửa sổ popup sẽ hiện ra. Tại đây, bạn có thể tìm kiếm và lọc mô hình theo Nhà cung cấp (Provider), Trạng thái (Status) hoặc Loại mô hình (Type).
-2. Bật/tắt riêng lẻ hoặc hàng loạt mô hình.
-3. Lưu (Save) các thay đổi.
+2. Lựa chọn mô hình: Một cửa sổ popup sẽ hiện ra. Tại đây, bạn có thể tìm kiếm và lọc mô hình theo Nhà cung cấp (Provider), Trạng thái (Status) hoặc Loại mô hình (Type).
+3. Bật/tắt riêng lẻ hoặc hàng loạt mô hình.
+4. Lưu (Save) các thay đổi.
 
 <figure><img src="../../.gitbook/assets/image (16) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -60,5 +60,4 @@ Sau khi thử nghiệm trong Playground, bạn có thể truy cập các mô hì
 
 ### Bảo mật và quyền riêng tư dữ liệu
 
-* Dữ liệu được mã hóa trên kênh truyền bằng **TLS 1.3**.
-* Dữ liệu chỉ tồn tại trong bộ nhớ của hệ thống suy luận trong thời gian xử lý yêu cầu. GreenNode không lưu trữ prompt đầu vào và kết quả đầu ra của người dùng lâu dài cho bất kỳ mục đích nào khác.
+* Dữ liệu được mã hóa trên kênh truyền bằng **TLS 1.2 trở lên**.

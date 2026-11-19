@@ -25,7 +25,7 @@ GreenNode cung cấp giao diện trực quan trong việc quản lý Load Balanc
      * Chọn **Internal** nếu: Chỉ cho phép truy cập với mạng nội bộ
    * _**Load Balancer Package**_: Chọn gói khởi tạo phù hợp với nhu cầu và mục đích sử dụng, lưu ý rằng gói này là yếu tố chính dùng để tính chi phí khởi tạo và vận hành Load Balancer của bạn. Gói này có thể thay đổi trong quá trình sử dụng.
    * **Auto-scale:** Chọn bật/tắt tính năng auto-scale số lượng LB. Xem chi tiết tính năng auto-scale [tại đây.](../auto-scaling.md)
-   * _**Cài đặt Network**_**: Chọn Virtual Private Cloud (VPC) và Subnet** có sẵn từ danh sách VPC của bạn, trường hợp khởi tạo VPC, tham khảo hướng dẫn [Virtual Private Cloud (VPC)](../../network/virtual-private-cloud-vpc/).
+   * _**Cài đặt Network**_**: Chọn Virtual Private Cloud (VPC) và Subnet** có sẵn từ danh sách VPC của bạn, trường hợp khởi tạo VPC, tham khảo hướng dẫn [Virtual Private Cloud (VPC)](../../../compute/network/virtual-private-cloud-vpc/).
 4. **Chọn cấu hình Listener**
    * **Tên Listener:** Trường hợp người dùng không chủ động điền tên Listener, hệ thống sẽ tự động sinh ra tên Listener.
    * **Giao thức & Cổng (Protocol & Port)**
@@ -43,7 +43,7 @@ GreenNode cung cấp giao diện trực quan trong việc quản lý Load Balanc
    * **Tab "Tóm tắt / Summary"**: Kiểm tra lần lượt các thông tin cấu hình Load Balancer, Listener, Pool và Pool Member
    * **Tab " Danh sách / Item list":** Kiểm tra thông tin Load Balancer Package và Chi phí
 8. **Hoàn tất khởi tạo: Sau khi hoàn tất việc cấu hình và kiểm tra thông tin, click nút "Tạo load Balancer / Create Load Balancer" để hoàn tất việc khởi tạo.**
-   * Đối với người dùng trả trước, bạn sẽ được điều hướng đến trang thanh toán, tại đây bạn cần cung cấp một phương thức thanh toán khả dụng để hoàn tất việc khởi tạo Application Load Balancer. Tham khảo thêm hướng dẫn [Thanh toán trực tuyến](../../../../quan-ly-hoa-don-chi-phi-and-tai-nguyen-tren-vng-cloud/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/thanh-toan-truc-tuyen.md)
+   * Đối với người dùng trả trước, bạn sẽ được điều hướng đến trang thanh toán, tại đây bạn cần cung cấp một phương thức thanh toán khả dụng để hoàn tất việc khởi tạo Application Load Balancer. Tham khảo thêm hướng dẫn [Thanh toán trực tuyến](../../../../quan-ly-hoa-don-chi-phi-and-tai-nguyen/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/thanh-toan-truc-tuyen.md)
 
 **Việc khởi tạo ban đầu cho phép cấu hình một Listener và một Pool tương ứng, sau khi hoàn tất khởi tạo thành công, người dùng có thể truy cập vào chi tiết Load Balancer để thêm mới/chỉnh sửa Listener và Pool tùy ý.**
 
@@ -69,7 +69,7 @@ Sử dụng hướng dẫn này để phục vụ cho việc xem danh sách tấ
 
 **Lọc và Sắp xếp Load Balancer**
 
-Người dùng có thể sắp xếp danh sách Load Balancer theo như cầu bằng cách nhấn chọn vào tên cột cần sắp xếp tại bảng danh sách Load Balancer như: Sắp xếp theo Tên, Trạng Thái, Endpoint, Cơ chế, Loại load balancer.&#x20;
+Người dùng có thể sắp xếp danh sách Load Balancer theo như cầu bằng cách nhấn chọn vào tên cột cần sắp xếp tại bảng danh sách Load Balancer như: Sắp xếp theo Tên, Trạng Thái, Endpoint, Cơ chế, Loại load balancer.
 
 **Tìm kiếm Load Balancer**
 
@@ -89,12 +89,12 @@ Truy cập vào Load Balancer để xem và quản lý thông tin chi tiết
      * Thống kê số lượng Pool đang hoạt động tốt / Tổng số Pool
      * Thống kê số lượng Pool đang hoạt động không tốt / Tổng số Pool
    * **Thông tin chung của Load Balancer**
-     * Thông tin tên, định danh Load Balancer&#x20;
+     * Thông tin tên, định danh Load Balancer
      * Cơ chế / Scheme (Internet / Internal)
      * Private subnet & Endpoint
      * Thông tin gói Load Balancer: Connections, Data Transfer, Package name
    * **Thông tin chi tiết**
-     * Listener: Danh sách và thông tin chi tiết từng Listener&#x20;
+     * Listener: Danh sách và thông tin chi tiết từng Listener
      * Pool: Danh sách và thông tin chi tiết từng Pool
      * Monitor: Danh sách Metrics và Logs
 

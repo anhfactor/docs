@@ -19,8 +19,8 @@ Tại giao diện quản lý Database, bạn click chọn **Create Database**. Q
 * **Bước 3 Cài đặt phiên bản DB:** bạn lựa chọn
   * **Yêu cầu mật khẩu**: bật yêu cầu mật khẩu để quản trị database instance này nếu muốn.
   * **Mật khẩu**: Trường hợp bật yêu cầu mật khẩu, bần cần nhập vào mật khẩu của mình. GreenNode khuyến nghị bạn đặt password đủ mạnh và lưu trữ password này tại nơi an toàn. Để đảm bảo an toàn thông tin, password cần thỏa tất cả yêu cầu tối thiểu độ dài, ký tự cho phép, ký tự đặc biệt,...
-* **Bước 4 Mạng và bảo mật:**&#x54;ại mục **Network & Security**, bạn lựa chọn&#x20;
-  * **Cloud Network (VPC & Subnet)** sẽ sử dụng cho MDS Instance này. Mọi RDS Instance đều phải kết nối với một Cloud Network. Nếu chưa có Cloud Network nào, bạn có thể tạo một Cloud Network mới với hướng dẫn[ tại đây](../../vserver/compute-hcm03-1a/network/virtual-private-cloud-vpc/).
+* **Bước 4 Mạng và bảo mật:**&#x54;ại mục **Network & Security**, bạn lựa chọn
+  * **Cloud Network (VPC & Subnet)** sẽ sử dụng cho MDS Instance này. Mọi RDS Instance đều phải kết nối với một Cloud Network. Nếu chưa có Cloud Network nào, bạn có thể tạo một Cloud Network mới với hướng dẫn[ tại đây](../../vserver/compute/network/virtual-private-cloud-vpc/).
   * **Truy cập công khai:** Nếu bạn muốn MDS Instance có IP Public và có thể truy cập từ ngoài Internet, bạn cần bật tính năng **Truy cập công khai** (**Public Accessbility)**, nếu bạn muốn MDS Instance chỉ có IP Private và chỉ những Cloud Servers mới có thể truy cập được thì bạn cần tắt tính năng Public Accessibility.
 
 **Lưu ý**: Để tăng cường bảo mật, GreenNode cho phép bạn giới hạn các địa chỉ IP tin cậy được phép truy cập vào mỗi MDS Instance thông qua **Security Group Rules**.
@@ -35,4 +35,3 @@ Tại giao diện quản lý Database, bạn click chọn **Create Database**. Q
 Sau khi cấu hình xong,tại mục **Tóm tắt/Summary** bên tay phải, bạn rà soát lại các thông tin, khi mọi thông tin đều đã chính xác, bạn nhấn **Create Database** để hoàn tất quá trìn&#x68;**.** Trong quá trình khởi tạo, MDS Instance sẽ có trạng thái **Building** hay **Build**. Nếu khởi tạo thành công, MDS Instance sẽ có trạng thái **Active**.
 
 Chúc mừng bạn đã khởi tạo thành công DB Instance trên hệ thống GreenNode. Mời bạn đến hướng dẫn [kết nối MDS Instance](ket-noi-mds-instance.md) để bắt đầu sử dụng cơ sở dữ liệu.
-
