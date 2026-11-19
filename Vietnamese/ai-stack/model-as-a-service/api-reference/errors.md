@@ -8,7 +8,7 @@ description: "Lỗi do gateway sinh ra có mã máy đọc được trong header
 
 | Code | HTTP | Ý nghĩa | Retry? |
 | --- | --- | --- | --- |
-| `invalid_request` | 400 | Thiếu prompt (`messages` thiếu hoặc rỗng — message "request body doesn't contain valid prompts"), tham số hoặc giá trị không hỗ trợ, `max_tokens` quá lớn, loại nội dung không hỗ trợ, hoặc `model` trong body khác model trên URL riêng của model. | Không — sửa request |
+| `invalid_request` | 400 | Thiếu prompt (`messages` thiếu hoặc rỗng — message "request body doesn't contain valid prompts"), tham số hoặc giá trị không hỗ trợ, `max_tokens` quá lớn, loại nội dung không hỗ trợ. | Không — sửa request |
 | `request_denied` | 401 | Thiếu API key, key không tồn tại, bị vô hiệu hoặc hết hạn. | Không |
 | `request_denied` | 403 | Model chưa được bật cho tài khoản (“model not allowed for this key”). | Không — bật model |
 | `request_denied` | 400 | Guardrail an toàn nội dung đã chặn request. Xem [An toàn nội dung](../features/content-safety.md). | Không |
@@ -79,7 +79,7 @@ Một số response do tầng proxy trả trước khi request tới model. Chú
 
 | HTTP | Body | Nguyên nhân và cách xử lý |
 | --- | --- | --- |
-| 404 | `{"message":"no Route matched with those values", …}` | Sai đường dẫn hoặc HTTP method, hoặc model không tồn tại trong URL riêng của model. Kiểm tra lại URL. |
+| 404 | `{"message":"no Route matched with those values", …}` | Sai đường dẫn hoặc HTTP method. Kiểm tra lại URL. |
 | 405 | `{"error":{"code":"method_not_allowed", …}}` | `/v1/models` chỉ nhận `GET`. |
 | 502 | `{"message":"An invalid response was received from the upstream server", …}` | Trên các endpoint `/v1/…`: gateway không đọc được trường `model` trong body (body không phải JSON hợp lệ, body rỗng, hoặc thiếu `model`) nên không định tuyến được. Gửi body JSON hợp lệ có `model`. Lỗi này không retry được. |
 | 504 | `{"message":"The upstream server is timing out", …}` | Model không trả lời trong giới hạn thời gian của request. Dùng streaming hoặc giảm `max_tokens`. Xem [giới hạn](limits.md). |

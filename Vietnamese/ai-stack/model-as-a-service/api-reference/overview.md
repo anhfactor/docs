@@ -34,15 +34,27 @@ Thiếu key hoặc key không hợp lệ → **401** `request_denied`. Model ch�
 
 ## Chọn model
 
-Đặt model ID trong body (`"model": "z-ai/glm-5.3"`). Ngoài ra, một số công cụ cần base URL riêng cho từng model; mọi endpoint cũng truy cập được qua đường dẫn riêng của model, khi đó `model` trong body phải trùng khớp:
+Đặt model ID trong trường `model` của body, theo dạng `vendor/model`:
 
-{% code title="per-model URL" %}
-```
-https://maas-llm-aiplatform-hcm.api.vngcloud.vn/{vendor}/{model}/v1/chat/completions
-# e.g.
-https://maas-llm-aiplatform-hcm.api.vngcloud.vn/qwen/qwen3.6-flash/v1/chat/completions
+{% code title="curl" %}
+```bash
+curl https://maas-llm-aiplatform-hcm.api.vngcloud.vn/v1/chat/completions \
+  -H "Authorization: Bearer $GREENNODE_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "z-ai/glm-5.3",
+    "messages": [{"role": "user", "content": "Xin chào"}]
+  }'
 ```
 {% endcode %}
+
+* Đường dẫn endpoint giống nhau cho mọi model (ví dụ `POST /v1/chat/completions`); chỉ giá trị `model` thay đổi.
+* Lấy model ID tại [Danh sách model](../models/README.md) hoặc bằng `GET /v1/models`.
+* Request thiếu `model` không định tuyến được và trả `502`; model ID không tồn tại trả `404 model_not_found`. Xem [Lỗi](errors.md).
+
+{% hint style="info" %}
+**Ngoại lệ: OCR.** Model OCR (`greennode/idp`) nhận file và trả kết quả sau, nên dùng bộ endpoint riêng và không nhận `model` trong body. Xem [OCR API](ocr.md).
+{% endhint %}
 
 ## Quy ước
 

@@ -8,7 +8,7 @@ description: "Errors produced by the gateway carry a machine-readable code in th
 
 | Code | HTTP | Meaning | Retry? |
 | --- | --- | --- | --- |
-| `invalid_request` | 400 | No prompt (`messages` missing or empty — message "request body doesn't contain valid prompts"), unsupported parameter or value, `max_tokens` too large, unsupported content type, or the `model` in the body differs from the model in a per-model URL. | No — fix the request |
+| `invalid_request` | 400 | No prompt (`messages` missing or empty — message "request body doesn't contain valid prompts"), unsupported parameter or value, `max_tokens` too large, unsupported content type. | No — fix the request |
 | `request_denied` | 401 | API key missing, unknown, inactive or expired. | No |
 | `request_denied` | 403 | The model is not enabled for the account (“model not allowed for this key”). | No — enable the model |
 | `request_denied` | 400 | A content-safety guardrail blocked the request. See [Content safety](../features/content-safety.md). | No |
@@ -79,7 +79,7 @@ A few responses come from the proxy layer before the request reaches a model. Th
 
 | HTTP | Body | Cause and fix |
 | --- | --- | --- |
-| 404 | `{"message":"no Route matched with those values", …}` | Wrong path or HTTP method, or an unknown model in a per-model URL. Check the URL. |
+| 404 | `{"message":"no Route matched with those values", …}` | Wrong path or HTTP method. Check the URL. |
 | 405 | `{"error":{"code":"method_not_allowed", …}}` | `/v1/models` only accepts `GET`. |
 | 502 | `{"message":"An invalid response was received from the upstream server", …}` | On `/v1/…` endpoints: the gateway cannot read `model` from the body (the body is not valid JSON, is empty, or has no `model`), so the request cannot be routed. Send a valid JSON body with `model`. This is not retryable. |
 | 504 | `{"message":"The upstream server is timing out", …}` | The model did not answer within the request time limit. Use streaming or lower `max_tokens`. See [limits](limits.md). |
