@@ -8,15 +8,15 @@ Tham khảo các Script trong API Usage trên Portal
 
 _Curl_
 
-<figure><img src="../../.gitbook/assets/image (26) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/maas-api-usage-curl.png" alt=""><figcaption></figcaption></figure>
 
 _Python_
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/maas-api-usage-python.png" alt=""><figcaption></figcaption></figure>
 
 Javascript
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/maas-api-usage-nodejs.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
