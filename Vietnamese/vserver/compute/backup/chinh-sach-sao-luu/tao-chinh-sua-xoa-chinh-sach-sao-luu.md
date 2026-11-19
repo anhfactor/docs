@@ -25,7 +25,7 @@ Bạn có thể tạo chính sách trong Bảng điều khiển quản lý vServ
 3. Chọn **Tạo Backup Policy**
 4. Tại trang tạo Policy, nhập thông tin **Tên Policy** tại mục **Thông tin cơ bản**
 5. Sau đó tại mục **Cài đặt chính sách**, lựa chọn **thời gian** và **múi giờ** mà hệ thống sẽ thực hiện sao lưu
-6. Chọn **tần suất sao lưu** phù hợp với nhu cầu sử dụng của bạn theo Hàng Ngày, Hàng Tuần, Hàng Tháng. Lưu ý rằng bạn có thể kết hợp cả 3 với nhau để tạo ra bộ lịch hoàn hảo nhất
+6. Chọn **tần suất sao lưu** phù hợp với nhu cầu sử dụng của bạn theo Hàng Giờ, Hàng Ngày, Hàng Tuần, Hàng Tháng. Lưu ý rằng bạn có thể kết hợp cả 4 với nhau để tạo ra bộ lịch hoàn hảo nhất
 7. Nhập **số bản lưu** mà hệ thống sẽ lưu giữ các bản sao lưu gần nhất
 8. Ngoài ra bạn có thể lựa chọn **tự động sao lưu** cho các **ổ đĩa** được thêm vào máy ảo sau này
 9. Chọn **Tạo Backup Policy**

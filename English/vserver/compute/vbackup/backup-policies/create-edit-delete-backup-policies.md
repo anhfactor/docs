@@ -27,7 +27,7 @@ You can create policies in the vServer Management Console using a visual editor 
 3. Select **Create Backup Policy**
 4. On the Policy creation page, enter the **Policy Name** information in the Basic Information section
 5. Then in the **Policy Settings section**, select the time and time zone in which the system will perform the backup
-6. Choose the **backup frequency** that suits your usage needs by Day, Week, Month, note that you can combine all 3 together to create the perfect calendar
+6. Choose the **backup frequency** that suits your usage needs by Hour, Day, Week, Month, note that you can combine all 4 together to create the perfect calendar
 7. Enter the **number of copies** that will be kept by the system according to the most recent backups
 8. In addition, you can choose to **automatically back up** for **drives** added to the virtual machine later.
 9. Click "**Create Backup Policy**"
