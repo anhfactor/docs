@@ -1,5 +1,5 @@
 ---
-description: "Kimi K2.7 Code is Moonshot AI's coding-focused open-source model, open-sourced in June 2026. It targets programming and agentic workflows with more reliable instruction following over long contexts and higher task success rates, and supports text, image and video input. The model runs with thinking always enabled. Moonshot reports improved coding and agentic performance over K2.6 together with lower average token consumption on long-context tasks. Served here over Tencent Cloud TokenHub, which exposes the OpenAI Chat Completions, Anthropic Messages and Responses APIs for this model."
+description: "Kimi K2.7 Code is Moonshot AI's coding-focused open-source model, open-sourced in June 2026. It targets programming and agentic workflows with more reliable instruction following over long contexts and higher task success rates, and supports text, image and video input. The model runs with thinking always enabled. Moonshot reports improved coding and agentic performance over K2.6 together with lower average token consumption on long-context tasks. Available over the OpenAI Chat Completions, Anthropic Messages and Responses APIs."
 ---
 
 # Kimi K2.7 Code
@@ -8,7 +8,7 @@ description: "Kimi K2.7 Code is Moonshot AI's coding-focused open-source model, 
 
 Model ID: `kimi/kimi-k2.7-code` · Loại: Chat
 
-Kimi K2.7 Code is Moonshot AI's coding-focused open-source model, open-sourced in June 2026. It targets programming and agentic workflows with more reliable instruction following over long contexts and higher task success rates, and supports text, image and video input. The model runs with thinking always enabled. Moonshot reports improved coding and agentic performance over K2.6 together with lower average token consumption on long-context tasks. Served here over Tencent Cloud TokenHub, which exposes the OpenAI Chat Completions, Anthropic Messages and Responses APIs for this model.
+Kimi K2.7 Code is Moonshot AI's coding-focused open-source model, open-sourced in June 2026. It targets programming and agentic workflows with more reliable instruction following over long contexts and higher task success rates, and supports text, image and video input. The model runs with thinking always enabled. Moonshot reports improved coding and agentic performance over K2.6 together with lower average token consumption on long-context tasks. Available over the OpenAI Chat Completions, Anthropic Messages and Responses APIs.
 
 ## Thông số
 

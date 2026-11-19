@@ -1,5 +1,5 @@
 ---
-description: "Qwen3.6-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview), served over the OpenAI-compatible Alibaba Cloud DashScope API. It keeps the same capability surface as the higher tiers — 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) — while optimising for latency and price, making it the default pick for high-volume chat, classification and lightweight agentic workloads."
+description: "Qwen3.6-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview). It keeps the same capability surface as the higher tiers — 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) — while optimising for latency and price, making it the default pick for high-volume chat, classification and lightweight agentic workloads."
 ---
 
 # Qwen 3.6 Flash
@@ -8,7 +8,7 @@ description: "Qwen3.6-Flash is the cost-optimized, fastest tier of Alibaba's Qwe
 
 Model ID: `qwen/qwen3.6-flash` · Loại: Chat
 
-Qwen3.6-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview), served over the OpenAI-compatible Alibaba Cloud DashScope API. It keeps the same capability surface as the higher tiers — 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) — while optimising for latency and price, making it the default pick for high-volume chat, classification and lightweight agentic workloads.
+Qwen3.6-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview). It keeps the same capability surface as the higher tiers — 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) — while optimising for latency and price, making it the default pick for high-volume chat, classification and lightweight agentic workloads.
 
 ## Thông số
 

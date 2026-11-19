@@ -1,5 +1,5 @@
 ---
-description: "BGE is the new series of Qwen large language models"
+description: "BGE-M3 is a multilingual text embedding model from BAAI. It supports more than 100 languages and inputs of up to 8,192 tokens, for semantic search and retrieval-augmented generation (RAG)."
 ---
 
 # BGE-M3
@@ -8,7 +8,7 @@ description: "BGE is the new series of Qwen large language models"
 
 Model ID: `baai/bge-m3` · Type: Embedding
 
-BGE is the new series of Qwen large language models
+BGE-M3 is a multilingual text embedding model from BAAI. It supports more than 100 languages and inputs of up to 8,192 tokens, for semantic search and retrieval-augmented generation (RAG).
 
 ## Specs
 
