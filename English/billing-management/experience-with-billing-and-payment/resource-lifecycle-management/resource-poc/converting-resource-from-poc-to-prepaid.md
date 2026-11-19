@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Converting resource from POC to Prepaid
 
 At GreenNode Service, we support users to flexibly change the purpose of using resources, from the POC stage to a paid service on the same resource. Changing the purpose of using brings significant benefits such as _**saving time to initialize new resources (configuration, payment, ...), optimizing usage costs, reusing old data for new purposes, ...**_
