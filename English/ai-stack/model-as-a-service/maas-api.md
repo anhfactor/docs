@@ -8,15 +8,15 @@ Refer to the scripts under API Usage on the Portal.
 
 _Curl_
 
-<figure><img src="../../.gitbook/assets/image (395).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/maas-api-usage-curl.png" alt=""><figcaption></figcaption></figure>
 
 _Python_
 
-<figure><img src="../../.gitbook/assets/image (397).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/maas-api-usage-python.png" alt=""><figcaption></figcaption></figure>
 
 Javascript
 
-<figure><img src="../../.gitbook/assets/image (398).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/maas-api-usage-nodejs.png" alt=""><figcaption></figcaption></figure>
 
 ***
 
