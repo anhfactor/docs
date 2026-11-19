@@ -2,6 +2,7 @@
 description: >-
   Hướng dẫn này sẽ giúp bạn hiểu thêm về cách sử dụng công cụ để ước tính chi
   phí cho từng cấu hình dịch vụ.
+hidden: true
 ---
 
 # Calculator - Công cụ ước tính chi phí

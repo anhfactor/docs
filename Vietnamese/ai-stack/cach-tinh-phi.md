@@ -37,4 +37,4 @@ GreenNode hỗ trợ 3 cơ chế thanh toán linh hoạt:
 * **Trả sau (Postpaid)** – Thanh toán sau theo mức sử dụng thực tế.
 * **Hold Credit** – Hệ thống giữ một khoản tạm thời, trừ dần theo usage.
 
-Tham khảo chi tiết: [Giới thiệu các hình thức thanh toán tại GreenNode](../quan-ly-hoa-don-chi-phi-and-tai-nguyen/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/)
+Tham khảo chi tiết: [Giới thiệu các hình thức thanh toán tại GreenNode](/broken/pages/18olYyPPZ0HCwTDEHzUS)

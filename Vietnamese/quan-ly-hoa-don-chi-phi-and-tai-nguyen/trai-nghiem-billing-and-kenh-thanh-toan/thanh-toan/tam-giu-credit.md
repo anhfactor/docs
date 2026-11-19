@@ -25,7 +25,7 @@ Nhận thấy nhu cầu sử dụng các tài nguyên / dich vụ trả sau củ
     * **Bước 1:** Truy cập vào portal của GreenNode
     * **Bước 2:** Chọn vào phần hiển thị thông tin credit như hình bên dưới. Tại đây, bạn sẽ nhìn thấy phần credit đang được holding bởi GreenNode.
 
-<figure><img src="../../../../.gitbook/assets/Xem thong tin hold credit.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Xem thong tin hold credit.png" alt=""><figcaption></figcaption></figure>
 
 * Hệ thống cung cấp tài nguyên theo cấu hình cho người dùng
 * Gửi mail thông báo thông tin tài nguyên (tùy vào đặc thù từng loại tài nguyên mà sẽ có email thông báo hoặc không)

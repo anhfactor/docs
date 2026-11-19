@@ -19,7 +19,7 @@ Sử dụng tài liệu này để hiểu thêm về tính năng tự động gi
     * Bước 1: Cấu hình thông tin dịch vụ tại trang sản phẩm → Nhấn "**Khởi tạo**" để chuyển đến trang thanh toán
     * Bước 2: Tại trang thanh toán, tick vào "**Auto-renew**" để bật tính năng tự động gia hạn
 
-    <figure><img src="../../../../.gitbook/assets/image (919).png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../../../.gitbook/assets/image (919).png" alt=""><figcaption></figcaption></figure>
 
     <figure><img src="https://docs.vngcloud.vn/download/attachments/49649295/image2023-12-12_10-49-53.png?version=1&#x26;modificationDate=1702352993000&#x26;api=v2" alt=""><figcaption></figcaption></figure>
 * **Bật/Tắt trong quá trình sử dụng dịch vụ**<br>
@@ -29,7 +29,7 @@ Sử dụng tài liệu này để hiểu thêm về tính năng tự động gi
     * Chọn **"Cập nhật tự động gia hạn"** để điều chỉnh thời gian sử dụng tài nguyên được áp dụng khi hệ thống thực hiện tự động gia hạn
     * Chọn **"Tắt tự động gia hạn"** để tắt tính năng tự động gia hạn nếu không có nhu cầu
 
-<figure><img src="../../../../.gitbook/assets/image (920).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (920).png" alt=""><figcaption></figcaption></figure>
 
 **2.3 Đối với sản phẩm, dịch vụ vMonitor**
 
@@ -37,7 +37,7 @@ Sử dụng tài liệu này để hiểu thêm về tính năng tự động gi
   * Bước 1: Cấu hình thông tin dịch vụ tại trang sản phẩm → Nhấn "Khởi tạo" để chuyển đến trang thanh toán
   * Bước 2: Tại trang thanh toán, tick vào "Auto-renew" để bật tính năng tự động gia hạn
 
-<figure><img src="../../../../.gitbook/assets/image (921).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (921).png" alt=""><figcaption></figcaption></figure>
 
 _Lưu ý: Hiện tại các dịch vụ trong sản phẩm vMonitor chưa hỗ trợ tắt tự động gia hạn khi người dùng bật lúc khởi tạo. Để tắt tự động gia hạn khi không có nhu cầu, vui lòng liên hệ đội ngũ 247 để hỗ trợ thêm._
 

@@ -52,7 +52,7 @@ vLB Console là giao diện người dùng dựa trên web, cho phép bạn qu�
    * **Tab "Tóm tắt / Summary"**: Kiểm tra lần lượt các thông tin cấu hình Load Balancer, Listener, Pool và Pool Member
    * **Tab " Danh sách / Item list":** Kiểm tra thông tin Load Balancer Package và Chi phí
 7. **Hoàn tất khởi tạo: Sau khi hoàn tất việc cấu hình và kiểm tra thông tin, click nút "Tạo load Balancer / Create Load Balancer" để hoàn tất việc khởi tạo.**
-   * Đối với người dùng trả trước, bạn sẽ được điều hướng đến trang thanh toán, tại đây bạn cần cung cấp một phương thức thanh toán khả dụng để hoàn tất việc khởi tạo Application Load Balancer. Tham khảo thêm hướng dẫn [Thanh toán trực tuyến](../../../../quan-ly-hoa-don-chi-phi-and-tai-nguyen/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/thanh-toan-truc-tuyen.md)
+   * Đối với người dùng trả trước, bạn sẽ được điều hướng đến trang thanh toán, tại đây bạn cần cung cấp một phương thức thanh toán khả dụng để hoàn tất việc khởi tạo Application Load Balancer. Tham khảo thêm hướng dẫn [Thanh toán trực tuyến](../../../../quan-ly-hoa-don-chi-phi-and-tai-nguyen/trai-nghiem-billing-and-kenh-thanh-toan/thanh-toan/thanh-toan-truc-tuyen.md)
 
 #### 3. Quan sát và kiểm tra ALB <a href="#gettingstarted-3.quansatvakiemtraalb" id="gettingstarted-3.quansatvakiemtraalb"></a>
 

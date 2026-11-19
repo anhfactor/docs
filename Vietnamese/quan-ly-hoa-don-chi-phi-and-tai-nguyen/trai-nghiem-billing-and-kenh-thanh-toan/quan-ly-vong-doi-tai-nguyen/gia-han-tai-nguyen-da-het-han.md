@@ -27,7 +27,7 @@ Sau 30 ngày kể từ thời điểm kết thúc chu kỳ trước. Hệ thốn
 
 ### Bảng tóm tắt vòng đời
 
-<figure><img src="../../../../.gitbook/assets/unknown (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/unknown (2).png" alt=""><figcaption></figcaption></figure>
 
 | Giai đoạn             | Trạng thái | Dịch vụ         | Trạng thái dữ liệu | Có thể gia hạn |
 | --------------------- | ---------- | --------------- | ------------------ | -------------- |
@@ -55,11 +55,11 @@ Thời gian dịch vụ mới sẽ bắt đầu ngay sau khi gói đăng ký tr�
 
 **Gia hạn tài nguyên trước khi hết hạn**
 
-<figure><img src="../../../../.gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/unknown.png" alt=""><figcaption></figcaption></figure>
 
 **Gia hạn tài nguyên sau khi hết hạn**
 
-<figure><img src="../../../../.gitbook/assets/unknown (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/unknown (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Phương thức gia hạn
 
