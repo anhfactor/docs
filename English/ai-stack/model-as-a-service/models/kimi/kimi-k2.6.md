@@ -4,8 +4,6 @@ description: "Kimi K2.6 is Moonshot AI's general-purpose open-source model, supp
 
 # Kimi K2.6
 
-> This page is generated from the GreenNode MaaS model catalog. Manual edits are overwritten on the next sync.
-
 Model ID: `kimi/kimi-k2.6` · Type: Chat
 
 Kimi K2.6 is Moonshot AI's general-purpose open-source model, supporting text, image and video input with a 256K-token context window. It offers both thinking and non-thinking modes and handles conversational as well as programming/agent tasks. Available over the OpenAI Chat Completions, Anthropic Messages and Responses APIs.

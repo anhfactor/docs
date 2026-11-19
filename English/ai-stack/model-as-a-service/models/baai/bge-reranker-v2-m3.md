@@ -4,8 +4,6 @@ description: "BGE-Reranker-v2-m3 is a lightweight multilingual cross-encoder rer
 
 # BGE Reranker v2 m3
 
-> This page is generated from the GreenNode MaaS model catalog. Manual edits are overwritten on the next sync.
-
 Model ID: `baai/bge-reranker-v2-m3` · Type: Rerank
 
 BGE-Reranker-v2-m3 is a lightweight multilingual cross-encoder reranker from BAAI, built on the BGE-M3 (XLM-RoBERTa) backbone. Given a query and candidate documents it outputs a relevance score for each pair, used to reorder first-stage retrieval results in RAG/search pipelines. Supports 100+ languages, up to 8,192 tokens per query-document pair, and up to 10,000 documents per request.

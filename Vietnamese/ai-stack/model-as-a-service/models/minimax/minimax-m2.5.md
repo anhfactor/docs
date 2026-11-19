@@ -4,8 +4,6 @@ description: "MiniMax-M2.5 is MiniMax's open-weight Mixture-of-Experts model wit
 
 # MiniMax M2.5
 
-> Trang này được sinh tự động từ danh mục model của GreenNode MaaS. Chỉnh sửa tay sẽ bị ghi đè ở lần đồng bộ sau.
-
 Model ID: `minimax/minimax-m2.5` · Loại: Chat
 
 MiniMax-M2.5 is MiniMax's open-weight Mixture-of-Experts model with 229B total parameters (~10B active per forward pass), purpose-built for advanced coding and agentic workflows. It targets software engineering, agent search and long-horizon tool use, while remaining substantially cheaper and faster than frontier closed models.

@@ -4,8 +4,6 @@ description: "BGE-M3 is a multilingual text embedding model from BAAI. It suppor
 
 # BGE-M3
 
-> This page is generated from the GreenNode MaaS model catalog. Manual edits are overwritten on the next sync.
-
 Model ID: `baai/bge-m3` · Type: Embedding
 
 BGE-M3 is a multilingual text embedding model from BAAI. It supports more than 100 languages and inputs of up to 8,192 tokens, for semantic search and retrieval-augmented generation (RAG).
