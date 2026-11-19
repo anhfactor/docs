@@ -16,13 +16,12 @@ Resource initialization feature applies to:
   * 1.1 Access the vServer, vStorage, vMonitor product page.
   * 1.2 Select the resources and configurations to use on the product page.
   * 1.3 Confirm the use of resources to proceed to payment: At this point, the system will redirect the user to the resource payment page.
-* Step 2: Pay for resources See detailed instructions here.
+* Step 2: Pay for resources.
 * Step 3: Check resource and payment information
   * 3.1 Check resource information on the product page.
-  * 3.2 Check payment information, and invoices at User Portal: [https://dashboard.console.greennode.ai/](https://dashboard.console.greennode.ai/)
+  * 3.2 Check [payment](https://dashboard.console.greennode.ai/payment-history) information at User Portal.
 * Step 4: System Implementation
-  * Email notification of the resource information just initialized.
-  * Generate corresponding invoices: Refer to how to calculate the amount and invoice information here.
+  * Generate the corresponding invoice: see [Invoice management](https://dashboard.console.greennode.ai/billing-report) for how the amount and invoice information are calculated.
 
 ### Resource pricing guide
 
@@ -32,7 +31,12 @@ Below is a guide to calculate the price when initializing a Server, users can ap
 
 _An example formula for calculating the invoice value when initializing a Server includes information:_
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+| Server configuration (1)         | Unit price (incl. VAT) (2) | Usage period (3) | Coupon value (4) | Amount = (2) × (3) |
+| -------------------------------- | -------------------------- | ---------------- | ---------------- | ------------------ |
+| Image (dev.v1.small1x1)          | 90,000 VND / 30 days       | 60 days          | 20,000 VND       | 180,000            |
+| Root disk (Size 20GB, IOPS 3000) | 35,000 VND / 30 days       | 60 days          |                  | 70,000             |
+
+**Amount to pay** = Total amount − Coupon value = 180,000 + 70,000 − 20,000 = **230,000 VND**
 
 ## Postpaid user initializes resources
 
@@ -43,4 +47,5 @@ _An example formula for calculating the invoice value when initializing a Server
   * 1.2 Select the resources and configuration to be used on the product page
   * 1.3 Confirm the use of resources.
   * 1.4 Check resource information.
-* Step 2: The system sends confirmation information to the user Email notification of newly initialized resources Record the start time of resource usage for calculating the usage price at the end of the month.
+* Step 2: The system sends confirmation to the user
+  * Records the start time of resource usage, used to calculate the usage cost at the end of the month.
