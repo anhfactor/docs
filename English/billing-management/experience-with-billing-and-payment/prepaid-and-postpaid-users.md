@@ -1,6 +1,6 @@
 # Prepaid & Postpaid Users
 
-Use this document to better understand the types of resource usage for different types of users. At the VGN Cloud Service level, we support two main types of users:
+Use this document to better understand the types of resource usage for different types of users. At the GreenNode Service level, we support two main types of users:
 
 * **Prepaid users:** Users who must pay for resource usage before they are allowed to use them. Payment for resource usage is based on the configuration and time they want to use (they need to determine the time to stop using resources).
 * **Postpaid users:** Users who are allowed to use resources first and pay later, based on the actual resource usage cost. The amount to be paid will be determined at the end of each month until the user stops using the resource.
@@ -31,29 +31,44 @@ Let's take a look at some differences in concepts, rights, and functions between
 * **Postpaid users:**
   * At the "Confirmation" step, the Product team will provide resources according to the user's requested configuration, and the system will record the start time of resource usage.
 
+→ Note: Postpaid users do not need to complete the payment step when taking actions on resources.
+
 ## Resource management
 
 Basically, the features that users can perform on resources are:
 
-* **For prepaid users**: Create new resources Change configuration Renew resources Recover resources Auto-renew resources Delete resources.
-* **For postpaid users:** Create new resources Change configuration Delete resources.
+* **For prepaid users:**
+  * Create new resources
+  * Change configuration
+  * Renew resources
+  * Recover resources
+  * Auto-renew resources
+  * Delete resources
+* **For postpaid users:**
+  * Create new resources
+  * Change configuration
+  * Delete resources
+
+For more details, see [Resource management](https://dashboard.console.greennode.ai/resource).
 
 ## Invoice management
 
 * **Prepaid users**
-  * At the successful payment step, after successfully providing resources, the system will generate an invoice that corresponds to the user's resource usage, which is considered paid.
+  * At the successful payment step, after the resource is provisioned, the system generates an invoice for the resource, which is **marked as paid**.
 * **Postpaid users**
-  * Invoices for resources will be generated at the end of each month, based on the actual usage of the customer during that month.
-  * The generated invoice will be considered unpaid, and users can pay through the following two methods: Contact the Sales or Support team or Access the user portal, go to Billing history, select the invoice to be paid and proceed with payment.
+  * Invoices are generated at the end of each month based on actual usage during that month, and are **marked as unpaid**.
+  * Invoices are paid automatically from the Credit balance in your GreenNode wallet. You only need to top up Credit, and the system pays your unpaid invoices automatically every day.
+  * Learn more in Buy Credits and Automatic invoice payment.
 
 ## Payment Management
 
 * **Prepaid Users**
-  * Payment history will appear immediately in the User Portal's Payment history section after the user makes a resource payment.
-* **Postpaid Users:** In general, postpaid users will have payment history in the following cases:
-  * Automatic invoice payment system → Learn more about **automatic invoice payment**
-  * Users proactively pay invoices at the User Portal
+  * Payment history will appear immediately in the User Portal's [Payment history](https://dashboard.console.greennode.ai/payment-history) section after the user makes a resource payment.
+* **Postpaid users**
+  * A payment history entry is recorded each time the system automatically pays an invoice from your Credit balance, and appears in the User Portal under Payment history.
 
 ## How to switch from prepaid to postpaid and vice versa?
 
-When users register a new account at GreenNode, the system will default to prepaid users. To switch to postpaid users, users need to proactively contact the Sales/Support department for assistance upon request. In case a postpaid user wants to switch back to prepaid, they can also proactively contact the Sales/Support department for assistance upon request.
+* When users register a new account at GreenNode, the system defaults to **prepaid users**.
+* To **switch to postpaid**, users need to contact the Sales / Support team for assistance.
+* If a postpaid user wants to **switch back to prepaid**, they also need to contact the Sales / Support team for assistance.
