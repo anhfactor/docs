@@ -59,45 +59,7 @@ Nếu bạn chọn xóa toàn bộ node đang chạy cuối cùng của cluster 
 
 ---
 
-## Xóa node qua API
-
-Ngoài giao diện console, bạn có thể xóa node được chọn bằng API:
-
-**Endpoint:**
-
-```
-POST /v1/clusters/{clusterId}/node-groups/{nodeGroupId}/delete-nodes
-```
-
-**Body:**
-
-```json
-{
-  "nodeIds": ["<node-id-1>", "<node-id-2>"],
-  "force": false
-}
-```
-
-| Trường | Kiểu | Bắt buộc | Mô tả |
-|---|---|---|---|
-| `nodeIds` | string[] | Có | Danh sách ID của các node cần xóa. ≥ 1 phần tử, không trùng, và mọi ID phải thuộc Node Group này. |
-| `force` | boolean | Không | Mặc định `false` — node được drain trước khi xóa. Đặt `true` để bỏ qua drain. |
-
-**Response thành công:** HTTP `202` với `{"status": "UPDATING"}` — việc xóa được thực hiện bất đồng bộ. Số node còn lại được hệ thống tự tính theo số node thực tế trên cluster; bạn chỉ cần gửi danh sách node cần xóa.
-
-**Lỗi thường gặp:**
-
-| HTTP | Điều kiện | Message |
-|---|---|---|
-| 400 | `nodeIds` thiếu hoặc rỗng | `nodeIds must contain at least one node id.` |
-| 400 | Có ID rỗng/blank | `nodeIds must not contain blank node ids.` |
-| 400 | ID trùng nhau | `Duplicate node id in nodeIds: <id>.` |
-| 400 | Số ID vượt số node hiện tại | `Cannot delete <n> nodes: the node group has only <m> nodes.` |
-| 400 | ID không thuộc Node Group | `Node <id> does not belong to this node group.` |
-| 400 | Số node còn lại dưới Minimum node (Autoscaling bật) | `Cannot scale down to <x> nodes: it is below the auto scale minimum size (<min>). Lower the 'Minimum node' setting of the node group first.` |
-| 409 | Cluster đang bận thao tác khác | `Cluster is not ready to update node group.` |
-| 409 | Node Group không ở trạng thái cho phép | `Could not update the node group currently.` |
-| 404 | Node Group không tồn tại | Not Found |
+Ngoài giao diện console, bạn cũng có thể xóa node được chọn qua API. Xem tài liệu tại [VKS API](https://docs.api.greennode.ai/service-docs/vks-api.html#tag/Node-Group-Controller/paths/~1v1~1clusters~1%7BclusterId%7D~1node-groups~1%7BnodeGroupId%7D~1delete-nodes/post).
 
 ---
 

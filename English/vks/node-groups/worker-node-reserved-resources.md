@@ -241,6 +241,6 @@ Allocatable also subtracts the **eviction threshold** (default `memory.available
 
 | I want to...                                 | Go to                                                                                                            |
 | -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| View the list of available Flavors and specs | [Supported Flavor List](https://github.com/vngcloud/docs/blob/main/English/vks/reference/node-flavors/README.md) |
+| View the list of available Flavors and specs | [Flavor List at zone HCM03-C (VN)](https://docs.vngcloud.vn/vng-cloud-document/vn/vks/reference/node-flavors/danh-sach-flavor-tai-zone-hcm03-c) |
 | Create a new Node Group                      | [Node Groups](./)                                                                                                |
 | Configure Auto Scaling for a Node Group      | [Auto Scaling](auto-scaling.md)                                                                                  |

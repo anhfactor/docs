@@ -59,45 +59,7 @@ If you select all of the last running nodes of the cluster (no other Node Group 
 
 ---
 
-## Delete nodes using the API
-
-Besides the console, you can delete selected nodes using the API:
-
-**Endpoint:**
-
-```
-POST /v1/clusters/{clusterId}/node-groups/{nodeGroupId}/delete-nodes
-```
-
-**Body:**
-
-```json
-{
-  "nodeIds": ["<node-id-1>", "<node-id-2>"],
-  "force": false
-}
-```
-
-| Field | Type | Required | Description |
-|---|---|---|---|
-| `nodeIds` | string[] | Yes | List of IDs of the nodes to delete. At least 1 item, no duplicates, and every ID must belong to this Node Group. |
-| `force` | boolean | No | Defaults to `false` — nodes are drained before deletion. Set to `true` to skip draining. |
-
-**Success response:** HTTP `202` with `{"status": "UPDATING"}` — the deletion runs asynchronously. The remaining node count is computed by the system from the actual number of nodes on the cluster; you only need to send the list of nodes to delete.
-
-**Common errors:**
-
-| HTTP | Condition | Message |
-|---|---|---|
-| 400 | `nodeIds` missing or empty | `nodeIds must contain at least one node id.` |
-| 400 | Contains a blank ID | `nodeIds must not contain blank node ids.` |
-| 400 | Duplicate IDs | `Duplicate node id in nodeIds: <id>.` |
-| 400 | More IDs than current nodes | `Cannot delete <n> nodes: the node group has only <m> nodes.` |
-| 400 | ID does not belong to the Node Group | `Node <id> does not belong to this node group.` |
-| 400 | Remaining nodes below Minimum node (Autoscaling enabled) | `Cannot scale down to <x> nodes: it is below the auto scale minimum size (<min>). Lower the 'Minimum node' setting of the node group first.` |
-| 409 | Cluster is busy with another operation | `Cluster is not ready to update node group.` |
-| 409 | Node Group not in an allowed state | `Could not update the node group currently.` |
-| 404 | Node Group not found | Not Found |
+Besides the console, you can also delete selected nodes using the API. See the documentation at [VKS API](https://docs.api.greennode.ai/service-docs/vks-api.html#tag/Node-Group-Controller/paths/~1v1~1clusters~1%7BclusterId%7D~1node-groups~1%7BnodeGroupId%7D~1delete-nodes/post).
 
 ---
 
