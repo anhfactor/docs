@@ -1,5 +1,14 @@
 # Release notes
 
+## Nov 19, 2026
+
+VKS (VNG Kubernetes Engine) vừa ra mắt bản cập nhật mới với các cải tiến sau:
+
+**Tính năng mới:**
+
+* **Xóa các node được chọn trong Node Group:** khi thu nhỏ Node Group, bạn có thể chỉ định chính xác node nào sẽ bị xóa ngay trong modal **View nodes**, thay vì để hệ thống tự chọn node. Hỗ trợ tùy chọn xóa ngay (bỏ qua drain); nếu Autoscaling đang bật, số node có thể xóa bị giới hạn bởi **Minimum node**.
+  * Hướng dẫn chi tiết tại [Xóa các node được chọn trong Node Group](../node-groups/xoa-cac-node-duoc-chon.md).
+
 ## Nov 13, 2026
 
 VKS (VNG Kubernetes Engine) vừa ra mắt bản cập nhật mới với các cải tiến sau:
