@@ -1,8 +1,5 @@
 ---
-description: >-
-  Qwen3-Embedding-8B is an 8B text embedding model from Alibaba, fine-tuned from
-  Qwen3-8B-Base. It produces dense vectors for semantic search, RAG, clustering
-  and similarity matching, with a 32K token c
+description: "Qwen3-Embedding-8B is an 8B text embedding model from Alibaba, fine-tuned from Qwen3-8B-Base. It produces dense vectors for semantic search, RAG, clustering and similarity matching, with a 32K token context window, user-defined embedding dimensions up to 4096, and support for over 100 languages. Apache 2.0."
 ---
 
 # Qwen 3 Embedding 8B
@@ -15,13 +12,13 @@ Qwen3-Embedding-8B is an 8B text embedding model from Alibaba, fine-tuned from Q
 
 ## Thông số
 
-| Thông số      | Giá trị          |
-| ------------- | ---------------- |
-| Ngữ cảnh      | 33K tokens       |
-| Output tối đa | —                |
-| Đầu vào       | text             |
-| Đầu ra        | embeddings       |
-| Endpoints     | `/v1/embeddings` |
+| Thông số | Giá trị |
+| --- | --- |
+| Ngữ cảnh | 33K tokens |
+| Output tối đa | — |
+| Đầu vào | text |
+| Đầu ra | embeddings |
+| Endpoints | `/v1/embeddings` |
 
 ## Tham số hỗ trợ
 

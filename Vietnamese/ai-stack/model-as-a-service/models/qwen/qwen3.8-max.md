@@ -1,8 +1,5 @@
 ---
-description: >-
-  Qwen3.8-Max is the flagship tier of Alibaba's Qwen3.8 commercial lineup,
-  served over the OpenAI-compatible Alibaba Cloud DashScope API. It offers the
-  strongest reasoning and coding capability of the f
+description: "Qwen3.8-Max is the flagship tier of Alibaba's Qwen3.8 commercial lineup, served over the OpenAI-compatible Alibaba Cloud DashScope API. It offers the strongest reasoning and coding capability of the family with a 1M-token context window, hybrid thinking / non-thinking modes, tool calling and structured output, and is aimed at complex agentic, coding and long-context workloads."
 ---
 
 # Qwen 3.8 Max
@@ -15,13 +12,13 @@ Qwen3.8-Max is the flagship tier of Alibaba's Qwen3.8 commercial lineup, served 
 
 ## Thông số
 
-| Thông số      | Giá trị                                                 |
-| ------------- | ------------------------------------------------------- |
-| Ngữ cảnh      | 1M tokens                                               |
-| Output tối đa | 128K tokens                                             |
-| Đầu vào       | text, image, video                                      |
-| Đầu ra        | text                                                    |
-| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số | Giá trị |
+| --- | --- |
+| Ngữ cảnh | 1M tokens |
+| Output tối đa | 128K tokens |
+| Đầu vào | text, image, video |
+| Đầu ra | text |
+| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 

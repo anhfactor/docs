@@ -1,8 +1,5 @@
 ---
-description: >-
-  MiniMax-M2.5 is MiniMax's open-weight Mixture-of-Experts model with 229B total
-  parameters (~10B active per forward pass), purpose-built for advanced coding
-  and agentic workflows. It targets software e
+description: "MiniMax-M2.5 is MiniMax's open-weight Mixture-of-Experts model with 229B total parameters (~10B active per forward pass), purpose-built for advanced coding and agentic workflows. It targets software engineering, agent search and long-horizon tool use, while remaining substantially cheaper and faster than frontier closed models."
 ---
 
 # MiniMax M2.5
@@ -11,17 +8,17 @@ description: >-
 
 Model ID: `minimax/minimax-m2.5` · Loại: Chat
 
-MiniMax-M2.5 is MiniMax's open-weight Mixture-of-Experts model with 229B total parameters (\~10B active per forward pass), purpose-built for advanced coding and agentic workflows. It targets software engineering, agent search and long-horizon tool use, while remaining substantially cheaper and faster than frontier closed models.
+MiniMax-M2.5 is MiniMax's open-weight Mixture-of-Experts model with 229B total parameters (~10B active per forward pass), purpose-built for advanced coding and agentic workflows. It targets software engineering, agent search and long-horizon tool use, while remaining substantially cheaper and faster than frontier closed models.
 
 ## Thông số
 
-| Thông số      | Giá trị                                                 |
-| ------------- | ------------------------------------------------------- |
-| Ngữ cảnh      | 192K tokens                                             |
-| Output tối đa | 128K tokens                                             |
-| Đầu vào       | text                                                    |
-| Đầu ra        | text                                                    |
-| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số | Giá trị |
+| --- | --- |
+| Ngữ cảnh | 192K tokens |
+| Output tối đa | 128K tokens |
+| Đầu vào | text |
+| Đầu ra | text |
+| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 

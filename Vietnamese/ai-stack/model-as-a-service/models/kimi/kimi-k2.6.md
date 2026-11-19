@@ -1,8 +1,5 @@
 ---
-description: >-
-  Kimi K2.6 is Moonshot AI's general-purpose open-source model, supporting text,
-  image and video input with a 256K-token context window. It offers both
-  thinking and non-thinking modes and handles conver
+description: "Kimi K2.6 is Moonshot AI's general-purpose open-source model, supporting text, image and video input with a 256K-token context window. It offers both thinking and non-thinking modes and handles conversational as well as programming/agent tasks. Served here over Tencent Cloud TokenHub, which exposes the OpenAI Chat Completions, Anthropic Messages and Responses APIs for this model."
 ---
 
 # Kimi K2.6
@@ -15,13 +12,13 @@ Kimi K2.6 is Moonshot AI's general-purpose open-source model, supporting text, i
 
 ## Thông số
 
-| Thông số      | Giá trị                                                 |
-| ------------- | ------------------------------------------------------- |
-| Ngữ cảnh      | 256K tokens                                             |
-| Output tối đa | 256K tokens                                             |
-| Đầu vào       | text, image, video                                      |
-| Đầu ra        | text                                                    |
-| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số | Giá trị |
+| --- | --- |
+| Ngữ cảnh | 256K tokens |
+| Output tối đa | 256K tokens |
+| Đầu vào | text, image, video |
+| Đầu ra | text |
+| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 
