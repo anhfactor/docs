@@ -12,5 +12,5 @@ Các gói băng thông được thiết kế để đáp ứng các nhu cầu kh
 
 Hiện tại, GreenNode đã hỗ trợ người dùng trả trước sử dụng các gói băng thông Pay-as-you-go theo hình thức tạm giữ credit.
 
-Để tìm hiểu thêm về hình thức tạm giữ credit và cách thức áp dụng cho các gói băng thông Pay-as-you-go, vui lòng truy cập [tại đây](../../../../quan-ly-hoa-don-chi-phi-and-tai-nguyen-tren-vng-cloud/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/tam-giu-credit.md)
+Để tìm hiểu thêm về hình thức tạm giữ credit và cách thức áp dụng cho các gói băng thông Pay-as-you-go, vui lòng truy cập [tại đây](../../../../quan-ly-hoa-don-chi-phi-and-tai-nguyen/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/tam-giu-credit.md)
 
