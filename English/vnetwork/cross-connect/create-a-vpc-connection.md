@@ -33,5 +33,5 @@
 **Note:**
 
 * The **Requester Region** and **Accepter Region** are understood to be two independent regions that form a Cross Connect connection (the Requester Region is automatically selected based on the region chosen when accessing vServer).
-* The VPCs in each region must be pre-created in vServer (refer to [**Create VPC**](../../vserver/compute-hcm03-1a/vpc/virtual-private-cloud-vpc.md)).
+* The VPCs in each region must be pre-created in vServer (refer to [**Create VPC**](../../vserver/compute/vpc/virtual-private-cloud-vpc.md)).
 {% endhint %}

@@ -15,7 +15,7 @@ Enabling the Private DNS Server will create one or more dedicated IP addresses f
 This is a prerequisite step for using other vDNS features within the VPC.
 
 {% hint style="info" %}
-**Important Note:** Enabling Private DNS will modify the DHCP Option Set of VMs in the network. Therefore, after enabling the feature, you need to update DHCP on the VMs so they can receive the new DNS configuration. Please refer to the DHCP update guide [here.](../vserver/compute-hcm03-1a/vpc/dhcp-options-sets/)
+**Important Note:** Enabling Private DNS will modify the DHCP Option Set of VMs in the network. Therefore, after enabling the feature, you need to update DHCP on the VMs so they can receive the new DNS configuration. Please refer to the DHCP update guide [here.](../vserver/compute/vpc/dhcp-options-sets/)
 {% endhint %}
 
 ### Create Hosted Zone

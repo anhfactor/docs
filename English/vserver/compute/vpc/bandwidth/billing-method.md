@@ -19,4 +19,4 @@ Bandwidth packages are designed to meet different needs in terms of speed, data 
 
 ### Pay As You Go Package <a href="#cac-goi-pay-as-you-go" id="cac-goi-pay-as-you-go"></a>
 
-Currently, GreenNode supports prepaid users with Pay-as-you-go bandwidth packages through a credit hold. To learn more about credit hold and how it applies to Pay-as-you-go bandwidth packages, please visit [here](https://app.gitbook.com/s/B0NrrrdJdpYOYzRkbWp5/quan-ly-hoa-don-chi-phi-and-tai-nguyen-tren-vng-cloud/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/tam-giu-credit). ​​
+Currently, GreenNode supports prepaid users with Pay-as-you-go bandwidth packages through a credit hold. To learn more about credit hold and how it applies to Pay-as-you-go bandwidth packages, please visit [here](https://app.gitbook.com/s/B0NrrrdJdpYOYzRkbWp5/quan-ly-hoa-don-chi-phi-and-tai-nguyen/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/tam-giu-credit). ​​

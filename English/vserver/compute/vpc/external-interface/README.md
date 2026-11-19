@@ -15,7 +15,7 @@ You can create an external interface, attach it to an instance, detach it from a
 You need to configure IP address for External Interface from within instance, static or DHCP configuration will work. You can only attach External Interface to Instance that is not associated with Floating IP.
 
 {% hint style="warning" %}
-If you set a custom MTU on the external NIC, keep MTU **< 4000 bytes**. Larger MTU can cause packet loss when traffic goes out via External Interface. For Internet-facing traffic, keep MTU at `1450` (or smaller if needed). See [MTU & “DF flag” best practice on GreenNode](../../vmarketplace/network-software-installation/pfsense-on-hcm03/mtu-and-df-flag-best-practice-on-vng-cloud.md).
+If you set a custom MTU on the external NIC, keep MTU **< 4000 bytes**. Larger MTU can cause packet loss when traffic goes out via External Interface. For Internet-facing traffic, keep MTU at `1450` (or smaller if needed). See [MTU & “DF flag” best practice on GreenNode](../../../vmarketplace/network-software-installation/pfsense-on-hcm03/mtu-and-df-flag-best-practice-on-vng-cloud.md).
 {% endhint %}
 
 ### **Work with External Interface** <a href="#externalinterface-workwithexternalinterface" id="externalinterface-workwithexternalinterface"></a>

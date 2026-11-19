@@ -2,7 +2,7 @@
 
 PostgreSQL Cluster enables deploying a database with a **1 Writer + N Readers** architecture, ensuring **High Availability** and the ability to **scale read** operations for your application. When the Writer encounters an issue, the system automatically fails over to a Reader without manual intervention.
 
-For more information about concepts, architecture, and the comparison between Single Node and Cluster, please refer to [PostgreSQL Cluster](README.md).
+For more information about concepts, architecture, and the comparison between Single Node and Cluster, please refer to [PostgreSQL Cluster](./).
 
 ***
 
@@ -50,12 +50,12 @@ When selecting **Cluster** as the Deployment Type, the system also displays a **
 * **Storage Size**: Select the storage capacity (includes data and logs).
 * **Number of Nodes**: Select the number of nodes for the cluster (from 2 to 10). The system will display the corresponding **Role Distribution**:
 
-| Number of Nodes | Role Distribution |
-| --- | --- |
-| 2 | 1 Writer + 1 Reader |
-| 3 | 1 Writer + 2 Readers |
-| 5 | 1 Writer + 4 Readers |
-| 10 | 1 Writer + 9 Readers |
+| Number of Nodes | Role Distribution    |
+| --------------- | -------------------- |
+| 2               | 1 Writer + 1 Reader  |
+| 3               | 1 Writer + 2 Readers |
+| 5               | 1 Writer + 4 Readers |
+| 10              | 1 Writer + 9 Readers |
 
 #### Step 3: DB Settings
 
@@ -73,7 +73,7 @@ When selecting **Cluster** as the Deployment Type, the system also displays a **
 
 #### Step 4: Network & Security
 
-* **Cloud Network (VPC & Subnet)**: Select the VPC and Subnet for the cluster. If you don't have one yet, you can create a new one following the guide [here](../../../../vserver/compute-hcm03-1a/vpc/virtual-private-cloud-vpc.md).
+* **Cloud Network (VPC & Subnet)**: Select the VPC and Subnet for the cluster. If you don't have one yet, you can create a new one following the guide [here](../../../../vserver/compute/vpc/virtual-private-cloud-vpc.md).
 * **Public Accessibility**: Enable if you want the cluster to have a Public IP and be accessible from the Internet; disable if you only want access via Private IP.
 * **Multi-AZ**: if you selected **Multi-AZ** in Step 1, this step requires a VPC with DNS enabled and shows a **Subnets** table for zone selection instead of a single Subnet — see [Create a Multi-AZ PostgreSQL Cluster](create-multi-az-postgresql-cluster.md).
 
@@ -119,11 +119,11 @@ In the **Summary** section on the right, review all configuration information. W
 
 On the Database List page, you can quickly filter databases by deployment type:
 
-| Tab | Description |
-| --- | --- |
-| **All Databases** | Shows all databases |
-| **Single Node** | Shows only Single Node databases |
-| **Clusters** | Shows only Cluster databases |
+| Tab               | Description                      |
+| ----------------- | -------------------------------- |
+| **All Databases** | Shows all databases              |
+| **Single Node**   | Shows only Single Node databases |
+| **Clusters**      | Shows only Cluster databases     |
 
 ### View Cluster Details
 
@@ -131,28 +131,28 @@ When clicking on a cluster in the list, the detail page shows the following info
 
 **General Information:**
 
-| Information | Description | Example |
-| --- | --- | --- |
-| ID | Cluster identifier | pg-1dfa6aaf-20c9-44a1-... |
-| Zone | Availability Zone | HCM03-1A |
-| Role | Instance role | Primary Writer / Replica Reader |
-| Replica Source | Replica source (if any) | N/A |
-| Instance Type | Instance configuration | db-postgre.s-general-2x4-n10 (2 Core, 4 GB) |
-| Engine | Engine and deployment type | PostgreSQL 15 (Cluster, 3 Node) |
-| Storage | Storage capacity and type | 20 GB (GEN2-NVME-IOPS5000) |
-| Free GB | Free backup capacity included with the package | 20 GB |
-| Configuration Group | Applied configuration group | default-group |
-| Network | VPC network | vpc-10-10-0-0 |
+| Information         | Description                                    | Example                                     |
+| ------------------- | ---------------------------------------------- | ------------------------------------------- |
+| ID                  | Cluster identifier                             | pg-1dfa6aaf-20c9-44a1-...                   |
+| Zone                | Availability Zone                              | HCM03-1A                                    |
+| Role                | Instance role                                  | Primary Writer / Replica Reader             |
+| Replica Source      | Replica source (if any)                        | N/A                                         |
+| Instance Type       | Instance configuration                         | db-postgre.s-general-2x4-n10 (2 Core, 4 GB) |
+| Engine              | Engine and deployment type                     | PostgreSQL 15 (Cluster, 3 Node)             |
+| Storage             | Storage capacity and type                      | 20 GB (GEN2-NVME-IOPS5000)                  |
+| Free GB             | Free backup capacity included with the package | 20 GB                                       |
+| Configuration Group | Applied configuration group                    | default-group                               |
+| Network             | VPC network                                    | vpc-10-10-0-0                               |
 
 **Detail tabs:**
 
-| Tab | Content |
-| --- | --- |
-| **Configuration** | Flavor information (vCPU, RAM) and storage (type, size, disk usage) |
-| **Connectivity & Security** | Connection endpoints and security settings |
-| **Backup** | Backup history, create manual backup, view backup information |
-| **History** | Activity logs |
-| **Monitor** | Metrics and monitoring charts, see the **Monitor a PostgreSQL Cluster (Monitoring)** section below |
+| Tab                         | Content                                                                                            |
+| --------------------------- | -------------------------------------------------------------------------------------------------- |
+| **Configuration**           | Flavor information (vCPU, RAM) and storage (type, size, disk usage)                                |
+| **Connectivity & Security** | Connection endpoints and security settings                                                         |
+| **Backup**                  | Backup history, create manual backup, view backup information                                      |
+| **History**                 | Activity logs                                                                                      |
+| **Monitor**                 | Metrics and monitoring charts, see the **Monitor a PostgreSQL Cluster (Monitoring)** section below |
 
 ***
 
@@ -219,13 +219,13 @@ To view metrics:
 
 Main charts available in the Monitor tab:
 
-| View | Group | Charts |
-| --- | --- | --- |
-| Cluster metric | Connections | Max Connections, Connection Usage Per Node |
-| Cluster metric | Memory and cache | Shared Buffers, Cache Hit Rate |
-| Cluster metric | Replication | Replication Lag |
-| Node metric | Node status | Online Nodes |
-| Node metric | Resources | CPU Usage, Mem Usage (Percent), Volume Usage (Percent) |
+| View           | Group            | Charts                                                 |
+| -------------- | ---------------- | ------------------------------------------------------ |
+| Cluster metric | Connections      | Max Connections, Connection Usage Per Node             |
+| Cluster metric | Memory and cache | Shared Buffers, Cache Hit Rate                         |
+| Cluster metric | Replication      | Replication Lag                                        |
+| Node metric    | Node status      | Online Nodes                                           |
+| Node metric    | Resources        | CPU Usage, Mem Usage (Percent), Volume Usage (Percent) |
 
 To view more metrics beyond the default set, build your own dashboards, or create alarms, select **Monitored by vMonitor Platform** to go to vMonitor Platform and enable Detailed Monitoring. See also:
 
@@ -249,7 +249,7 @@ At the top of the Backup tab there is a **"View full backup details →"** link 
 
 There are 2 ways to create a Manual Backup:
 
-* **Option 1 (recommended):** Click the **Back up now** button directly on the action bar of the cluster detail page (see guide at [Back Up Now](#back-up-now)).
+* **Option 1 (recommended):** Click the **Back up now** button directly on the action bar of the cluster detail page (see guide at [Back Up Now](create-and-manage-postgresql-cluster.md#back-up-now)).
 * **Option 2:** In the **Backup** tab, click **Create Manual Backup**, then confirm.
 
 The system will create a **Full Snapshot** of the database. The new backup appears in the list with **In Progress** status, transitioning to **Completed** when done.
