@@ -4,8 +4,6 @@ description: "GLM-5.3 is Z.ai's open-weight flagship model of the GLM-5 series, 
 
 # GLM-5.3
 
-> This page is generated from the GreenNode MaaS model catalog. Manual edits are overwritten on the next sync.
-
 Model ID: `z-ai/glm-5.3` · Type: Chat
 
 GLM-5.3 is Z.ai's open-weight flagship model of the GLM-5 series, built for agentic coding, reasoning and tool use. Self-hosted on GreenNode infrastructure with a 300K-token context window. Supports chat completions, Anthropic-style messages and the responses API, with function calling, structured output, streaming and reasoning-effort control.

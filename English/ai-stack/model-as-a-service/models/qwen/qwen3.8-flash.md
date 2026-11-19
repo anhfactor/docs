@@ -4,8 +4,6 @@ description: "Qwen3.8-Flash is the cost-optimized, fastest tier of Alibaba's Qwe
 
 # Qwen 3.8 Flash
 
-> This page is generated from the GreenNode MaaS model catalog. Manual edits are overwritten on the next sync.
-
 Model ID: `qwen/qwen3.8-flash` · Type: Chat
 
 Qwen3.8-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.8 commercial lineup. It keeps the 1M-token context window of the family while allowing up to 128K output tokens, supports hybrid thinking / non-thinking modes, tool calling and structured output, and targets high-volume chat, classification and latency-sensitive agentic workloads.

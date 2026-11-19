@@ -4,8 +4,6 @@ description: "Gemma 4 31B-IT is Google's open-weight instruction-tuned model fro
 
 # Gemma 4 31B-IT
 
-> This page is generated from the GreenNode MaaS model catalog. Manual edits are overwritten on the next sync.
-
 Model ID: `google/gemma-4-31b-it` · Type: Chat
 
 Gemma 4 31B-IT is Google's open-weight instruction-tuned model from the Gemma 4 family, featuring 31 billion parameters with native multimodal support for text and image inputs. It offers a 256K-token context window (262,144 tokens) and is optimized for instruction following, reasoning, coding, and vision-language tasks.

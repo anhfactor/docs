@@ -4,8 +4,6 @@ description: "Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial 
 
 # Qwen 3.6 Plus
 
-> Trang này được sinh tự động từ danh mục model của GreenNode MaaS. Chỉnh sửa tay sẽ bị ghi đè ở lần đồng bộ sau.
-
 Model ID: `qwen/qwen3.6-plus` · Loại: Chat
 
 Qwen3.6-Plus is the balanced tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview). It sits between Max-Preview (top reasoning) and Flash (fastest / lowest cost), targeting medium-to-high complexity tasks at a balanced price-performance point. It ships with a 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) alongside function calling with structured output.

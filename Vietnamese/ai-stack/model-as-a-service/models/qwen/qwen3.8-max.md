@@ -4,8 +4,6 @@ description: "Qwen3.8-Max is the flagship tier of Alibaba's Qwen3.8 commercial l
 
 # Qwen 3.8 Max
 
-> Trang này được sinh tự động từ danh mục model của GreenNode MaaS. Chỉnh sửa tay sẽ bị ghi đè ở lần đồng bộ sau.
-
 Model ID: `qwen/qwen3.8-max` · Loại: Chat
 
 Qwen3.8-Max is the flagship tier of Alibaba's Qwen3.8 commercial lineup. It offers the strongest reasoning and coding capability of the family with a 1M-token context window, hybrid thinking / non-thinking modes, tool calling and structured output, and is aimed at complex agentic, coding and long-context workloads.

@@ -4,8 +4,6 @@ description: "Qwen3-Reranker-8B is an 8B text reranking model from the Qwen3 fam
 
 # Qwen 3 Reranker 8B
 
-> Trang này được sinh tự động từ danh mục model của GreenNode MaaS. Chỉnh sửa tay sẽ bị ghi đè ở lần đồng bộ sau.
-
 Model ID: `qwen/qwen3-reranker-8b` · Loại: Rerank
 
 Qwen3-Reranker-8B is an 8B text reranking model from the Qwen3 family. Given a query and candidate documents it returns a relevance score for each pair, used to reorder retrieval results in search and RAG pipelines.

@@ -4,8 +4,6 @@ description: "Qwen3.7-Plus is the balanced flagship tier of Alibaba's Qwen3.7 co
 
 # Qwen 3.7 Plus
 
-> This page is generated from the GreenNode MaaS model catalog. Manual edits are overwritten on the next sync.
-
 Model ID: `qwen/qwen3.7-plus` · Type: Chat
 
 Qwen3.7-Plus is the balanced flagship tier of Alibaba's Qwen3.7 commercial lineup (plus / flash / max). It positions inference quality, cost and speed between the Max and Flash tiers — ideal for medium-to-high complexity tasks. It ships with a 1M-token context window, hybrid thinking / non-thinking modes, built-in tools with adaptive tool use, and strong agentic coding, reasoning and multilingual capabilities across the Qwen3 series.

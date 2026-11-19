@@ -4,8 +4,6 @@ description: "DeepSeek-V4 Pro is the flagship tier of the DeepSeek-V4 family —
 
 # DeepSeek V4 Pro
 
-> Trang này được sinh tự động từ danh mục model của GreenNode MaaS. Chỉnh sửa tay sẽ bị ghi đè ở lần đồng bộ sau.
-
 Model ID: `deepseek/deepseek-v4-pro` · Loại: Chat
 
 DeepSeek-V4 Pro is the flagship tier of the DeepSeek-V4 family — a Mixture-of-Experts (MoE) model built on Multi-head Latent Attention (MLA) and the DeepSeekMoE architecture with an auxiliary-loss-free load-balancing strategy. It delivers state-of-the-art reasoning, math, coding and agentic performance with a 128K token context window, served over an OpenAI-compatible API.
