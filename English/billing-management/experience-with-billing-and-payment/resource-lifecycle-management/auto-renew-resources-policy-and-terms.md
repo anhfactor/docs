@@ -43,13 +43,14 @@ _Note: Currently, services in vMonitor products do not support turning off autom
 
 Automatic resource renewal is **a system feature** that helps users' resource usage not be interrupted at the end of the resource period (users need to continue using it but forget to renew it on the system for some reason).
 
-**Terms applicable to the "Automatic renewal" feature on GreenNode are as follows:**
+**Terms applicable to the "Auto-renewal" feature on GreenNode:**
 
-* Send email notification of required resources **7 days in advance** , from the end of the resource. The purpose is for users to prepare enough credit balance.
-* Resources are **renewed by default for 1 month** from the end date.
-* Users need to prepare enough available credit balance as notified so that the system can proceed with the renewal.
-* The official system will renew **3 days in advance** , calculated from the end of the resource.
-  * The pricing for automatic renewal is no different from when the user actively renews the resource. See more [here.](https://docs.vngcloud.vn/vng-cloud-document/billing-management/experience-with-billing-and-payment/resource-lifecycle-management/renew-resource)
-  * The system sends information about the resource being renewed successfully/failed to the user.
-  * The system generates invoices corresponding to the extended period.
-* For expired resources, automatic renewal will not be applied. This means that when the resource is enabled for automatic renewal, but the automatic renewal process fails due to lack of credits, resulting in the resource expiring, in this case the user needs to proactively restore the resource to continue using the service. Refer to the Resource Restoration [guide](https://docs.vngcloud.vn/vng-cloud-document/billing-management/experience-with-billing-and-payment/resource-lifecycle-management/recover-resource)
+* Starting **7 days before the expiry date**, the system sends renewal reminder emails so that users can prepare enough available Credit balance. Top up enough Credit before 8:30 AM on the renewal date.
+* Resources are **renewed for 1 month by default**, starting from the end date.
+* On each of the following dates, **7 days, 4 days and 1 day before the expiry date, and on the expiry date**, the system starts running auto-renewal at **8:30 AM**. Resources are processed one after another, so the time renewal completes may differ between resources. If a renewal attempt fails due to insufficient Credit, the system tries again at the next date.
+  * Auto-renewal is priced the same as a renewal performed by the user. See Renew resource.
+  * The system notifies the user whether the renewal succeeded or failed.
+  * The system generates an invoice for the renewed period.
+* **Note:** Auto-renewal only applies to resources of products that support auto-renewal, that the customer has turned auto-renewal on for, and that are Active. Resources that have expired or been deleted before these dates are not auto-renewed.
+* **Note on expiry time:** At each auto-renewal run, if the resource's expiry time has already passed before the system processes the renewal, the resource no longer qualifies for auto-renewal. For example, a resource expires at 7:00 AM on the expiry date, while that day's run starts at 8:30 AM. In this case, you need to renew the resource manually in the console.
+* If all 4 renewal attempts fail, auto-renewal stops and the resource expires. To continue using it, the user needs to renew the resource before it is permanently deleted. See Renew expiring resources.
