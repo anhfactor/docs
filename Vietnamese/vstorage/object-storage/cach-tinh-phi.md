@@ -25,7 +25,7 @@ Bảng giá dưới đây áp dụng cho toàn bộ các region Object Storage (
 | ------------------------------- | ------------ | ------------------ | -------------- | --------------------- | --------------- | ---------------------- |
 | **Giá lưu trữ** (VND/GB/tháng)  | 1.000        | 1.400              | 3.400          | 4.760                 | 530             | 742                    |
 | **Request**                     | Unlimited    | Unlimited          | Unlimited      | Unlimited             | Unlimited       | Unlimited              |
-| **Traffic download (free)**     | Free x10     | Free x10           | Free x10       | Free x10              | Free 3TB        | Free 3TB               |
+| **Traffic download (free)**     | Free x10     | Free x10           | Free x10       | Free x10              | Free x2         | Free x2                |
 | **Traffic upload**              | Free         | Free               | Free           | Free                  | Free            | Free                   |
 | **Thời gian retrieval dữ liệu** | Ngay lập tức | Ngay lập tức       | Ngay lập tức   | Ngay lập tức          | Ngay lập tức    | Ngay lập tức           |
 | **Hình thức tính phí**          | Mua package  | Dung lượng sử dụng | Mua package    | Dung lượng sử dụng    | Mua package     | Dung lượng sử dụng     |
@@ -44,5 +44,5 @@ Bảng giá dưới đây áp dụng cho toàn bộ các region Object Storage (
 > **Lưu ý về Traffic download free:**
 >
 > * **Gold:** Hạn mức download miễn phí bằng 10 lần dung lượng lưu trữ (VD: lưu 30 GB → miễn phí 300 GB/tháng).
-> * **Instant Archive:** Hạn mức cố định 3 TB/tháng.
+> * **Instant Archive:** Hạn mức download miễn phí bằng 2 lần dung lượng lưu trữ (VD: lưu 30 GB → miễn phí 60 GB/tháng).
 > * Khi vượt hạn mức free, traffic sẽ tính phí theo giá **Domestic / International download** ở bảng Phí phát sinh.

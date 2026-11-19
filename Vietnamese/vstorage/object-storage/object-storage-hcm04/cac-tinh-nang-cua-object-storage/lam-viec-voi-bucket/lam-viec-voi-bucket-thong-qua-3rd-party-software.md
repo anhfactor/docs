@@ -86,7 +86,7 @@ SSE-S3 (Server-Side Encryption with S3 Managed Keys) là tính năng mã hóa d�
 
 <figure><img src="../../../../../.gitbook/assets/image (623).png" alt=""><figcaption></figcaption></figure>
 
-Tiếp theo, khi bucket được tạo thành công, bạn hãy nhấn chuột phải vào bucket, sau đó chọn **Object Locked**. Bạn có thể thiết lập object locked ở cả 2 mode **Retention** và **Legal Hold** thông qua S3 Browser. Chi tiết tham khảo thêm tại [https://s3browser.com/amazon-s3-object-lock.aspx](https://s3browser.com/amazon-s3-object-lock.aspx)
+Tiếp theo, khi bucket được tạo thành công, bạn hãy nhấn chuột phải vào bucket, sau đó chọn **Object Locked**. Bạn có thể thiết lập object locked ở cả 2 mode **Retention** (chỉ hỗ trợ **Compliance mode**, chưa hỗ trợ Governance mode) và **Legal Hold** thông qua S3 Browser. Chi tiết tham khảo thêm tại [https://s3browser.com/amazon-s3-object-lock.aspx](https://s3browser.com/amazon-s3-object-lock.aspx)
 
 <figure><img src="../../../../../.gitbook/assets/image (114).png" alt=""><figcaption></figcaption></figure>
 
@@ -108,7 +108,7 @@ Versioning là một tính năng hỗ trợ lưu trữ nhiều phiên bản quá
 
 ### **Lifecycle transit**
 
-Hiện tại trên region HCM04 chúng tôi chỉ hỗ trợ bạn tạo Project với Storage Class **Instant Archive Type**. Do chỉ có 1 storage class duy nhất nên hiện tại tính năng Lifecycle transit sẽ không hoạt động.
+Region HCM04 hỗ trợ nhiều storage class (**Gold**, **Instant Archive**), vì vậy bạn có thể dùng tính năng Lifecycle transit để chuyển object giữa các storage class. Lưu ý: Transition rule chỉ hỗ trợ trên project Pay-as-you-go.
 
 ### **CORS**
 

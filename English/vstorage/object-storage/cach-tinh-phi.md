@@ -25,7 +25,7 @@ The pricing below applies to all Object Storage regions (HCM03, HAN02, HCM04).
 | -------------------------------- | ----------- | ------------- | -------------- | --------------------- | --------------- | ---------------------- |
 | **Storage price** (VND/GB/month) | 1,000       | 1,400         | 3,400          | 4,760                 | 530             | 742                    |
 | **Request**                      | Unlimited   | Unlimited     | Unlimited      | Unlimited             | Unlimited       | Unlimited              |
-| **Traffic download (free)**      | Free x10    | Free x10      | —              | —                     | Free 3TB        | Free 3TB               |
+| **Traffic download (free)**      | Free x10    | Free x10      | —              | —                     | Free x2         | Free x2                |
 | **Traffic upload**               | Free        | Free          | —              | —                     | Free            | Free                   |
 | **Data retrieval time**          | Immediately | Immediately   | —              | —                     | Immediately     | Immediately            |
 | **Billing method**               | Package     | Pay as you go | Package        | Pay as you go         | Package         | Pay as you go          |
@@ -44,5 +44,5 @@ The pricing below applies to all Object Storage regions (HCM03, HAN02, HCM04).
 > **Notes on free Traffic download:**
 >
 > * **Gold:** Free download quota equals 10× your storage size (e.g., storing 30 GB → 300 GB free download/month).
-> * **Instant Archive:** Fixed 3 TB/month.
+> * **Instant Archive:** Free download quota equals 2× your storage size (e.g., storing 30 GB → 60 GB free download/month).
 > * When exceeding the free tier, traffic is charged at the **Domestic / International download** rates shown in the Extra Fees table above.

@@ -14,7 +14,7 @@ Dịch vụ File Storage cung cấp hai phương thức thanh toán để phục
       * Nếu Usage của bạn là 51 GB, bạn sẽ cần trả phí là 1 TB
       * Nếu Usage của bạn là 1.1 TB, bạn sẽ cần trả phí là 1.1 TB
 
-**Phí File Storage fee là 53.3 VND / 1 GB / 1 ngày (Đã bao gồm VAT)**
+**Phí File Storage là 58.3 VND / 1 GB / 1 ngày (đã bao gồm VAT)**
 
 ### **Phương thức thanh toán trả trước**
 

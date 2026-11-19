@@ -9,7 +9,7 @@ Thực hiện tạo project theo các bước bên dưới:
 3. Chọn **Tạo một Project.**
 4. Nhập **Project Name**
 5. Chọn **Billing method** (hình thức thanh toán) phù hợp theo nhu cầu. Chúng tôi đang hỗ trợ **Trả phí theo gói** hoặc **Trả phí theo dung lượng sử dụng**.
-6. Chọn **Project type** (gói) lưu trữ phù hợp theo nhu cầu. Hiện tại ở region HCM04, chúng tôi sẽ cung cấp cho bạn gói lưu trữ **Instant Archive Type**. Với gói lưu trữ này, bạn sẽ có lượng Traffic miễn phí bằng 2 lần lượng Quota mà bạn chọn sử dụng và lượng Request hoàn toàn miễn phí. Để biết thêm thông tin chi tiết về cách tính giá, vui lòng tham khảo thêm tại [Cách tính phí.](../../cach-tinh-phi.md) Sau khi tạo project, bạn không thể thay đổi tên của project.
+6. Chọn **Project type** (gói) lưu trữ phù hợp theo nhu cầu. Region HCM04 cung cấp các gói lưu trữ **Gold** và **Instant Archive**. Lượng Traffic miễn phí bằng 10 lần (Gold) hoặc 2 lần (Instant Archive) lượng Quota mà bạn chọn sử dụng, và lượng Request hoàn toàn miễn phí. Để biết thêm thông tin chi tiết về cách tính giá, vui lòng tham khảo thêm tại [Cách tính phí.](../../cach-tinh-phi.md) Sau khi tạo project, bạn không thể thay đổi tên của project.
 7. Chọn **Quota** (dung lượng lưu trữ) mà bạn mong muốn.
 8. Chọn **Period** và chọn/bỏ chọn **Auto-renew** theo nhu cầu của bạn.
 9. Thực hiện các bước **Thanh toán** giỏ hàng và **Project** của bạn sẽ được khởi tạo.
