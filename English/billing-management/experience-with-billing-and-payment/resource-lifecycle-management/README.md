@@ -2,28 +2,27 @@
 
 Use this document to understand more about the resources you are using.
 
-Here, we provide information about the resource lifecycle and actions that users/systems can take that may affect the state of the resource being used.
+Here, we provide information about the resource lifecycle and the user or system actions that can change the state of a resource.
 
-Through the resource lifecycle model below, you will have an overview of the state transition of the resource, as well as the connection between the resource and the bill.
+The resource lifecycle models below give you an overview of how a resource moves between states, and how resources are linked to invoices.
 
-## Resource lifecycle model
+### Resource lifecycle model for prepaid users
 
-### **Prepaid user actions on resources**
+* **New → Active:** When the user successfully creates the resource, it becomes Active and the corresponding invoice is generated.
+* **Active ⇄ Stopped:** The user performs Start, Reboot / Stop on the resource to switch between these two states.
+* **Active / Stopped → Suspended:** A resource that expires without being renewed is suspended. Its data is kept.
+* **Suspended → Active:** The user renews the resource during the suspension period to continue using it.
+* **Active / Stopped → Deleted:** The user deletes the resource.
+* **Suspended → Deleted:** If the resource is still not renewed when the suspension period ends, it is permanently deleted and cannot be restored.
+* **Invoice generation:** An invoice is generated whenever the user creates, resizes or renews the resource, or when the system auto-renews it.
 
-* **New → Active:** When the user successfully initializes the resource, the resource will have a state of Active and corresponding invoices will be generated.
-* **Active → ← Stop**: Users perform the Start, Reboot / Stop action on the resource to switch between these two states.
-* **Active → ← Suspense:**
-  * Active → Suspense: The resource has expired and is moved to the trash to be completely deleted.
-  * Suspense → Active: The user restores the resource in the trash to continue using it.
+For the detailed timeline after a resource expires, see Renew expiring resources.
+
+### Resource lifecycle model for postpaid users
+
+* **New → Active:** When the user successfully creates the resource, it becomes Active.
+* **Active ⇄ Stopped:** The user performs Start, Reboot / Stop on the resource to switch between these two states.
 * **Active → Deleted:** The user deletes the resource.
-* **Suspense → Deleted:** The resource has expired, and after a period of time in the trash, it will be permanently deleted and cannot be restored.
-
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-### Postpaid user actions on resources
-
-* **New → Active:** When the user successfully initializes the resource, the resource will have a state of Active.
-* **Active → ← Stop:** Users perform the Start, Reboot / Stop action to switch between these two states.
-* **Active → Deleted:** The user deletes the resource.
-* **Suspense → Deleted:** The resource has expired, and after a period of time in the trash, it will be permanently deleted and cannot be restored.
-* **Invoice generation:** For postpaid users, invoices will be generated at the end of the month, recording information about the use of that resource. In the case where the user deletes the resource, usage information will also be recorded and invoices will be generated based on that information.
+* **Invoice generation:**
+  * Invoices are generated at the end of each month, recording the resource's usage during the month.
+  * When the user deletes the resource, the system records the time usage stopped, and the cost up to that time is included in the end-of-month invoice.
