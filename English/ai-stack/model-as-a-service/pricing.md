@@ -31,7 +31,7 @@ Applies to models such as:
 * Completion
 * Embedding
 * Rerank
-* Speech-to-text / Text-to-speech _(_&#x69;f converted into token&#x73;_)_
+* Speech-to-text / Text-to-speech _(if converted into tokens)_
 
 **Pricing Method**
 

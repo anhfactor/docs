@@ -127,7 +127,7 @@ Sau khi recover:
     * Buy-more user-credits nếu có nhu cầu tiếp tục sử dụng
 
 > Khuyến nghị người dùng **ước lượng trước nhu cầu sử dụng và chủ động buy-more** để tránh gián đoạn dịch vụ khi hết quota hoặc hết hạn credits.\
-> &#xNAN;_(Chức năng Quota Alarm đang được phát triển và sẽ cập nhật trong thời gian tới)_
+> _(Chức năng Quota Alarm đang được phát triển và sẽ cập nhật trong thời gian tới)_
 
 ***
 
