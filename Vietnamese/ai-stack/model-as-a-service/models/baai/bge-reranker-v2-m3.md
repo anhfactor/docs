@@ -1,8 +1,5 @@
 ---
-description: >-
-  BGE-Reranker-v2-m3 is a lightweight multilingual cross-encoder reranker from
-  BAAI, built on the BGE-M3 (XLM-RoBERTa) backbone. Given a query and candidate
-  documents it outputs a relevance score for ea
+description: "BGE-Reranker-v2-m3 is a lightweight multilingual cross-encoder reranker from BAAI, built on the BGE-M3 (XLM-RoBERTa) backbone. Given a query and candidate documents it outputs a relevance score for each pair, used to reorder first-stage retrieval results in RAG/search pipelines. Supports 100+ languages, up to 8,192 tokens per query-document pair, and up to 10,000 documents per request."
 ---
 
 # BGE Reranker v2 m3
@@ -15,13 +12,13 @@ BGE-Reranker-v2-m3 is a lightweight multilingual cross-encoder reranker from BAA
 
 ## Thông số
 
-| Thông số      | Giá trị      |
-| ------------- | ------------ |
-| Ngữ cảnh      | 8K tokens    |
-| Output tối đa | —            |
-| Đầu vào       | text         |
-| Đầu ra        | rerank       |
-| Endpoints     | `/v1/rerank` |
+| Thông số | Giá trị |
+| --- | --- |
+| Ngữ cảnh | 8K tokens |
+| Output tối đa | — |
+| Đầu vào | text |
+| Đầu ra | rerank |
+| Endpoints | `/v1/rerank` |
 
 ## Tham số hỗ trợ
 

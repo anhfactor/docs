@@ -1,8 +1,5 @@
 ---
-description: >-
-  DeepSeek-V4 Flash is the speed- and cost-optimized tier of the DeepSeek-V4
-  family. On the same MLA + DeepSeekMoE backbone it activates fewer experts per
-  token to deliver high-throughput, low-latency r
+description: "DeepSeek-V4 Flash is the speed- and cost-optimized tier of the DeepSeek-V4 family. On the same MLA + DeepSeekMoE backbone it activates fewer experts per token to deliver high-throughput, low-latency responses for chat, summarization and lightweight reasoning, while preserving a 128K token context window. Served over an OpenAI-compatible API."
 ---
 
 # DeepSeek V4 Flash
@@ -15,13 +12,13 @@ DeepSeek-V4 Flash is the speed- and cost-optimized tier of the DeepSeek-V4 famil
 
 ## Thông số
 
-| Thông số      | Giá trị                                                 |
-| ------------- | ------------------------------------------------------- |
-| Ngữ cảnh      | 1M tokens                                               |
-| Output tối đa | 384K tokens                                             |
-| Đầu vào       | text                                                    |
-| Đầu ra        | text                                                    |
-| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số | Giá trị |
+| --- | --- |
+| Ngữ cảnh | 1M tokens |
+| Output tối đa | 384K tokens |
+| Đầu vào | text |
+| Đầu ra | text |
+| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 

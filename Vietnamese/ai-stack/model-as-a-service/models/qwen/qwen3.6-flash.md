@@ -1,8 +1,5 @@
 ---
-description: >-
-  Qwen3.6-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.6
-  commercial lineup (flash / plus / max-preview), served over the
-  OpenAI-compatible Alibaba Cloud DashScope API. It keeps the same
+description: "Qwen3.6-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.6 commercial lineup (flash / plus / max-preview), served over the OpenAI-compatible Alibaba Cloud DashScope API. It keeps the same capability surface as the higher tiers — 1M-token context window, max 65,536 output tokens, hybrid thinking / non-thinking modes, and built-in first-class tools (web search, code interpreter, web scraping) — while optimising for latency and price, making it the default pick for high-volume chat, classification and lightweight agentic workloads."
 ---
 
 # Qwen 3.6 Flash
@@ -15,13 +12,13 @@ Qwen3.6-Flash is the cost-optimized, fastest tier of Alibaba's Qwen3.6 commercia
 
 ## Thông số
 
-| Thông số      | Giá trị                                                 |
-| ------------- | ------------------------------------------------------- |
-| Ngữ cảnh      | 1M tokens                                               |
-| Output tối đa | 64K tokens                                              |
-| Đầu vào       | text, image, video                                      |
-| Đầu ra        | text                                                    |
-| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số | Giá trị |
+| --- | --- |
+| Ngữ cảnh | 1M tokens |
+| Output tối đa | 64K tokens |
+| Đầu vào | text, image, video |
+| Đầu ra | text |
+| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 

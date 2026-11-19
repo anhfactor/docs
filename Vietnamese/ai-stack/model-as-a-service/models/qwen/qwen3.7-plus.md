@@ -1,8 +1,5 @@
 ---
-description: >-
-  Qwen3.7-Plus is the balanced flagship tier of Alibaba's Qwen3.7 commercial
-  lineup (plus / flash / max), served over the OpenAI-compatible Alibaba Cloud
-  DashScope API. It positions inference quality, c
+description: "Qwen3.7-Plus is the balanced flagship tier of Alibaba's Qwen3.7 commercial lineup (plus / flash / max), served over the OpenAI-compatible Alibaba Cloud DashScope API. It positions inference quality, cost and speed between the Max and Flash tiers — ideal for medium-to-high complexity tasks. It ships with a 1M-token context window, hybrid thinking / non-thinking modes, built-in tools with adaptive tool use, and strong agentic coding, reasoning and multilingual capabilities across the Qwen3 series."
 ---
 
 # Qwen 3.7 Plus
@@ -15,13 +12,13 @@ Qwen3.7-Plus is the balanced flagship tier of Alibaba's Qwen3.7 commercial lineu
 
 ## Thông số
 
-| Thông số      | Giá trị                                                 |
-| ------------- | ------------------------------------------------------- |
-| Ngữ cảnh      | 1M tokens                                               |
-| Output tối đa | 128K tokens                                             |
-| Đầu vào       | text, image, video                                      |
-| Đầu ra        | text                                                    |
-| Endpoints     | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
+| Thông số | Giá trị |
+| --- | --- |
+| Ngữ cảnh | 1M tokens |
+| Output tối đa | 128K tokens |
+| Đầu vào | text, image, video |
+| Đầu ra | text |
+| Endpoints | `/v1/chat/completions`, `/v1/responses`, `/v1/messages` |
 
 ## Reasoning
 
