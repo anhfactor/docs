@@ -34,15 +34,27 @@ Missing or unknown key → **401** `request_denied`. Model not enabled for the k
 
 ## Selecting the model
 
-Put the model ID in the request body (`"model": "z-ai/glm-5.3"`). Alternatively, some tools need a model-specific base URL; every endpoint is also reachable under the model's own path, and the body `model` must then match it:
+Put the model ID in the `model` field of the request body, in the form `vendor/model`:
 
-{% code title="per-model URL" %}
-```
-https://maas-llm-aiplatform-hcm.api.vngcloud.vn/{vendor}/{model}/v1/chat/completions
-# e.g.
-https://maas-llm-aiplatform-hcm.api.vngcloud.vn/qwen/qwen3.6-flash/v1/chat/completions
+{% code title="curl" %}
+```bash
+curl https://maas-llm-aiplatform-hcm.api.vngcloud.vn/v1/chat/completions \
+  -H "Authorization: Bearer $GREENNODE_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "z-ai/glm-5.3",
+    "messages": [{"role": "user", "content": "Hello"}]
+  }'
 ```
 {% endcode %}
+
+* The endpoint path is the same for every model (for example `POST /v1/chat/completions`); only the `model` value changes.
+* Get model IDs from the [Model list](../models/README.md) or with `GET /v1/models`.
+* A request without `model` cannot be routed and returns `502`; an unknown model ID returns `404 model_not_found`. See [Errors](errors.md).
+
+{% hint style="info" %}
+**Exception: OCR.** The OCR model (`greennode/idp`) takes a file and returns the result later, so it has its own set of endpoints and does not take `model` in the body. See [OCR API](ocr.md).
+{% endhint %}
 
 ## Conventions
 
