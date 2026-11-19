@@ -5,7 +5,7 @@ Use this document to learn more about the auto-renewal feature. It will detail t
 **1. The automatic resource renewal policy only applies to:**
 
 * **Target:** Prepaid users
-* **Resources** : All resources are auto-renewable and are in use
+* **Resources** : All resources that support auto-renewal and are currently in use
 * **Funding source** : GreenNode Credit
 
 **2. Instructions to enable/disable the "Automatic renewal" feature**
