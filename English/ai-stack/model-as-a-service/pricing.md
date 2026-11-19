@@ -49,10 +49,12 @@ Pricing Formula
 
 ```
 Total Cost =
-(Input tokens - Cache tokens / 1,000,000 × Input price)
+((Input tokens − Cache tokens) / 1,000,000) × Input price
 + (Cache tokens / 1,000,000 × Cache price)
 + (Output tokens / 1,000,000 × Output price)
 ```
+
+Cache tokens are subtracted from input tokens only for models that bill cache tokens separately; for other models all input tokens are billed at the Input price.
 
 ***
 
