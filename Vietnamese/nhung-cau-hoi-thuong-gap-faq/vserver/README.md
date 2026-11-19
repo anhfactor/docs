@@ -154,7 +154,7 @@ Hiện tại default security policy full 10 . Khách hàng muốn nâng lên th
 
 ### \[vServer] Tôi muốn tạo một server có HDD với volume 1TB được không?
 
-Khi bạn khởi tạo Server mới, chúng tôi sẽ mặc định tạo một phân vùng Root Volume có định dạng SSD và hỗ trợ mức dụng lượng thấp nhất 20GB và tối đa 3000GB, IOPS thấp nhất 200 và tối đa 10000. Vì vậy bạn có thể tùy chọn tạo Server với phân vùng Volume hỗ trợ dung lượng 1TB (1000GB), tuy nhiên cần lưu ý rằng chúng tôi không còn hỗ trợ định dạng HDD cho Volume.
+Khi bạn khởi tạo Server mới, chúng tôi sẽ mặc định tạo một phân vùng Root Volume có định dạng SSD và hỗ trợ mức dụng lượng thấp nhất 20GB và tối đa 3000GB, IOPS thấp nhất 3000 và tối đa 60000. Vì vậy bạn có thể tùy chọn tạo Server với phân vùng Volume hỗ trợ dung lượng 1TB (1000GB), tuy nhiên cần lưu ý rằng chúng tôi không còn hỗ trợ định dạng HDD cho Volume.
 
 ### \[vServer] Tôi có thể add bao nhiêu volume trên một server ?
 
