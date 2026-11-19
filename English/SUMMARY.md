@@ -1208,7 +1208,6 @@
         * [Access Management via IAM](billing-management/vconsole-management-channel-for-billing-and-resources/getting-started/other-features/access-management-via-iam.md)
         * [Resource Tagging](billing-management/vconsole-management-channel-for-billing-and-resources/getting-started/other-features/resource-tagging.md)
         * [Match End Time](billing-management/vconsole-management-channel-for-billing-and-resources/getting-started/other-features/match-end-time.md)
-  * [What's Billing & Payment](billing-management/hold-credit.md)
   * [Experience with Billing & Payment](billing-management/experience-with-billing-and-payment/README.md)
     * [Prepaid & Postpaid Users](billing-management/experience-with-billing-and-payment/prepaid-and-postpaid-users.md)
     * [Resource lifecycle management](billing-management/experience-with-billing-and-payment/resource-lifecycle-management/README.md)

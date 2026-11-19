@@ -3,6 +3,7 @@ description: >-
   Welcome to the Pricing calculator tool! This guide will help you understand
   how to use the calculator to estimate the cost of your desired service
   configuration.
+hidden: true
 ---
 
 # vCalculator - Service estimated tool
