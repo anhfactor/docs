@@ -49,7 +49,7 @@ The Models page has filters in the left sidebar:
 
 A model is either hosted on GreenNode infrastructure (**GreenNode self-host**) or forwarded to the model vendor under an official contract (**Third-party**). Some model families are offered both ways; the partner variant has an ID ending in `-thirdparty` and its own on/off switch.
 
-Under the [SLA](../sla.md), the commitment applies to the availability of the Service for GreenNode Models; GreenNode does not commit to any SLA for Third-party Models.
+Under the [SLA](../sla.md), the commitment on Monthly Uptime Percentage applies to the availability of the Service for GreenNode Models; GreenNode does not commit to any SLA for Third-party Models. The list of available models and their classification are published and updated by GreenNode on the [Service Console](https://aiplatform.console.greennode.ai/models).
 
 ## Check the result
 

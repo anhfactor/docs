@@ -22,7 +22,7 @@ This SLA applies to GreenNode's AI MaaS (Model as a Service) service (the "Servi
 
 **1.1.** "Customer"/ "Service User": means any individual or entity using GreenNode's Service.
 
-**1.2.** "GreenNode Model": means the AI models directly deployed and operated by GreenNode on GreenNode's infrastructure. "Third-party Model": means the AI models operated by a third-party provider and made available to the Customer by GreenNode through the Service. The list of available models and theirification are published and updated by GreenNode on the [Service Console](https://aiplatform.console.greennode.ai/models).
+**1.2.** "GreenNode Model": means the AI models directly deployed and operated by GreenNode on GreenNode's infrastructure. "Third-party Model": means the AI models operated by a third-party provider and made available to the Customer by GreenNode through the Service. The list of available models and their classification are published and updated by GreenNode on the [Service Console](https://aiplatform.console.greennode.ai/models).
 
 **1.3.**
 
@@ -138,7 +138,7 @@ Content of complaints: in order to save the Customer's time, when sending compla
 * b. The information of the account affected;
 * c. Specific date and time and the moments when the system, and Service used by the Customer fall into the Unavailable State;
 * d. Logs recording errors or screenshots at the time the error occurs (the Customer's confidential information should be blurred or hidden);
-* e. All claims regarding data loss shall only be received and considered by GreenNode when accompanied by an official assessment document issued by an independent assessment organization with legal functions (which clearlyentifies the cause of data loss, the list and volume of lost data). The entire cost related to this assessment shall be borne by the Customer.
+* e. All claims regarding data loss shall only be received and considered by GreenNode when accompanied by an official assessment document issued by an independent assessment organization with legal functions (which clearly identifies the cause of data loss, the list and volume of lost data). The entire cost related to this assessment shall be borne by the Customer.
 * f. Damages to the Customer and the value of damages accompanied by relevant documents and invoices;
 * g. The level of compensation that the Customer requires.
 

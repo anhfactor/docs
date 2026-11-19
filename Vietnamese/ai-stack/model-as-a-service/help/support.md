@@ -10,7 +10,9 @@ description: "Cách liên hệ GreenNode, cần gửi gì khi báo lỗi, và c�
 | --- | --- |
 | Help Center | [helpdesk.greennode.ai](https://helpdesk.greennode.ai/portal/vi/home) |
 | Email | [support@greennode.ai](mailto:support@greennode.ai) |
-| Hotline | 19001549 |
+| Hotline | 1900 1549 |
+
+Báo sự cố và khiếu nại theo SLA: xem [Cam kết SLA](../cam-ket-sla.md), Điều 6 (hình thức liên hệ, thời gian đáp ứng) và Điều 7 (quy trình khiếu nại).
 
 ## Cần gửi gì
 

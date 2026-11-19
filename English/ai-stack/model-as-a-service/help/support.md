@@ -10,7 +10,9 @@ description: "How to reach GreenNode, what to include in a report, and the terms
 | --- | --- |
 | Help Center | [helpdesk.greennode.ai](https://helpdesk.greennode.ai/portal/en/home) |
 | Email | [support@greennode.ai](mailto:support@greennode.ai) |
-| Hotline | 19001549 |
+| Hotline | 1900 1549 |
+
+Reporting incidents and SLA complaints: see the [SLA](../sla.md), Clause 6 (forms of contact, response time) and Clause 7 (complaint process).
 
 ## What to send
 

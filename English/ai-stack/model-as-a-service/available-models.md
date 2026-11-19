@@ -32,6 +32,6 @@ Models are offered in one of two ways:
 * **GreenNode self-host** — the model runs on GreenNode infrastructure.
 * **Third-party** — the request is forwarded to the model vendor under an official contract.
 
-Under the [SLA](sla.md), the commitment applies to the availability of the Service for GreenNode Models; GreenNode does not commit to any SLA for Third-party Models.
+Under the [SLA](sla.md), the commitment on Monthly Uptime Percentage applies to the availability of the Service for GreenNode Models; GreenNode does not commit to any SLA for Third-party Models. The list of available models and their classification are published and updated by GreenNode on the [Service Console](https://aiplatform.console.greennode.ai/models).
 
 MaaS supports these model types: **Chat**, **Embedding**, **Rerank** and **OCR**.

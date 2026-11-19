@@ -49,7 +49,7 @@ Trang Models có bộ lọc ở thanh bên trái:
 
 Model chạy trên hạ tầng GreenNode (**GreenNode self-host**) hoặc được chuyển tới nhà cung cấp model theo hợp đồng chính thức (**Third-party**). Một số dòng model có cả hai; biến thể qua đối tác có ID kết thúc bằng `-thirdparty` và công tắc bật/tắt riêng.
 
-Theo [Cam kết SLA](../cam-ket-sla.md), cam kết áp dụng đối với tính sẵn sàng của Dịch Vụ đối với các Mô Hình GreenNode; GreenNode không cam kết SLA đối với Mô Hình Bên Thứ Ba.
+Theo [Cam kết SLA](../cam-ket-sla.md), cam kết về Tỷ Lệ Uptime Hàng Tháng áp dụng đối với tính sẵn sàng của Dịch Vụ đối với các Mô Hình GreenNode; GreenNode không cam kết SLA đối với Mô Hình Bên Thứ Ba. Danh sách các mô hình được cung cấp và phân loại mô hình được GreenNode công bố và cập nhật trên [Console của Dịch Vụ](https://aiplatform.console.greennode.ai/models).
 
 ## Kiểm tra kết quả
 
