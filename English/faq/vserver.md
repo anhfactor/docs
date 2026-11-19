@@ -152,7 +152,7 @@ Currently, the default security policy is full 10. Customers who want to increas
 
 ### \[vServer] Can I create a server with a HDD and a 1TB volume?
 
-When you create a new Server, we will default to creating a Root Volume partition with an SSD format and support a minimum capacity of 20GB and a maximum of 3000GB, with a minimum of 200 IOPS and a maximum of 10000. So you can choose to create a Server with a Volume partition that supports a capacity of 1TB (1000GB), but please note that we no longer support HDD format for Volumes.
+When you create a new Server, we will default to creating a Root Volume partition with an SSD format and support a minimum capacity of 20GB and a maximum of 3000GB, with a minimum of 3000 IOPS and a maximum of 60000. So you can choose to create a Server with a Volume partition that supports a capacity of 1TB (1000GB), but please note that we no longer support HDD format for Volumes.
 
 ### \[vServer] How many volumes can I add to a server?
 
@@ -230,7 +230,7 @@ The time depends on the volume size, the larger the volume size, the longer it t
 
 ### \[vServer] How high can I increase the IOPS?
 
-We allow you to increase the IOPS up to a maximum of 200 to 10000.
+We allow you to increase the IOPS up to a maximum of 3000 to 60000.
 
 ### \[vServer] How many volumes can I add to a server?
 
