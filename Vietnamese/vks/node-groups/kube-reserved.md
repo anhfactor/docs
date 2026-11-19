@@ -237,6 +237,6 @@ Allocatable trừ thêm **eviction threshold** (default `memory.available<100Mi`
 
 | Tôi muốn... | Đi đến |
 |---|---|
-| Xem danh sách Flavor và thông số kỹ thuật | [Danh sách Flavor đang hỗ trợ](../reference/node-flavors/README.md) |
+| Xem danh sách Flavor và thông số kỹ thuật | [Danh sách Flavor tại zone HCM03-C](../reference/node-flavors/danh-sach-flavor-tai-zone-hcm03-c.md) |
 | Tạo Node Group mới | [Node Groups](README.md) |
 | Cấu hình Auto Scaling cho Node Group | [Auto Scaling](auto-scaling.md) |
