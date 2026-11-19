@@ -47,10 +47,12 @@ Tự động gia hạn tài nguyên là **tính năng của hệ thống**, giú
 
 **Điều khoản áp dụng dành cho tính năng "Tự động gia hạn" trên GreenNode như sau:**
 
-* Tài nguyên được mặc định **gia hạn thêm 1 tháng**, kể từ thời điểm kết thúc. (Hệ thống sẽ thực hiện gia hạn tài nguyên vào 8:00 AM)
-* Người dùng cần chuẩn bị đủ số dư credit khả dụng theo như thông báo để hệ thống có thể tiến hành gia hạn
-* Hệ thống chính thức thực hiện gia hạn vào các mốc thời gian: trước 7 ngày, trước 4 ngày, trước 1 ngày và ngay ngày hết hạn của tài nguyên. **Lưu ý, tính năng auto-renew chỉ áp dụng cho tài nguyên đã được Khách hàng lựa chọn cho phép tự động gia hạn và có trạng thái đang hoạt động (active). Trường hợp tài nguyên đã hết hạn hoặc bị xóa trước các mốc thời gian hệ thống thực hiện thì sẽ không tự động gia hạn.**
-  * Cách tính giá khi hệ thống tự động gia hạn không khác biệt so với việc người dùng chủ động gia hạn tài nguyên, tham khảo thêm [tại đây](gia-han-tai-nguyen.md)
-  * Hệ thống gửi thông tin tài nguyên được gia hạn thành công/thất bại đến người dùng
-  * Hệ thống phát sinh hóa đơn tương ứng với khoảng thời gian được gia hạn thêm
-* Với các tài nguyên đã kết thúc sẽ không áp dụng tự động gia hạn. Có nghĩa khi tài nguyên được bật tự động gia hạn, nhưng quá trình tự động gia hạn thất bại do thiếu credit, dẫn đến việc tài nguyên bị hết hạn, trong trường hợp này người dùng cần chủ động thực hiện khôi phục tài nguyên để tiếp tục sử dụng dịch vụ. Tham khảo hướng dẫn [Khôi phục tài nguyên](khoi-phuc-tai-nguyen.md)
+* Từ **7 ngày trước ngày hết hạn**, hệ thống gửi email nhắc gia hạn để người dùng chuẩn bị đủ số dư Credit khả dụng. Nên nạp đủ Credit trước 8:30 sáng của ngày gia hạn.
+* Tài nguyên được mặc định **gia hạn thêm 1 tháng**, kể từ thời điểm kết thúc.
+* Vào mỗi mốc **7 ngày, 4 ngày, 1 ngày trước ngày hết hạn và ngay ngày hết hạn**, hệ thống bắt đầu chạy tự động gia hạn từ **8:30 sáng**. Các tài nguyên được xử lý lần lượt, nên thời điểm gia hạn hoàn tất có thể khác nhau giữa các tài nguyên. Nếu một lần gia hạn không thành công do thiếu Credit, hệ thống thử lại ở mốc tiếp theo.
+  * Cách tính giá khi hệ thống tự động gia hạn không khác biệt so với việc người dùng chủ động gia hạn tài nguyên, tham khảo thêm tại Gia hạn tài nguyên.
+  * Hệ thống gửi thông tin tài nguyên được gia hạn thành công / thất bại đến người dùng.
+  * Hệ thống phát sinh hóa đơn tương ứng với khoảng thời gian được gia hạn thêm.
+* **Lưu ý:** Tính năng tự động gia hạn chỉ áp dụng cho tài nguyên thuộc sản phẩm có hỗ trợ tự động gia hạn, đã được Khách hàng bật tự động gia hạn và đang ở trạng thái hoạt động (Active). Tài nguyên đã hết hạn hoặc bị xóa trước các mốc trên sẽ không được tự động gia hạn.
+* **Lưu ý về thời điểm hết hạn:** Tại mỗi lần chạy tự động gia hạn, nếu thời điểm hết hạn của tài nguyên đã qua trước thời điểm hệ thống thực hiện gia hạn, tài nguyên sẽ không còn thỏa điều kiện tự động gia hạn. Ví dụ: tài nguyên hết hạn lúc 7:00 sáng ngày T, trong khi lần chạy của ngày T bắt đầu từ 8:30 sáng. Khi đó, bạn cần chủ động gia hạn tài nguyên trên giao diện.
+* Nếu cả 4 lần gia hạn đều thất bại, tính năng tự động gia hạn dừng lại và tài nguyên sẽ hết hạn. Để tiếp tục sử dụng, người dùng cần chủ động gia hạn tài nguyên trước khi tài nguyên bị xóa vĩnh viễn. Tham khảo Gia hạn tài nguyên đã hết hạn.
