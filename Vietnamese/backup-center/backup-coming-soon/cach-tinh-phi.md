@@ -32,7 +32,7 @@ Hiện tại, GreenNode Backup hỗ trợ cả 2 hình thức là trả trước
 ### Đối với trả trước
 
 * Đối tượng áp dụng: Người dùng trả trước tại GreenNode
-* Hình thức thanh toán: [Tạm giữ Credit ( Hold Credit )](../../quan-ly-hoa-don-chi-phi-and-tai-nguyen-tren-vng-cloud/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/tam-giu-credit.md)
+* Hình thức thanh toán: [Tạm giữ Credit ( Hold Credit )](../../quan-ly-hoa-don-chi-phi-and-tai-nguyen/trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/tam-giu-credit.md)
   * Theo đó, người dùng cần chuẩn bị sẵn lượng credit đủ dùng trong tài khoản GreenNode, cứ mỗi ngày, hệ thống sẽ tiến hành tạm giữ credit dựa trên số usage thực tế của toàn bộ backup location.
   * Trường hợp lượng credit trong tài khoản không đủ để tiến hành tạm giữ, GreenNode sẽ nhắc nhở và có các biện pháp xử lý nếu người dùng không chủ động nạp thêm credit.
 * Cuối mỗi tháng, GreenNode sẽ xuất hóa đơn dịch vụ, và người dùng sẽ tiến hành thanh toán hóa đơn tương tự các dịch vụ trả sau khác. Lưu ý rằng, một backup location sẽ tương ứng với 1 hóa đơn.

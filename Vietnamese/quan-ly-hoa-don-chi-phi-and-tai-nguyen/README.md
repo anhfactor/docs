@@ -52,12 +52,12 @@ Hệ thống theo dõi trạng thái tài nguyên từ lúc khởi tạo tới l
 
 | Trang | Dùng để |
 |---|---|
-| [Lịch sử hóa đơn](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/lich-su-hoa-don.md) (**Billing history**) | Xem hóa đơn và tình trạng thanh toán của mọi sản phẩm |
-| [Lịch sử thanh toán](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/lich-su-thanh-toan.md) (**Payment history**) | Xem số tiền, hình thức và ngày của từng lần thanh toán |
-| [Lịch sử tín dụng](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/lich-su-tin-dung.md) (**Credit history**) | Xem biến động số dư ví Credit: nạp Credit, thanh toán, hoàn tiền |
-| [Thống kê sử dụng](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/thong-ke-su-dung.md) (**Usage report**) | Xem thời gian sử dụng và các lần thay đổi cấu hình của từng tài nguyên, kèm chi phí |
-| [Trình khám phá chi phí](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/trinh-kham-pha-chi-phi.md) (**Cost explorer**) | Phân tích và dự đoán chi phí theo sản phẩm, loại tài nguyên và từng tài nguyên |
-| [Cài đặt thông báo](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/cai-dat-thong-bao.md) | Nhận email về hóa đơn, bảo trì hệ thống và cảnh báo dịch vụ |
+| [Lịch sử hóa đơn](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/lich-su-hoa-don.md) (**Billing history**) | Xem hóa đơn và tình trạng thanh toán của mọi sản phẩm |
+| [Lịch sử thanh toán](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/lich-su-thanh-toan.md) (**Payment history**) | Xem số tiền, hình thức và ngày của từng lần thanh toán |
+| [Lịch sử tín dụng](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/lich-su-tin-dung.md) (**Credit history**) | Xem biến động số dư ví Credit: nạp Credit, thanh toán, hoàn tiền |
+| [Thống kê sử dụng](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/thong-ke-su-dung.md) (**Usage report**) | Xem thời gian sử dụng và các lần thay đổi cấu hình của từng tài nguyên, kèm chi phí |
+| [Trình khám phá chi phí](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/trinh-kham-pha-chi-phi.md) (**Cost explorer**) | Phân tích và dự đoán chi phí theo sản phẩm, loại tài nguyên và từng tài nguyên |
+| [Cài đặt thông báo](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/cai-dat-thong-bao.md) | Nhận email về hóa đơn, bảo trì hệ thống và cảnh báo dịch vụ |
 
 ---
 
@@ -65,11 +65,11 @@ Hệ thống theo dõi trạng thái tài nguyên từ lúc khởi tạo tới l
 
 | Tôi muốn... | Đi đến |
 |---|---|
-| Nạp Credit vào ví | [Mua Credit](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/cac-tinh-nang-khac/mua-credit.md) |
+| Nạp Credit vào ví | [Mua Credit](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/cac-tinh-nang-khac/mua-credit.md) |
 | Ước tính chi phí trước khi tạo tài nguyên | [Calculator - Công cụ ước tính chi phí](../calculator-cong-cu-uoc-tinh-chi-phi.md) |
 | Hiểu rõ khác biệt giữa trả trước và trả sau | [Người dùng trả trước & trả sau](trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/nguoi-dung-tra-truoc-and-tra-sau.md) |
 | Dùng coupon khi thanh toán | [Áp dụng coupon khi thanh toán](trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/ap-dung-coupon-khi-thanh-toan.md) |
 | Thanh toán hóa đơn trả sau | [Thanh toán hóa đơn tự động](trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/thanh-toan/thanh-toan-hoa-don-tu-dong.md) |
 | Gia hạn tài nguyên | [Gia hạn tài nguyên](trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/quan-ly-vong-doi-tai-nguyen/gia-han-tai-nguyen.md) |
 | Khôi phục tài nguyên đã hết hạn | [Khôi phục tài nguyên](trai-nghiem-billing-and-kenh-thanh-toan/ve-billing-and-payment/quan-ly-vong-doi-tai-nguyen/khoi-phuc-tai-nguyen.md) |
-| Phân quyền cho thành viên khác truy cập vConsole | [Phân quyền truy cập thông qua IAM](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/cac-tinh-nang-khac/phan-quyen-truy-cap-thong-qua-iam.md) |
+| Phân quyền cho thành viên khác truy cập vConsole | [Phân quyền truy cập thông qua IAM](vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/cac-tinh-nang-khac/phan-quyen-truy-cap-thong-qua-iam.md) |

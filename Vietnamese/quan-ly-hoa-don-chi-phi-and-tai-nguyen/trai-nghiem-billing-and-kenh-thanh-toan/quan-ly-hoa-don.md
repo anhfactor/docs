@@ -60,7 +60,7 @@ Ví dụ công thức tính giá trị hóa đơn khi khởi tạo Server bao g�
 
 * Số tiền trên hóa đơn là số tiền được tính dựa trên chi phí thực tế khi sử dụng tài nguyên
 * Báo cáo chi phí sử dụng tài nguyên sẽ được xuất vào cuối tháng, tại user portal: [https://dashboard.console.greennode.ai/usage-report](https://dashboard.console.greennode.ai/usage-report)
-* Để hiểu thêm về cách tính giá tiền sử dụng tài nguyên tài nguyên trong tháng, mời tham khảo thêm [**tại đây**](../vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/thong-ke-su-dung.md)**.**
+* Để hiểu thêm về cách tính giá tiền sử dụng tài nguyên tài nguyên trong tháng, mời tham khảo thêm [**tại đây**](../vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/thong-ke-su-dung.md)**.**
 
 ### **Thời điểm thanh toán hóa đơn** <a href="#quanlyhoadon-thoidiemthanhtoanhoadon" id="quanlyhoadon-thoidiemthanhtoanhoadon"></a>
 
@@ -80,4 +80,4 @@ Ví dụ công thức tính giá trị hóa đơn khi khởi tạo Server bao g�
 Chúng tôi cung cấp website user portal để giúp người dùng quản lý hóa đơn sử dụng tại nguyên một cách tốt nhất và hiệu quả nhất:
 
 * Truy cập vào trang quản lý hóa đơn tại đây: [https://dashboard.console.greennode.ai/billing-report](https://dashboard.console.greennode.ai/billing-report)
-* Để xem thêm hướng dẫn sử dụng cũng như các tính năng của trang quản lý hóa đơn, mời tham khảo thêm [**tại đây**](../vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen-tren-vng-cloud/trai-nghiem-vconsole/lich-su-hoa-don.md)
+* Để xem thêm hướng dẫn sử dụng cũng như các tính năng của trang quản lý hóa đơn, mời tham khảo thêm [**tại đây**](../vconsole-kenh-quan-ly-chung-ve-hoa-don-va-tai-nguyen/trai-nghiem-vconsole/lich-su-hoa-don.md)

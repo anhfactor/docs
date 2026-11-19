@@ -99,4 +99,4 @@ Các hành động tính phí theo request bao gồm:
 * PUT: ghi đè tất cả thông tin của đối tượng với những gì được gửi lên server. Ví dụ như ghi đè nội dung của 1 object đã được upload lên server trước đó.
 * DELETE: xóa đối tượng khỏi server. Ví dụ như xóa 1 object đã được upload lên trước đó khỏi vStorage.
 
-Bạn cũng có thể tham khảo cách tính phí của chúng tôi tại [Quản lý hóa đơn, chi phí & tài nguyên trên GreenNode](../quan-ly-hoa-don-chi-phi-and-tai-nguyen-tren-vng-cloud/).
+Bạn cũng có thể tham khảo cách tính phí của chúng tôi tại [Quản lý hóa đơn, chi phí & tài nguyên trên GreenNode](../quan-ly-hoa-don-chi-phi-and-tai-nguyen/).
