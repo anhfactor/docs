@@ -1,6 +1,6 @@
 # Các Model được cung cấp
 
-MaaS API cung cấp quyền truy cập với độ chính xác đầy đủ vào các họ mô hình Anthropic, OpenAI, Qwen... được liệt kê bên dưới.
+MaaS API cung cấp quyền truy cập vào các họ mô hình như Qwen, DeepSeek, GLM, Kimi, MiniMax, Gemma… Danh sách đầy đủ ở bên dưới.
 
 {% hint style="info" %}
 Danh mục model bên dưới đã được cập nhật theo lộ trình chuyển đổi bắt đầu **03/08/2026**, gồm model do GreenNode self-host và model third-party đã ký hợp đồng chính thức. Xem chi tiết mốc thời gian tại [Release Notes](../release-notes.md) và nguyên tắc tính phí tại [Cách tính phí](cach-tinh-phi.md).
@@ -8,77 +8,28 @@ Danh mục model bên dưới đã được cập nhật theo lộ trình chuy�
 
 ### Rate limit
 
-Mặc định áp dụng cho **mọi tài khoản** dùng MaaS API:
+Mặc định áp dụng cho **mọi tài khoản mới** dùng MaaS API, tính **riêng cho từng model**:
 
-| Giới hạn | Giá trị |
+| Giới hạn | Giá trị mặc định (mỗi model) |
 | --- | --- |
-| Theo phút | **10 RPM** — 10 request/phút |
-| Theo ngày | **14.400 request/ngày** |
+| Request | **10 RPM** — 10 request/phút |
+| Token | **1.000.000 TPM** — 1 triệu token/phút |
 
-Giới hạn được tính trên **tài khoản** và dùng chung cho mọi model — không phải hạn mức riêng của từng model. Trong các bảng bên dưới, cột **Rate Limit** hiển thị `–` nghĩa là model đó không có giới hạn riêng và áp dụng mức mặc định này.
+Mỗi model có bộ đếm riêng: gọi model A không làm giảm hạn mức của model B. Xem chi tiết tại [Rate limit](portal/rate-limits.md).
 
 {% hint style="info" %}
-Cần mức cao hơn 10 RPM? Hãy [liên hệ GreenNode](https://helpdesk.greennode.ai/portal/vi/newticket) để được xem xét đưa vào **whitelist**. Whitelist được xét theo từng trường hợp cụ thể.
+Cần mức cao hơn? Hãy [liên hệ GreenNode](https://helpdesk.greennode.ai/portal/vi/newticket) để được xem xét đưa vào **whitelist**. Whitelist được xét theo từng trường hợp cụ thể.
 {% endhint %}
 
 ***
 
 ### Danh sách mô hình
 
-Cột **Loại Provider** cho biết request của bạn được xử lý ở đâu:
+Danh sách model đầy đủ (Model ID, độ dài ngữ cảnh, đầu vào, endpoints, reasoning) được cập nhật tự động theo hệ thống tại **[Danh sách model](models/README.md)**.
+
+Model được cung cấp theo một trong hai hình thức:
 
 * **GreenNode self-host** — model chạy trên hạ tầng của GreenNode.
-* **Third-party** — request được chuyển tiếp đến nhà cung cấp model (Anthropic, OpenAI, Moonshot AI, Qwen, MiniMax, Cohere...) theo hợp đồng chính thức.
+* **Third-party** — request được chuyển tiếp đến nhà cung cấp model theo hợp đồng chính thức.
 
-MaaS hỗ trợ nhiều loại mô hình khác nhau:
-
-#### _Chat_
-
-| Model Name     | Loại Provider       | Modalities (Input → Output)   | Rate Limit | Sẵn có từ    |
-| --------------- | ------------------- | ---------------------------------- | ---------- | ------------ |
-| Kimi K2.7 Code | Third-party         | Text + Image → Text               | –          | 03/08/2026   |
-| Kimi 2.6       | Third-party         | Text + Image → Text               | –          | 03/08/2026   |
-| GLM-5.2        | GreenNode self-host | Text → Text                        | –          | 03/08/2026   |
-| Gemma 4 31B-IT | Third-party         | Text + Image → Text               | –          | 03/08/2026   |
-| Qwen 3.7 Plus  | Third-party         | Text + Image + Video → Text       | –          | 03/08/2026   |
-| Qwen 3.6 Plus  | Third-party         | Text + Image + Video → Text       | –          | 03/08/2026   |
-| Qwen 3.6 Flash | Third-party         | Text + Image + Video → Text       | –          | 03/08/2026   |
-| MiniMax M3     | Third-party         | Text + Image + Video → Text       | –          | 03/08/2026   |
-| MiniMax M2.5   | Third-party         | Text → Text                        | –          | 03/08/2026   |
-| Opus 4.8       | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| Sonnet 4.6     | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| Haiku 4.5      | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| GPT-5.4        | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| GPT-5.4 Mini   | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| GPT-5.4 Nano   | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| GPT-5          | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| GPT-5 Mini     | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| GPT-5 Nano     | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| GPT-4o         | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| GPT-4o Mini    | Third-party         | Text + Image + File → Text        | –          | 20/08/2026   |
-| GPT-OSS 20B    | Third-party         | Text → Text                        | –          | 20/08/2026   |
-| GPT-OSS 120B   | Third-party         | Text → Text                        | –          | 20/08/2026   |
-
-{% hint style="info" %}
-Modalities mô tả khả năng chung của model theo tài liệu của nhà cung cấp — khả năng thực tế có thể phụ thuộc vào endpoint API cụ thể được gọi qua MaaS. Model có mốc **03/08/2026** đã sẵn sàng sử dụng; model có mốc **20/08/2026** đang được triển khai dần và chưa khả dụng.
-{% endhint %}
-
-#### _Image Generation_
-
-| Model Name    | Loại Provider | Modalities (Input → Output) | Rate Limit | Sẵn có từ  |
-| -------------- | ------------- | ------------------------------- | ---------- | ---------- |
-| gpt-image-2    | Third-party   | Text + Image → Image           | –          | 20/08/2026 |
-
-#### _Embedding_
-
-| Model Name          | Loại Provider       | Modalities (Input → Output) | Rate Limit | Sẵn có từ  |
-| -------------------- | ------------------- | ------------------------------- | ---------- | ---------- |
-| Cohere Embed v4     | Third-party         | Text + Image → Vector          | –          | 20/08/2026 |
-| Qwen3 Embedding 8B  | Third-party         | Text → Vector                   | –          | 20/08/2026 |
-
-#### _Rerank_
-
-| Model Name              | Loại Provider | Modalities (Input → Output) | Rate Limit | Sẵn có từ  |
-| ------------------------ | ------------- | ------------------------------- | ---------- | ---------- |
-| Cohere Rerank v4.0 pro  | Third-party   | Text → Ranked List             | –          | 20/08/2026 |
-
+MaaS hỗ trợ các loại model: **Chat**, **Embedding**, **Rerank** và **OCR**.

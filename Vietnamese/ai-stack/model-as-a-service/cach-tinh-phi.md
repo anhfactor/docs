@@ -49,10 +49,12 @@ Hiện tại có **2 nhóm model chính**:
 
 ```
 Total Cost =
-(Input tokens - Cache tokens / 1,000,000 × Input price)
+((Input tokens − Cache tokens) / 1,000,000) × Input price
 + (Cache tokens / 1,000,000 × Cache price)
 + (Output tokens / 1,000,000 × Output price)
 ```
+
+Cache token chỉ được trừ khỏi input token với các model tính phí cache token riêng; với model khác, toàn bộ input token tính theo giá Input.
 
 ***
 
@@ -148,7 +150,7 @@ Sau khi recover:
 
 Để xem chi tiết lượng usage đã sử dụng:
 
-* Truy cập trang **Model Usage**
+* Truy cập trang [**Model Usage**](https://aiplatform.console.greennode.ai/model-usage)
 * Cho phép:
   * Chọn **khoảng thời gian cụ thể**
   * Xem chi tiết:
