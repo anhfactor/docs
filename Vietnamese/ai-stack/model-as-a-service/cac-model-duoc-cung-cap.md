@@ -29,7 +29,9 @@ Danh sách model đầy đủ (Model ID, độ dài ngữ cảnh, đầu vào, e
 
 Model được cung cấp theo một trong hai hình thức:
 
-* **GreenNode self-host** — model chạy trên hạ tầng của GreenNode.
-* **Third-party** — request được chuyển tiếp đến nhà cung cấp model theo hợp đồng chính thức.
+* **GreenNode self-host** (Mô Hình GreenNode) — model do GreenNode trực tiếp triển khai và vận hành trên hạ tầng của GreenNode.
+* **Third-party** (Mô Hình Bên Thứ Ba) — model do nhà cung cấp bên thứ ba vận hành, request được chuyển tiếp đến nhà cung cấp theo hợp đồng chính thức.
+
+Cam kết uptime 99,90% chỉ áp dụng cho Mô Hình GreenNode, không áp dụng cho Mô Hình Bên Thứ Ba. Xem [Cam kết SLA](cam-ket-sla.md).
 
 MaaS hỗ trợ các loại model: **Chat**, **Embedding**, **Rerank** và **OCR**.

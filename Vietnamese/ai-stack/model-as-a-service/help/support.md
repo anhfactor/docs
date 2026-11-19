@@ -30,7 +30,7 @@ description: "Cách liên hệ GreenNode, cần gửi gì khi báo lỗi, và c�
 | Token reasoning | Token model dùng để suy luận trước khi trả lời. Tính phí như output. |
 | Cached token | Token input lấy từ prompt cache, tính theo giá cache. |
 | RPM / TPM | Số request mỗi phút / số token mỗi phút. |
-| Self-host / Third-party | Nơi model chạy: trên hạ tầng GreenNode, hoặc tại nhà cung cấp model theo hợp đồng. |
+| Self-host / Third-party | Mô Hình GreenNode (GreenNode trực tiếp vận hành trên hạ tầng GreenNode) hoặc Mô Hình Bên Thứ Ba (nhà cung cấp bên thứ ba vận hành). Cam kết SLA chỉ áp dụng cho Mô Hình GreenNode, xem [Cam kết SLA](../cam-ket-sla.md). |
 | SSE | Server-sent events, định dạng dùng cho streaming. |
 | RAG | Retrieval-augmented generation: trả lời dựa trên tài liệu truy xuất được. |
 | Trả trước / Trả sau | Trả từ credit mua trước, hoặc nhận hoá đơn hằng tháng. |
