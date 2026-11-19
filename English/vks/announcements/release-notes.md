@@ -7,6 +7,7 @@ VKS (VNG Kubernetes Engine) has just released a new update with the following im
 **New features:**
 
 * **Delete selected nodes in a Node Group:** when scaling down a Node Group, you can specify exactly which nodes are deleted right in the **View nodes** modal, instead of letting the system pick them. Supports delete-immediately (skip drain); if Autoscaling is enabled, the number of deletable nodes is limited by the **Minimum node** setting.
+  * API reference: see [VKS API](https://docs.api.greennode.ai/service-docs/vks-api.html#tag/Node-Group-Controller/paths/~1v1~1clusters~1%7BclusterId%7D~1node-groups~1%7BnodeGroupId%7D~1delete-nodes/post).
   * See [Delete Selected Nodes in a Node Group](../node-groups/delete-selected-nodes.md) for details.
 
 ## Nov 13, 2026
