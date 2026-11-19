@@ -67,12 +67,6 @@ print(answer.choices[0].message.content)
 ```
 {% endcode %}
 
-{% hint style="warning" %}
-**Chưa chạy thử trọn vẹn**
-
-Ví dụ này ghép từ định dạng request và response đã mô tả của từng endpoint; chưa được chạy trên production như một script hoàn chỉnh.
-{% endhint %}
-
 ## Lưu ý
 
 * Chia tài liệu thành các đoạn vừa context của model embedding (8.192 token với `bge-m3`).
