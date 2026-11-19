@@ -84,11 +84,6 @@ Một số response do tầng proxy trả trước khi request tới model. Chú
 | 502 | `{"message":"An invalid response was received from the upstream server", …}` | Trên các endpoint `/v1/…`: gateway không đọc được trường `model` trong body (body không phải JSON hợp lệ, body rỗng, hoặc thiếu `model`) nên không định tuyến được. Gửi body JSON hợp lệ có `model`. Lỗi này không retry được. |
 | 504 | `{"message":"The upstream server is timing out", …}` | Model không trả lời trong giới hạn thời gian của request. Dùng streaming hoặc giảm `max_tokens`. Xem [giới hạn](limits.md). |
 
-{% hint style="info" %}
-**Đã đối chiếu production**
-
-Các response 401, 404 `model_not_found`, 404 không có route, 405 và 502 ở trên đã được ghi nhận trên gateway production ngày 2026-11-14 và kiểm tra lại ngày 2026-11-18.
-{% endhint %}
 
 ## Chính sách retry khuyến nghị
 

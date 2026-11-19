@@ -47,7 +47,7 @@ curl https://maas-llm-aiplatform-hcm.api.vngcloud.vn/v1/models \
 
 ## Key errors
 
-These responses were checked against the production gateway on 2026-11-12. Every one carries the header `x-ai-error-code: request_denied`.
+Every response below carries the header `x-ai-error-code: request_denied`.
 
 | HTTP | Body | Cause and fix |
 | --- | --- | --- |

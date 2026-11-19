@@ -47,7 +47,7 @@ curl https://maas-llm-aiplatform-hcm.api.vngcloud.vn/v1/models \
 
 ## Lỗi liên quan đến key
 
-Các response dưới đây đã được kiểm tra trên gateway production ngày 2026-11-12. Tất cả đều kèm header `x-ai-error-code: request_denied`.
+Tất cả response dưới đây đều kèm header `x-ai-error-code: request_denied`.
 
 | HTTP | Nội dung | Nguyên nhân và cách xử lý |
 | --- | --- | --- |

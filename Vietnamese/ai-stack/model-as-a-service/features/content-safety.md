@@ -35,8 +35,4 @@ Request được trả **400** kèm `x-ai-error-code: request_denied`. Body khô
 
 Guardrail tắt trừ khi đã được cấu hình cho tài khoản của bạn. Thiết lập do GreenNode quản lý; [liên hệ hỗ trợ](../help/support.md) để bật hoặc điều chỉnh guardrail.
 
-{% hint style="info" %}
-**Nguồn**
 
-Cấu trúc response lấy từ mã nguồn gateway; chưa được kích hoạt trên production trong đợt kiểm tra ngày 2026-11-14.
-{% endhint %}
