@@ -274,13 +274,6 @@ Attach, Detach twice, so the system recognizes it as sdc. Detach and Attach agai
 
 **Method 2**: Access Server Manager\File and Storage Services\Volumes\Disks and turn it online, then initialize the disk.
 
-### \[vServer] Information about chip and clock speed of High Performance vServer package.
-
-Currently, we support 2 types of chip for High Performance vServer:
-
-* Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
-* Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz
-
 ### \[vServer] Why does my Windows server RDP report account password has expired?
 
 Please log in to the console interface to change the password, then you can use RDP.
