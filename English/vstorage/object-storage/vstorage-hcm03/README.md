@@ -1,5 +1,9 @@
 # Object storage (HCM03)
 
+{% hint style="warning" %}
+The HCM03 farm no longer accepts new customers. Existing customers can continue to use the service. New customers should use the [HCM04](../object-storage-hcm04/) or [HAN02](../object-storage-han02/) farm.
+{% endhint %}
+
 **Object Storage** (also known as **Object Storage**, **Cloud Storage**) is a form of data storage in discrete units called **objects**. Each object contains the actual data (such as images, videos, files) along with metadata that provides information about the object.
 
 **Benefits of Object Storage:**

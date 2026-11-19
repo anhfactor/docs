@@ -75,7 +75,7 @@ To set up Object Locked for a bucket using S3 Browser, when creating a new bucke
 
 <figure><img src="../../../../.gitbook/assets/image (535).png" alt=""><figcaption></figcaption></figure>
 
-Next, when the bucket is successfully created, right-click on the bucket, then select **Object Locked** . You can set the object locked in both **Retention** and **Legal Hold** modes through S3 Browser. For more details, please visit [https://s3browser.com/amazon-s3-object-lock.aspx](https://s3browser.com/amazon-s3-object-lock.aspx)
+Next, when the bucket is successfully created, right-click on the bucket, then select **Object Locked** . You can set the object locked in both **Retention** (**Compliance mode** only, Governance mode is not supported yet) and **Legal Hold** modes through S3 Browser. For more details, please visit [https://s3browser.com/amazon-s3-object-lock.aspx](https://s3browser.com/amazon-s3-object-lock.aspx)
 
 <figure><img src="../../../../.gitbook/assets/image (536).png" alt=""><figcaption></figcaption></figure>
 

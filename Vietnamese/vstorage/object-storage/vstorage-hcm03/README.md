@@ -1,5 +1,9 @@
 # Object storage (HCM03)
 
+{% hint style="warning" %}
+Farm HCM03 đã ngừng nhận khách hàng mới. Khách hàng hiện tại vẫn được tiếp tục sử dụng dịch vụ. Nếu bạn là khách hàng mới, vui lòng sử dụng farm [HCM04](../object-storage-hcm04/) hoặc [HAN02](../object-storage-han02/).
+{% endhint %}
+
 **Lưu trữ đối tượng** (hay còn gọi là **Object Storage**, **Cloud Storage**) là một hình thức lưu trữ dữ liệu dưới dạng các đơn vị riêng biệt gọi là **đối tượng (object)**. Mỗi đối tượng bao gồm dữ liệu thực tế (như hình ảnh, video, tệp) cùng với metadata cung cấp thông tin về đối tượng đó.
 
 #### Lợi ích của Object Storage:
