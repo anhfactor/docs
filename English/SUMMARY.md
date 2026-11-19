@@ -781,6 +781,7 @@
       * [GreenNode IDP](ai-stack/model-as-a-service/models/greennode/idp.md)
     * [MaaS API](ai-stack/model-as-a-service/maas-api.md)
     * [Pricing](ai-stack/model-as-a-service/pricing.md)
+    * [Model Pricing List](ai-stack/model-as-a-service/model-pricing-list.md)
     * [SLA](ai-stack/model-as-a-service/sla.md)
     * [Get started](ai-stack/model-as-a-service/get-started/README.md)
       * [Quickstart](ai-stack/model-as-a-service/get-started/quickstart.md)

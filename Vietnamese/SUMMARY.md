@@ -871,6 +871,7 @@
       * [GreenNode IDP](ai-stack/model-as-a-service/models/greennode/idp.md)
     * [MaaS API](ai-stack/model-as-a-service/maas-api.md)
     * [Cách tính phí](ai-stack/model-as-a-service/cach-tinh-phi.md)
+    * [Bảng giá Model](ai-stack/model-as-a-service/bang-gia-model.md)
     * [Cam kết SLA](ai-stack/model-as-a-service/cam-ket-sla.md)
     * [Bắt đầu](ai-stack/model-as-a-service/get-started/README.md)
       * [Bắt đầu nhanh](ai-stack/model-as-a-service/get-started/quickstart.md)
