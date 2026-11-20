@@ -3,7 +3,7 @@
 The MaaS API provides access to model families such as Qwen, DeepSeek, GLM, Kimi, MiniMax, Gemma and more. See the full list below.
 
 {% hint style="info" %}
-The model catalog below has been updated under the transition starting **August 3, 2026**, covering models self-hosted by GreenNode and third-party models under official contracts. See the timeline details in [Release Notes](../release-notes.md) and the billing rules in [Pricing](pricing.md).
+The model catalog below covers models self-hosted by GreenNode and third-party models under official contracts. See catalog changes in [Release Notes](../release-notes.md) and the billing rules in [Pricing](pricing.md).
 {% endhint %}
 
 ### Rate limit
