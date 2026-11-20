@@ -1,4 +1,4 @@
-# GLM-5.3 Flash
+# GLM-5.3 Flash Thirdparty
 
 Model ID: `z-ai/glm-5.3-flash-thirdparty` · Type: Chat
 
