@@ -857,7 +857,7 @@
       * [GLM-5.2](ai-stack/model-as-a-service/models/z-ai/glm-5.2-thirdparty.md)
       * [GLM-5.3](ai-stack/model-as-a-service/models/z-ai/glm-5.3.md)
       * [GLM-5.3 Flash](ai-stack/model-as-a-service/models/z-ai/glm-5.3-flash.md)
-      * [GLM-5.3 Flash](ai-stack/model-as-a-service/models/z-ai/glm-5.3-flash-thirdparty.md)
+      * [GLM-5.3 Flash Thirdparty](ai-stack/model-as-a-service/models/z-ai/glm-5.3-flash-thirdparty.md)
       * [BGE-M3](ai-stack/model-as-a-service/models/baai/bge-m3.md)
       * [Qwen 3 Embedding 8B](ai-stack/model-as-a-service/models/qwen/qwen3-embedding-8b.md)
       * [BGE Reranker v2 m3](ai-stack/model-as-a-service/models/baai/bge-reranker-v2-m3.md)

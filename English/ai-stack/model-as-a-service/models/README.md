@@ -29,7 +29,7 @@ Every model is addressed as `vendor/model`. Click a model for details and a read
 | [`z-ai/glm-5.2-thirdparty`](z-ai/glm-5.2-thirdparty.md) | GLM-5.2 | 1M | 128K | text | chat, responses, messages | On by default |
 | [`z-ai/glm-5.3`](z-ai/glm-5.3.md) | GLM-5.3 | 300K | 128K | text | chat, responses, messages | Always on |
 | [`z-ai/glm-5.3-flash`](z-ai/glm-5.3-flash.md) | GLM-5.3 Flash | 1M | 128K | text, image, file, video | chat, responses, messages | Always on |
-| [`z-ai/glm-5.3-flash-thirdparty`](z-ai/glm-5.3-flash-thirdparty.md) | GLM-5.3 Flash | 1M | 128K | text, image, video | chat, responses, messages | Always on |
+| [`z-ai/glm-5.3-flash-thirdparty`](z-ai/glm-5.3-flash-thirdparty.md) | GLM-5.3 Flash Thirdparty | 1M | 128K | text, image, video | chat, responses, messages | Always on |
 
 ## Embedding
 
